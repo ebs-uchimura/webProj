@@ -1,0 +1,145 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Noto Sans JP", "メイリオ", "Meiryo", "ＭＳ ゴシック",
+    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN", sans-serif;
+  font-size: 1.6rem;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: #333;
+  background-color: #fff;
+  font-weight: 400;
+}
+/* mainタグ */
+.contact_main {
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* 見出し */
+.contact_h1 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin-top: 1em;
+  text-align: center;
+}
+/* formタグ：フォーム全体 */
+.contact_form {
+  margin: 40px;
+}
+/* ------------------------------------ */
+/* フォーム共通書式 */
+/* ------------------------------------ */
+/* labelタグ：項目のラベルと入力欄を囲うタグ */
+.form_block {
+  display: grid;
+  grid-template-columns: 14em 1fr;
+  border-top: 1px dotted #606060;
+  padding: 1em;
+  align-items: center;
+  height: 5em;
+}
+/* 必須アイコン */
+.form-required {
+  margin-left: 2em;
+  color: #fff;
+  background-color: #f67a7a;
+  padding: 2px 8px;
+  font-size: 1.2rem;
+  border-radius: 3px;
+}
+/* 入力欄 */
+.form_field {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5em 1em;
+}
+/* ------------------------------------ */
+/* ラジオボタン専用 */
+/* ------------------------------------ */
+.label_radio + .label_radio {
+  margin-left: 2em;
+}
+.radio_span {
+  margin-left: 0.5em;
+}
+/* ------------------------------------ */
+/* checkbox専用 */
+/* ------------------------------------ */
+.label_checkbox + .checkbox {
+  margin-left: 2em;
+}
+.checkbox_span {
+  margin-left: 0.5em;
+}
+
+/* ------------------------------------ */
+/* セレクト：プルダウン専用 */
+/* ------------------------------------ */
+.select_block {
+  padding-left: 1em;
+}
+/* ------------------------------------ */
+/* 段落入力 */
+/* ------------------------------------ */
+.form_block.--textfield {
+  align-items: start;
+  border-bottom: 1px dotted #606060;
+  height: auto;
+}
+.form_field.--textfield {
+  height: 20em;
+  resize: none;
+}
+/* ------------------------------------ */
+/* 送信ボタン */
+/* ------------------------------------ */
+.form-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12em;
+  height: 3em;
+  font-size: 2rem;
+  background-color: #6695ED;
+  border-radius: 5px;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+/* ------------------------------------ */
+/* 個人情報保護 */
+/* ------------------------------------ */
+.privacy{
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 1em;
+}
+
+/* ------------------------------------ */
+/* 送信後のサンクスページ専用 */
+/* ------------------------------------ */
+.section-thanks{
+  padding: 100px 40px;
+}
+.thanks_h1{
+  font-size: 2.8rem;
+  text-align: center;
+}
+.thanks_a{
+  background-color:#6695ED;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.8rem;
+  width: 12em;
+  height: 3em;
+}
