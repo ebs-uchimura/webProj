@@ -1294,6 +1294,15 @@ footer address {
         background-color: #f8f8f8;
     }
 
+    .mobilepaid {
+        margin-top: 5vw;
+        text-align: center;      
+    }
+
+    .mobilepaid ul li {
+        list-style: none;        
+    }
+
     /* footer */
     footer {
         margin-bottom: 2vw;
@@ -1692,5 +1701,9 @@ footer address {
 
     .contents .container .main .main-section {
         padding: 0 10px;
+    }
+
+    .mobilepaid {
+        display: none;        
     }
 }

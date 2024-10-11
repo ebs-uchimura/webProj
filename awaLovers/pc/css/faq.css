@@ -1,0 +1,340 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
+
+/*------------------------------
+ ▼共通デザイン
+ -------------------------------*/
+/* tag */
+body {
+    margin: 0;
+    background-image: url(../img/bg.jpg);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 20%;
+}
+
+a {
+    color: #fff;
+}
+
+p {
+    margin: auto;
+    justify-content: space-around;
+    text-align: justify;
+    font-feature-settings: "palt";
+    line-height: 1.8em;
+    letter-spacing: 0.05em;
+}
+
+ul {
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+dt {
+    margin: 0;
+}
+
+dd {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* hide */
+.display-none {
+    display: none;
+}
+
+/* font */
+.zen-maru-gothic-bold {
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* breadcrumb */
+.breadcrumb-nav {
+    width: 100%;
+    background-color: #000;
+}
+
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+}
+
+.breadcrumb li:not(:last-of-type)::after {
+    content: ">";
+    color: #fff;
+    margin: 0 .6em;
+}
+
+/*------------------------------
+ ▼ヘッダ部分
+ -------------------------------*/
+/* content */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.whole-header {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+.whole-header p {
+    margin: 0 auto;
+    background-color: #000;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #fff;
+}
+
+/* header */
+header {
+    width: 1050px;
+    margin: auto;
+}
+header .header-wrapper .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+header .header-wrapper .header-flex div {
+    padding-right: 20px;
+}
+
+header .header-wrapper .header-flex .header-logo {
+    margin-left: 10px;
+}
+
+header .header-wrapper .header-flex .header-logo img {
+    width: 100px;
+    margin-left: 10px;
+}
+
+header .header-wrapper .header-flex .login {
+    margin-left: auto;
+    padding-top: 4px;
+}
+
+header .header-wrapper .header-flex .login p {
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+header .header-wrapper .header-flex .cart {
+    padding-top: 5px;
+}
+
+header .header-wrapper .header-flex .telephone {
+    padding-top: 1px;
+    
+}
+
+header .header-wrapper .header-flex .telephone p {
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: inherit;
+}
+
+header .header-wrapper .header-flex .information img {
+    width: 38px;
+}
+
+header .header-main-image {
+    width: 100%;
+}
+
+/*------------------------------
+ ▼コンテンツ部分
+ -------------------------------*/
+ /* contents */
+main {
+    margin-top: 40px;
+}
+
+main .whole-wrapper {
+    width: 1200px;
+    display: flex;
+}
+
+/* sidebar */
+main .whole-wrapper .sidebar {
+    width: 700px;
+    background-color: #5dd2bd;
+    border-radius: 0 50px 0 0;
+}
+
+main .whole-wrapper .sidebar ul {
+    margin: 35px auto;
+}
+
+main .whole-wrapper .sidebar ul li a img {
+    width: 250px;
+}
+
+/* mainarea */
+main .whole-wrapper .mainarea {
+    margin-top: 30px;
+    background-color: #fff;
+}
+
+main .whole-wrapper .mainarea .attention-area {
+    margin: 40px 0 100px;
+}
+
+main .whole-wrapper .mainarea .attention-area ul {
+    margin: 0 30px;
+}
+
+main .whole-wrapper .mainarea .attention-area ul li {
+    margin-top: 20px;
+    text-align: left;
+}
+
+main .whole-wrapper .mainarea .attention-area img {
+    width: 600px;
+}
+
+main .whole-wrapper .mainarea .faq-area {
+    margin: 50px 0;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-index-area {
+    position: relative;
+    width: 700px;
+    margin: 50px auto 0;
+    background-color: #eee;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-index-area img {
+    position: absolute;
+    width: 300px;
+    top: -45px;
+    left: 200px;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-index-area ul {
+    padding: 80px;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-index-area ul li {
+    margin: 10px 0;
+    text-align: left;
+    list-style: inside;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-index-area ul li a {
+    color: #001eff;
+    text-decoration: underline;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-article-area {
+    width: 700px;
+    margin: 0 auto;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-article-area div {
+    margin: 35px 0;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-article-area div dl {
+    padding-top: 50px;
+}
+main .whole-wrapper .mainarea .faq-area .faq-article-area div dl .purple {
+    text-align: right;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-article-area div dl .purple a {
+    color: #b67dec;
+    text-decoration: underline;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-article-area div dl dt {
+    position: relative;
+    padding: 0 20px 10px;
+    font-size: 1.1rem;
+    font-family: "Noto Sans JP", sans-serif;
+    color: #ff992b;
+    font-weight: 600;
+    text-align: left;
+    background-color: #fff0df;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-article-area div dl dt img {
+    position: absolute;
+    width: 250px;
+    top: -40px;
+    left: 0;
+ }
+
+main .whole-wrapper .mainarea .faq-area .faq-article-area div dl dd {
+    position: relative;
+    padding: 30px 10px;
+    font-size: 1rem;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    text-align: left;
+    background-color: #f4e8ff;
+}
+
+main .whole-wrapper .mainarea .faq-area .faq-article-area div dl dd img {
+    position: absolute;
+    width: 250px;
+    bottom: -30px;
+    right: 0;
+}
+
+/*------------------------------
+ ▼フッター
+ -------------------------------*/
+footer {
+    margin-top: 50px;
+}
+
+footer .footer-headline  {
+    display: flex;
+    position: relative;
+    width: 1200px;
+    height: 620px;
+    margin-left: 100px;
+    background-image: url(../img/footer_comment.png), url(../img/footer.jpg);
+    background-repeat: no-repeat;
+    background-position: left top, 480px top;
+    background-size: 50%;
+}
+
+footer .footer-headline .footer-headline-txt {
+    width: 500px;
+    text-align: left;
+    margin-left: 40px;
+}
+
+footer .footer-headline .footer-headline-txt p {
+    color: #FFF;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 130px;
+}
+
