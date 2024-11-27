@@ -8,8 +8,6 @@
   detail
 ----------------------------------------------------------------- */
 /* general */
-
-
 *,
 *::before,
 *::after {
@@ -26,6 +24,21 @@
 
 .off {
   display: none !important;
+}
+
+.iframe-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.iframe-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .goods-cart-btn-active {
@@ -455,6 +468,11 @@
   width: 280px;
 }
 
+.goods-cart-btn.logged-in p {
+  padding-top: 3px;
+  font-size: 0.8rem;
+}
+
 .goods-cart-btn-wrapper .sku {
   width: 100%;
 }
@@ -600,6 +618,11 @@
   background-color: #fff;
   border: 2px solid #eaeaea;
   z-index: 10;
+}
+
+.goods-wrapper .goods-cart-btn-fix p {
+  padding-top: 3px;
+  font-size: 0.8rem;
 }
 
 .goods-wrapper .goods-cart-btn-fix .goods-cart-btn-fix-name {
@@ -1147,6 +1170,10 @@
     width: 100%;
   }
 
+  .goods-cart-btn-wrapper .goods-cart-btn p {
+    font-size: 0.8rem;
+  }
+
   .goods-cart-btn-wrapper .sku .sku-cart .sku-cart-wrap .goods-cart-btn-restock {
     background: #333;
     border: 1px solid #e5e5e5;
@@ -1203,7 +1230,7 @@
 
   .goods-cart-btn span,
   .goods-cart-btn a {
-    width: 80vw;
+    width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;

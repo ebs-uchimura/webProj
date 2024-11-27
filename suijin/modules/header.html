@@ -69,31 +69,42 @@
             <div class="header-nav-search-btn"><a id="header-search-link" href="<{$search_form.search_url}>"></a></div>
         </div>
         <ul id="header-nav-category" class="header-nav-category">
-        <{section name=i loop=$category_menu.list}>
-            <{if $category_menu.list[i].child_category.has_item}>
-                <li>
-                    <a class="has-sub-category" href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
-                    <ul class="header-nav-sub-category">
-                    <{section name=j loop=$category_menu.list[i].child_category.list}>
+            <{section name=i loop=$category_menu.list}>
+            <!-- VIPか業務会員 -->
+            <{if ($member.group_id == 1 || $member.group_id == 2)}>
+                <{if $category_menu.list[i].name == "焼酎[会員]" || $category_menu.list[i].name == "ワイン[会員]" || $category_menu.list[i].name == "ウイスキー[会員]" || $category_menu.list[i].name == "リキュール[会員]" || $category_menu.list[i].name == "日本酒[会員]" || $category_menu.list[i].name == "名入れ商品[会員]" || $category_menu.list[i].name == "食品・サプリメント[会員]" || $category_menu.list[i].name == "グラス[会員]" || $category_menu.list[i].name == "ゑびす工房[会員]" ||
+                $category_menu.list[i].name == "泡ラヴァーズ"}>
+                    <li class="side-category-item">
+                        <a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
+                    </li>
+                    <{if $category_menu.list[i].child_category.has_item}>
+                        <{section name=j loop=$category_menu.list[i].child_category.list}>
                         <li>
-                            <a href="<{$category_menu.list[i].child_category.list[j].url}>"><{$category_menu.list[i].child_category.list[j].name}></a>
+                            <a href="<{$category_menu.list[i].child_category.list[j].url}>" class="child-item">
+                                <{$category_menu.list[i].child_category.list[j].name}>
+                            </a>
                         </li>
-                    <{/section}>
-                    </ul>
-                </li>
+                        <{/section}>
+                    <{/if}>
+                <{/if}>
+            <!-- ゲストか一般会員 -->
             <{else}>
-                <li>
-                    <a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
-                </li>
+                <{if $category_menu.list[i].name != "焼酎[会員]" && $category_menu.list[i].name != "ワイン[会員]" && $category_menu.list[i].name != "ウイスキー[会員]" && $category_menu.list[i].name != "リキュール[会員]" && $category_menu.list[i].name != "日本酒[会員]" && $category_menu.list[i].name != "名入れ商品[会員]" && $category_menu.list[i].name != "食品・サプリメント[会員]" && $category_menu.list[i].name != "グラス[会員]" && $category_menu.list[i].name != "ゑびす工房[会員]"}>
+                    <li class="side-category-item">
+                        <a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
+                    </li>
+                    <{if $category_menu.list[i].child_category.has_item}>
+                    <{section name=j loop=$category_menu.list[i].child_category.list}>
+                    <li>
+                        <a href="<{$category_menu.list[i].child_category.list[j].url}>" class="child-item">
+                            <{$category_menu.list[i].child_category.list[j].name}>
+                        </a>
+                    </li>
+                    <{/section}>
+                    <{/if}>
+                <{/if}>
             <{/if}>
-        <{/section}>
-        <{if $bulk_menu.has_item}>
-            <{section name=i loop=$bulk_menu.list}>
-                <li>
-                    <a href="<{$bulk_menu.list[i].url}>"><{$bulk_menu.list[i].name}></a>
-                </li>
             <{/section}>
-        <{/if}>
         </ul>
         <ul class="header-other-link">
             <li>
