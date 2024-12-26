@@ -253,15 +253,16 @@
                                                             <{/if}>
                                                         <{/if}>
                                                     </td>
-                                                    <td class="sku-option-name">
-                                                        <{if $item.option_sku.list[i.index_prev].name1 != $item.option_sku.list[i.index].name1}>
-                                                            <{$item.option_sku.list[i].name1}>
-                                                        <{/if}>
-                                                    </td>
-                                                    <{if $item.option_sku.has_option2}>
-                                                        <td class="sku-option-name"><{$item.option_sku.list[i].name2}></td>
-                                                    <{/if}>
+                                                    
                                                     <td class="sku-cart">
+                                                        <div class="sku-option-name">
+                                                            <{if $item.option_sku.list[i.index_prev].name1 != $item.option_sku.list[i.index].name1}>
+                                                                <{$item.option_sku.list[i].name1}>
+                                                            <{/if}>
+                                                        </div>
+                                                        <{if $item.option_sku.has_option2}>
+                                                            <div class="sku-option-name"><{$item.option_sku.list[i].name2}></div>
+                                                        <{/if}>
                                                         <{if $item.is_subscription_only}>
                                                             <div class="sku-price-wrap">
                                                                 <p class="sku-price">￥<{$item.option_sku.list[i].price|number_format}><span>（税込）</span></p>
@@ -678,35 +679,17 @@
                     <{section name=i loop=$category_menu.list}>
                     <!-- VIPか業務会員 -->
                     <{if ($member.group_id == 1 || $member.group_id == 2)}>
-                        <{if $category_menu.list[i].name == "焼酎[会員]" || $category_menu.list[i].name == "ワイン[会員]" || $category_menu.list[i].name == "ウイスキー[会員]" || $category_menu.list[i].name == "リキュール[会員]" || $category_menu.list[i].name == "日本酒[会員]" || $category_menu.list[i].name == "名入れ商品[会員]" || $category_menu.list[i].name == "食品・サプリメント[会員]" || $category_menu.list[i].name == "グラス[会員]" || $category_menu.list[i].name == "ゑびす工房[会員]"}>
+                        <{if $category_menu.list[i].name == "焼酎[会員]" || $category_menu.list[i].name == "ワイン[会員]" || $category_menu.list[i].name == "ウイスキー[会員]" || $category_menu.list[i].name == "リキュール[会員]" || $category_menu.list[i].name == "日本酒[会員]" || $category_menu.list[i].name == "名入れ商品[会員]" || $category_menu.list[i].name == "食品・サプリメント[会員]" || $category_menu.list[i].name == "グラス[会員]" || $category_menu.list[i].name == "ゑびす工房[会員]" || $category_menu.list[i].name == "泡ラヴァーズ" || $category_menu.list[i].name == "ギフト"}>
                             <li class="main-category-item">
                                 <a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
                             </li>
-                            <{if $category_menu.list[i].child_category.has_item}>
-                                <{section name=j loop=$category_menu.list[i].child_category.list}>
-                                <li>
-                                    <a href="<{$category_menu.list[i].child_category.list[j].url}>" class="child-item">
-                                        <{$category_menu.list[i].child_category.list[j].name}>
-                                    </a>
-                                </li>
-                                <{/section}>
-                            <{/if}>
                         <{/if}>
                     <!-- ゲストか一般会員 -->
                     <{else}>
-                        <{if ($category_menu.list[i].name != "焼酎[会員]" && $category_menu.list[i].name != "ワイン[会員]" && $category_menu.list[i].name != "ウイスキー[会員]" && $category_menu.list[i].name != "リキュール[会員]" && $category_menu.list[i].name != "日本酒[会員]" && $category_menu.list[i].name != "名入れ商品[会員]" && $category_menu.list[i].name != "食品・サプリメント[会員]" && $category_menu.list[i].name != "グラス[会員]" && $category_menu.list[i].name != "ゑびす工房[会員]")}>
+                        <{if ($category_menu.list[i].name != "すべての商品" && $category_menu.list[i].name != "焼酎[会員]" && $category_menu.list[i].name != "ワイン[会員]" && $category_menu.list[i].name != "ウイスキー[会員]" && $category_menu.list[i].name != "リキュール[会員]" && $category_menu.list[i].name != "日本酒[会員]" && $category_menu.list[i].name != "名入れ商品[会員]" && $category_menu.list[i].name != "食品・サプリメント[会員]" && $category_menu.list[i].name != "グラス[会員]" && $category_menu.list[i].name != "ゑびす工房[会員]")}>
                             <li class="main-category-item">
                                 <a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
                             </li>
-                            <{if $category_menu.list[i].child_category.has_item}>
-                            <{section name=j loop=$category_menu.list[i].child_category.list}>
-                            <li>
-                                <a href="<{$category_menu.list[i].child_category.list[j].url}>" class="child-item">
-                                    <{$category_menu.list[i].child_category.list[j].name}>
-                                </a>
-                            </li>
-                            <{/section}>
-                            <{/if}>
                         <{/if}>
                     <{/if}>
                     <{/section}>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>
+    <{$page.title}>
+  </title>
+  <meta name="description" content="<{$page.description}>">
+  <link rel="canonical" href="<{$page.canonical_url}>">
+  <link rel="shortcut icon" type="image/ico" href="<{$shop.favicon_url}>">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<{$page.title}>">
+  <meta property="og:description" content="<{$page.description}>">
+  <meta property="og:site_name" content="<{$shop.name}>">
+  <meta name="twitter:card" content="Summary with Large Image">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/category.css">
+  <link rel="stylesheet" href="<{$page.css}>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <{$makeshop.head}>
+</head>
+
+<body>
+  <{$makeshop.body_top}>
+  <{$module.header}>
+  <main>
+    <nav class="breadcrumb pc-breadcrumb">
+      <ul class="breadcrumb-list">
+        <li><a href="<{$url.top}>"><{$shop.name}></a></li>
+        <li>検索結果：
+        <{if ($search.keyword)}>
+          <{$search.keyword}>
+        <{else}>
+          すべての商品
+        <{/if}>
+        </li>
+      </ul>
+    </nav>
+    <section class="main-section">
+      <div class="category-contents">
+        <div class="category-header-area">
+          <div class="headline-area">
+            <hr>
+            <h1 class="headline">
+              検索結果
+            </h1>
+          </div>
+        </div>
+        <div class="category-title">
+            <div class="search-count">
+            <span class="search-count-all"><{$search.total_count}></span>件中<span class="search-count-show"><{$search.display_count}></span>件表示しています。
+          </div>
+          <dl class="list-head-sort forpc">
+            <dt>並び替えor目的別キーワード：</dt>
+            <dd><a href="<{$search.sort_recommend_url}>">人気順</a></dd>
+            <dd><a href="<{$search.sort_low_price_url}>">価格の低い順</a></dd>
+            <dd><a href="<{$search.sort_high_price_url}>">価格の高い順</a></dd>
+            <dd><a href="<{$search.sort_new_url}>">登録の新しい順</a></dd>
+          </dl>
+        </div>
+        <{if $search.item.has_item}>
+        <ul class="item-list">
+        <{section name=i loop=$search.item.list}>
+          <li>
+            <div class="item-list-image">
+              <a href="<{$search.item.list[i].url}>"><img src="<{$search.item.list[i].image_L}>" alt="商品画像"></a>
+            </div>
+            <div class="search-item-info">
+              <p class="item-name"><a href="<{$search.item.list[i].url}>"><{$search.item.list[i].name}></a></p>
+             <{if $search.item.list[i].is_sale}>
+              <p class="price original-price">￥<{$search.item.list[i].original_price|number_format}><span>（税込）</span></p>
+              <p class="price item-sale-price">￥<{$search.item.list[i].price|number_format}><span class="tax">（税込）</span>
+              <span class="sale-discount-rate">[<{$search.item.list[i].sale_rate}>%OFF</span>]</p>
+              <{else}>
+              <p class="price">￥<{$search.item.list[i].price|number_format}><span>（税込）</span></p>
+              <{/if}>
+            </div>
+          </li>
+          <{/section}>
+        </ul>
+        <div class="pager-wrap">
+          <p class="total-count">（全<span><{$search.total_count}></span>件）<{$search.display_count}>件表示</p>
+          <{if $search.pager.has_item}>
+          <ul class="pager">
+            <{if !$search.pager.is_first_display}>
+            <li><a href="<{$search.pager.first_url}>"><span class="prev">一番前へ</span></a></li>
+            <{/if}>
+            <{section name=i loop=$search.pager.list}>
+            <{if $search.pager.list[i].is_current_page}>
+            <li><span class="current"><{$search.pager.list[i].number}></span></li>
+            <{else}>
+            <li><a href="<{$search.pager.list[i].url}>"><span><{$search.pager.list[i].number}></span></a></li>
+            <{/if}>
+            <{/section}>
+            <{if !$search.pager.is_last_display}>
+            <li><a href="<{$search.pager.last_url}>"><span class="next">最後へ</span></a></li>
+            <{/if}>
+          </ul>
+          <{/if}>
+        </div>
+        <{else}>
+        <p class="empty">このカテゴリーには商品がありません</p>
+        <{/if}>
+      </div>
+    </section>
+    <section class="introduction">
+      <div class="introduction-head">
+        <h2>商品紹介</h2>
+        <div class="subscript">PRODUCTS</div>
+      </div>
+      <ul>
+        <li class="intro1">
+          <div class="product">
+            <div class="product-image">
+              <img src="https://gigaplus.makeshop.jp/kenkonomorij/06_blackvinegar.jpg" alt="薩摩くろす丸">
+            </div>
+            <div class="product-detail">
+              <div class="product-name">薩摩くろす丸｜元祖黒酢サプリ</div>
+              <div class="product-description">玄米黒酢は体に良いことはわかっていても、飲みにくく、続けにくい。そこで誕生したのが薩摩くろす丸。<br>
+                カプセルだからすっぱさを感じることなく、手軽に長く続けることができます。
+              </div>
+              <div class="product-price">1,599円（税込）</div>
+              <div class="product-goto">
+                <button class="show-detail" onclick="location.href='https://www.kenkonomori.jp/view/item/000000000001'">詳しくはこちらから&emsp;<i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="intro2">
+          <div class="product">
+            <div class="product-image">
+              <img src="https://gigaplus.makeshop.jp/kenkonomorij/06_bonito.jpg" alt="鰹一番せんじ">
+            </div>
+            <div class="product-detail">
+              <div class="product-name">鰹一番せんじ｜鹿児島県枕崎産</div>
+              <div class="product-description">1000年以上もの昔から日本人の食を支え続けた「かつお」。<br>
+                その「かつおのチカラ」をギュッと凝縮した古くて新しい<br>
+                健康食品の登場です。<br>
+                <span class="bold">薩摩の殿様も薦めた、伝統の“万民保健食品”</span>
+              </div>
+              <div class="product-price">2,139円（税込）</div>
+              <div class="product-goto">
+                <button class="show-detail" onclick="location.href='https://www.kenkonomori.jp/view/item/000000000002'">詳しくはこちらから&emsp;<i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="intro3">
+          <div class="product">
+            <div class="product-image">
+              <img src="https://gigaplus.makeshop.jp/kenkonomorij/06_garlic.jpg" alt="にんにく黒酢">
+            </div>
+            <div class="product-detail">
+              <div class="product-name">にんにく黒酢</div>
+              <div class="product-description">お客様のご要望にお応えして発売いたしました！<br>
+                鹿児島県霧島市福山町の玄米黒酢、青森県産福地ホワイト六片にんにく、発酵黒にんにく、すべて厳選国産原料です。<br>
+                <span class="bold">にんにくの元気と玄米黒酢のチカラをカプセルに！</span>
+              </div>
+              <div class="product-price">1,944円（税込）</div>
+              <div class="product-goto">
+                <button class="show-detail" onclick="location.href='https://www.kenkonomori.jp/view/item/000000000006'">詳しくはこちらから&emsp;<i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="intro4">
+          <div class="product">
+            <div class="product-image">
+              <img src="https://gigaplus.makeshop.jp/kenkonomorij/06_blueberry.jpg" alt="ブルーベリー">
+            </div>
+            <div class="product-detail">
+              <div class="product-name">ブルーベリー</div>
+              <div class="product-description">お客様のご要望にお応えして発売いたしました！<br>
+                全て北欧産のビルベリーを使用した自然の恵みを閉じ込めたサプリメントです。自然の恵みビルベリーエキスを飲みやすいカプセルにしました！
+              </div>
+              <div class="product-price">1,728円（税込）</div>
+              <div class="product-goto">
+                <button class="show-detail" onclick="location.href='https://www.kenkonomori.jp/view/item/000000000004'">詳しくはこちらから&emsp;<i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="intro5">
+          <div class="product">
+            <div class="product-image">
+              <img src="https://gigaplus.makeshop.jp/kenkonomorij/06_blueberryvinegar.jpg" alt="ブルーベリー黒酢">
+            </div>
+            <div class="product-detail">
+              <div class="product-name">ブルーベリー黒酢 プレミアム</div>
+              <div class="product-description">最高品種の北欧産ビルベリーに、さらに自信をもっておすすめする玄米黒酢を加え、そしてここ数年テレビに取り上げられているブドウや赤ワインに多く含まれる美容成分を
+                プラスして独自のバランスで配合しました。
+                <span class="bold">特別に徹底的にこだわり抜いた一粒</span>
+              </div>
+              <div class="product-price">2,160円（税込）</div>
+              <div class="product-goto">
+                <button class="show-detail" onclick="location.href='https://www.kenkonomori.jp/view/item/000000000005'">詳しくはこちらから&emsp;<i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="intro6">
+          <div class="product">
+            <div class="product-image">
+              <img src="https://gigaplus.makeshop.jp/kenkonomorij/06_rakuraku.jpg" alt="楽らくウォーク♪">
+            </div>
+            <div class="product-detail rakuraku">
+              <div class="product-name">楽らくウォーク♪</div>
+              <div class="product-description">1日たったの3粒で『プロテオグリカン』をはじめ『Ⅱ型コラーゲン』『コンドロイチン』『Ｎ・アセチルグルコサミン』『ヒアルロン酸』等、軟骨の構成成分を摂ることができます。<br>プロテオグリカン（サケの鼻軟骨抽出物）はスポンジのように水を含む水分保持機能があり粘性や弾性といった衝撃への耐性を持っています。※サケは主に北海道のシロサケを使用しています。
+              </div>
+              <div class="product-price">5,346円（税込）</div>
+              <div class="product-goto">
+                <button class="show-detail" onclick="location.href='https://www.kenkonomori.jp/view/item/000000000003'">詳しくはこちらから&emsp;<i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="intro7">
+          <div class="product">
+            <div class="product-image">
+              <img src="https://gigaplus.makeshop.jp/kenkonomorij/06_bubble.jpg" alt="バブルアルデント">
+            </div>
+            <div class="product-detail">
+              <div class="product-name">バブルアルデント</div>
+              <div class="product-description"><span class="bold">2023年2月ついに新商品デビュー</span><br>
+                口に入れるものだから。ヌルつき知らずのバブルアルデント。お口の中を気持ちよく。<br>
+                入れ歯で悩む皆様に気持ち良い一日を過ごす健康の森、自慢の新商品。<br>
+                <span class="bold">堂々デビュー</span>
+              </div>
+              <div class="product-price">2,980円（税込）</div>
+              <div class="product-goto">
+                <button class="show-detail" onclick="location.href='https://www.kenkonomori.jp/view/item/000000000007'">詳しくはこちらから&emsp;<i class="fa-solid fa-arrow-right"></i></button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <div class="customer">
+      <div class="customer-button button-01">
+        <div class="headline">お客様の声</div>
+        <div class="subscript">VOICE</div>
+        <button class="show-detail">詳しくはこちらから&emsp;<i class="fa-solid fa-arrow-right"></i></button>
+      </div>
+      <!--<div class="customer-button button-02">
+        <div class="headline">定期コースについて</div>
+        <div class="subscript">REGULAR COURSE</div>
+        <button class="show-detail">詳しくはこちらから&emsp;<i class="fa-solid fa-arrow-right"></i></button>
+      </div>-->
+    </div>
+    <div class="gototop">
+      <button class="gototop-button"><i class="fa-solid fa-arrow-up-from-bracket fa-2x"></i></button>
+    </div>
+  </main>
+  <{$module.footer}>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="<{$page.javascript}>"></script>
+  <{$makeshop.body_bottom}>
+</body>
+</html>

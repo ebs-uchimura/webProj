@@ -215,6 +215,15 @@ input {
     visibility:hidden !important; 
 }
 
+.fixed {
+    position: fixed;
+    width: 975px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999999;
+}
+
 
 /*スマホサイズ*/
 @media screen and (max-width: 480px) {
@@ -228,9 +237,18 @@ input {
     }
 
     /*Btn*/
-        #section-62 img,
-        #section-63 img {
+    #section-62 img,
+    #section-63 img {
         width: auto;
+    }
+
+    .fixed {
+        position: fixed;
+        width: 90vw;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999999;
     }
 
     /*About*/

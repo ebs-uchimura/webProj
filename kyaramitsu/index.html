@@ -33,7 +33,9 @@
         <link rel="canonical" href="https://lp.ebisu-do.jp/kyaramitsu/">
         <link rel="stylesheet" type="text/css" href="css/themeColor.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="js/fontplus.js" charset="utf-8"></script>
+        <script src="js/animation.js" charset="utf-8"></script>
     </head>
     <body
         class="theme-base theme-blank theme-custom fp_default template-theme-default"
@@ -137,7 +139,7 @@
                     <img
                         id="mainimage"
                         class="pera1-editable"
-                        src="img/main_image.jpg"
+                        src="img/main_image.png"
                         alt="酔神 伽羅蜜 KYARA-MITSU｜株式会社 薩摩恵比寿堂"
                         data-structure="e-img"
                     >
@@ -168,7 +170,7 @@
                     <img
                         id="sideimage"
                         class="pera1-editable"
-                        src="img/side_image3_sp.jpg"
+                        src="img/side_image.png"
                         alt="酔神 伽羅蜜 KYARA-MITSU｜株式会社 薩摩恵比寿堂"
                         data-structure="e-img"
                     >
@@ -365,6 +367,20 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="u-mbmd  u-mbsm p-article-main-text pera1-removable">
+                                        <div data-structure="e-text" class="pera1-editable">
+                                            <div>
+                                                <span data-custom-pc-fontsize="16px">
+                                                    <span style="color: #b9b9b9;">
+                                                        参考小売価格　3,500円(税込) 
+                                                        <br>
+                                                        特約店様専売価格　1,449円（税込）
+                                                    </span>
+                                                    <br>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -454,6 +470,30 @@
                                                     <br>
                                                 </span>
                                             </div>
+                                            <div>
+                                                <span data-custom-pc-fontsize="16px">
+                                                    <span style="color: #b9b9b9;">
+                                                        参考小売価格　3,500円(税込) 
+                                                        <br>
+                                                        特約店様専売価格　1,449円（税込）
+                                                    </span>
+                                                    <br>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="u-mbmd p-article-main-text pera1-removable">
+                                        <div data-structure="e-text" class="pera1-editable">
+                                            <div>
+                                                <span data-custom-pc-fontsize="16px">
+                                                    <span style="color: #b9b9b9;">
+                                                        参考小売価格　3,500円(税込) 
+                                                        <br>
+                                                        特約店様専売価格　1,449円（税込）
+                                                    </span>
+                                                    <br>
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -498,7 +538,7 @@
                                                     <a href="#section-39" target="_self">
                                                         <img
                                                             class="pera1-editable"
-                                                            src="img/entry.png"
+                                                            src="img/entry2.png"
                                                             alt="お申し込みボタン"
                                                             data-structure="e-img"
                                                         >
@@ -512,7 +552,7 @@
                                                     <a href="https://line.me/R/ti/p/@003kbjwk?oat_content=url" target="_blank">
                                                         <img
                                                             class="pera1-editable"
-                                                            src="img/line.png"
+                                                            src="img/line2.png"
                                                             alt="LINEボタン"
                                                             data-structure="e-img"
                                                         >
@@ -1708,7 +1748,7 @@
                                                     <a href="#section-39" target="_self">
                                                         <img
                                                             class="pera1-editable"
-                                                            src="img/entry.png"
+                                                            src="img/entry2.png"
                                                             alt="お申し込みボタン"
                                                             data-structure="e-img"
                                                         >
@@ -1722,7 +1762,7 @@
                                                     <a href="https://line.me/R/ti/p/@003kbjwk?oat_content=url" target="_blank">
                                                         <img
                                                             class="pera1-editable"
-                                                            src="img/line.png"
+                                                            src="img/line2.png"
                                                             alt="LINEボタン"
                                                             data-structure="e-img"
                                                         >
@@ -2299,7 +2339,7 @@
                     <a href="https://line.me/R/ti/p/@003kbjwk?oat_content=url" target="_blank">
                         <img
                             class="pera1-editable"
-                            src="img/line.png"
+                            src="img/line2.png"
                             alt="LINEボタン"
                             data-structure="e-img"
                         >
@@ -2360,7 +2400,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group" data-elem-name="formInputCustomText">
-                                                <label class="col-sm-3 control-label customFormGroup_ttl">毎月のお届けのケース数を選択ください。（特約店を希望する方のみ）</label>
+                                                <label class="col-sm-3 control-label customFormGroup_ttl">毎月のお届けのケース数を選択ください。（特約店を希望する方のみ）<br>※販売状況に応じて本数の変更や一時休止など、柔軟に対応できます。</label>
                                                 <div class="col-sm-8 form_inputs">
                                                     <label class="radio-inline">
                                                         <input
@@ -2384,37 +2424,10 @@
                                                         <input
                                                             class="form_input"
                                                             type="radio"
-                                                            value="3ケース（36本）"
+                                                            value="2ケース以上"
                                                             name="entry.1421899238"
                                                         >
-                                                        3ケース（36本）
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="radio"
-                                                            value="4ケース（48本）"
-                                                            name="entry.1421899238"
-                                                        >
-                                                        4ケース（48本）
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="radio"
-                                                            value="5ケース（60本）"
-                                                            name="entry.1421899238"
-                                                        >
-                                                        5ケース（60本）
-                                                    </label>
-                                                    <label class="radio-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="radio"
-                                                            value="6ケース以上"
-                                                            name="entry.1421899238"
-                                                        >
-                                                        6ケース以上
+                                                        2ケース以上
                                                     </label>
                                                 </div>
                                             </div>
@@ -2455,31 +2468,6 @@
                                                 </div>
                                             </div>
                                             <div class="form-group" data-elem-name="formInputCustomText">
-                                                <label class="col-sm-3 control-label customFormGroup_ttl_required">担当者名（フリガナ）</label>
-                                                <div class="col-sm-8 form_inputs">
-                                                    <input
-                                                        class="form-control form_input"
-                                                        type="text"
-                                                        placeholder=""
-                                                        name="entry.2014446040"
-                                                        required=""
-                                                    >
-                                                </div>
-                                            </div>
-                                            <div class="form-group" data-elem-name="formInputCustomText">
-                                                <label class="col-sm-3 control-label customFormGroup_ttl_required">担当者電話番号</label>
-                                                <div class="col-sm-8 form_inputs">
-                                                    <input
-                                                        class="form-control form_input"
-                                                        type="tel"
-                                                        placeholder=""
-                                                        name="entry.979868355"
-                                                        required=""
-                                                        data-input-category-name="phone_number"
-                                                    >
-                                                </div>
-                                            </div>
-                                            <div class="form-group" data-elem-name="formInputCustomText">
                                                 <label class="col-sm-3 control-label customFormGroup_ttl_required">メールアドレス</label>
                                                 <div class="col-sm-8 form_inputs">
                                                     <input
@@ -2490,83 +2478,6 @@
                                                         required=""
                                                         data-input-category-name="mail_address"
                                                     >
-                                                </div>
-                                            </div>
-                                            <div class="form-group" data-elem-name="formInputCustomText">
-                                                <label class="col-sm-3 control-label customFormGroup_ttl">【アンケート】今回気になった理由を教えてください（※複数選択可）</label>
-                                                <div class="col-sm-8 form_inputs">
-                                                    <label class="checkbox-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="checkbox"
-                                                            value="地域に1店舗だけの販売だから"
-                                                            name="entry.232932466"
-                                                        >
-                                                        地域に1店舗だけの販売だから
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="checkbox"
-                                                            value="商品に魅力を感じたから"
-                                                            name="entry.232932466"
-                                                        >
-                                                        商品に魅力を感じたから
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="checkbox"
-                                                            value="商品ラベルや見た目に魅力を感じたから"
-                                                            name="entry.232932466"
-                                                        >
-                                                        商品ラベルや見た目に魅力を感じたから
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="checkbox"
-                                                            value="常連さんに芋焼酎が好きな人がいるから"
-                                                            name="entry.232932466"
-                                                        >
-                                                        常連さんに芋焼酎が好きな人がいるから
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="checkbox"
-                                                            value="店主またはご回答者様が芋焼酎が好きだから"
-                                                            name="entry.232932466"
-                                                        >
-                                                        店主またはご回答者様が芋焼酎が好きだから
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="checkbox"
-                                                            value="他の店にはない商品だから"
-                                                            name="entry.232932466"
-                                                        >
-                                                        他の店にはない商品だから
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="checkbox"
-                                                            value="蔵元の150年の歴史に魅力を感じるから"
-                                                            name="entry.232932466"
-                                                        >
-                                                        蔵元の150年の歴史に魅力を感じるから
-                                                    </label>
-                                                    <label class="checkbox-inline">
-                                                        <input
-                                                            class="form_input"
-                                                            type="checkbox"
-                                                            value="その他 "
-                                                            name="entry.232932466"
-                                                        >
-                                                        その他
-                                                    </label>
                                                 </div>
                                             </div>
                                         </div>
@@ -2725,6 +2636,20 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="fixed" data-elem-name="m-card">
+            <div data-structure="m-card">
+                <div class="c-img c-img--responsive u-mbmd pera1-removable">
+                    <a href="https://line.me/R/ti/p/@003kbjwk?oat_content=url" target="_blank">
+                        <img
+                            class="pera1-editable"
+                            src="img/line2.png"
+                            alt="LINEボタン"
+                            data-structure="e-img"
+                        >
+                    </a>
                 </div>
             </div>
         </div>

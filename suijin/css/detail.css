@@ -994,7 +994,7 @@
 
   .goods-detail .goods-price-wrapper {
     margin-top: 10px;
-    margin-bottom: 0;
+    margin-bottom: 10px;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -1145,7 +1145,8 @@
 
   .goods-cart-btn-wrapper .sku .sku-option-name {
     width: 30%;
-    font-size: 0.7rem;
+    padding: 0 0 5px 0;
+    font-size: 1rem;
     text-align: center;
   }
 
@@ -1198,7 +1199,7 @@
 
   .goods-cart-btn-wrapper .sku-cart-wrap .logged-in {
     width: 180px;
-    margin: 0 4px 40px 0;
+    margin: 0;
   }
 
   .goods-cart-btn-wrapper .goods-review {
@@ -1230,7 +1231,7 @@
 
   .goods-cart-btn span,
   .goods-cart-btn a {
-    width: 50vw;
+    width: 90vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1283,13 +1284,11 @@
   .goods-other-wrapper {
     width: 100vw;
     padding: 0 5px;
-    border-bottom: 1px solid #eaeaea;
     overflow: hidden;
   }
 
   .goods-other-wrapper .goods-other {
     padding: 0;
-    border-bottom: 1px solid #eaeaea;
   }
 
   .goods-other-wrapper .goods-other:last-child {
