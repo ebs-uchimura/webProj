@@ -1,0 +1,382 @@
+/*
+/* news.css
+*/
+
+@charset "utf-8";
+
+/*------------------------------
+ ▼共通デザイン（モバイル向け）
+ -------------------------------*/
+p {
+  font-size: 1.05rem;
+}
+
+.radio_lb>label {
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.radio_lb>label:hover {
+  color: #d80909;
+}
+
+.radio_lb>label>input {
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.textimg {
+  width: 80vw !important;
+}
+
+/* 1. news */
+main #news {
+  margin-top: 20vw;
+}
+
+main #news .news-main-headline {
+  width: 100vw;
+  margin: 12vw auto;
+  text-align: center;
+}
+
+main #news .news-main-headline img {
+  width: 80%;
+  margin: 1vw auto;
+}
+
+main #news .news-main-headline img.catchimg {
+  width: 95%;
+  margin: 2vw auto;
+}
+
+main #news .news-main-headline .news-flex-item {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main #news .head_button {
+  width: 78vw;
+  margin: 5vw auto;
+  text-align: center;
+}
+
+main #news .head_button img {
+  width: 100%;
+}
+
+main #news .next_button {
+  width: 60vw;
+  margin: 5vw auto;
+}
+
+/* 2. appeal */
+main #appeal {
+  background-image: url("../img/background03.jpg");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 20vw;
+  z-index: 99999;
+}
+
+main #appeal .news-appeal-headline {
+  width: 95vw;
+  margin: 5vw auto;
+  text-align: center;
+}
+
+main #appeal .news-appeal-headline img {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+main #appeal .news-appeal-headline .head_button {
+  width: 80vw;
+  margin: 3vw auto;
+  text-align: center;
+}
+
+main #appeal .news-appeal-headline .head_button img {
+  width: 100%;
+  margin: 2vw auto;
+}
+
+main #appeal .news-appeal-headline .appeal {
+  width: 70vw;
+  margin: 3vw auto;
+  text-align: center;
+}
+
+main #appeal .news-appeal-headline .appeal img {
+  width: 100%;
+}
+
+main #appeal .news-appeal-headline .news-flex-item {
+  width: 90vw;
+  margin: 3vw auto 10vw auto;
+  padding-bottom: 15vw;
+  background-image: url("../img/news_bar01.png");
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: center bottom;
+  z-index: 99999;
+}
+
+main #appeal .news-appeal-headline .news-flex-item span {
+  width: 100%;
+  text-align: center;
+}
+
+main #appeal .news-appeal-headline .news-flex-item img {
+  width: 100%;
+  margin: 15vw auto;
+}
+
+main #appeal .news-appeal-headline .news-flex-item .news-main-text {
+  width: 85%;
+  margin: 0 auto;
+}
+
+main #appeal .news-appeal-headline .button-flex-item {
+  width: 90%;
+  margin: 12vw auto;
+}
+
+main #appeal .news-appeal-headline .button-flex-item .appeal-main-text {
+  width: 90%;
+  margin: 6vw auto;
+}
+
+/* 3. button */
+main #button {
+  text-align: center;
+}
+
+main #button img {
+  width: 85vw;
+}
+
+/* 8.menu */
+.poparea {
+  top: 0;
+  position: fixed;
+}
+
+.poparea a {
+  color: #000;
+  text-decoration: none;
+}
+
+.poparea .pop-base {
+  width: 70vw;
+  top: 50vw;
+  left: 10vw;
+  padding: 5vw 5vw 0;
+  position: fixed;
+  color: #606072;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 4px 3px #e5e5e5;
+  z-index: 99999;
+}
+
+.poparea .pop-base .batsu {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 10vw;
+}
+
+/*-------------------------------
+ ▼大型画面向けデザイン（PCなど）
+ --------------------------------*/
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 20px;
+  }
+
+  .textimg {
+    width: 500px !important;
+  }
+
+  /* 1. entry */
+  main {
+    margin: 10vw 0 0 0;
+  }
+
+  main #news {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  main #news .news-main-headline {
+    width: 828px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  main #news .news-main-headline img {
+    width: 75%;
+    margin: 3px auto 15px auto;
+    text-align: center;
+  }
+
+  main #news .news-main-headline h3 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  main #news .news-main-headline h3 span {
+    font-size: 35px;
+  }
+
+  main #news .news-main-headline .news-flex-item {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+  }
+
+  main #news .news-main-headline .news-flex-item .news-main-text {
+    width: 90%;
+    margin: 0 auto 80px auto;
+  }
+
+  main #news .news-main-headline .news-flex-item .news-main-text p {
+    font-size: 20px;
+  }
+
+  main #news .news-main-headline .news-flex-item .news-main-text img {
+    width: 500px;
+    margin: 0 auto 20px auto;
+  }
+
+  main #news .head_button {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  /* 3. appeal */
+  main #appeal {
+    margin-top: 50px;
+    background: none;
+  }
+
+  main #appeal .news-appeal-headline {
+    width: 828px;
+    margin: auto;
+    background-image: url("../img/background03.jpg");
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 20vw;
+    z-index: 99999;
+  }
+
+  main #appeal .news-appeal-headline img {
+    margin: 0;
+  }
+
+  main #appeal .news-appeal-headline .head_button {
+    width: 828px;
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  main #appeal .news-appeal-headline .head_button img {
+    margin: 0 auto;
+  }
+
+  main #appeal .news-appeal-headline .appeal {
+    width: 828px;
+    margin: 0;
+  }
+
+  main #appeal .news-appeal-headline .appeal img {
+    width: 80%;
+  }
+
+  main #appeal .news-appeal-headline .news-flex-item {
+    width: 828px;
+    margin: 0;
+    padding-bottom: 100px;
+    background-image: url("../img/news_bar01.png");
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: center bottom;
+    z-index: 99999;
+  }
+
+  main #appeal .news-appeal-headline .news-flex-item img {
+    width: 90%;
+    margin: 60px auto;
+  }
+
+  main #appeal .news-appeal-headline .news-flex-item .news-main-text {
+    width: 72%;
+    margin: auto;
+  }
+
+  main #appeal .news-appeal-headline .news-flex-item .news-main-text p {
+    font-size: 20px !important;
+  }
+
+  main #appeal .catch-image img {
+    width: 313px;
+    margin-top: 1140px;
+  }
+
+  main #appeal .news-appeal-headline .button-flex-item {
+    width: 90%;
+    margin: 80px auto;
+  }
+
+  main #appeal .news-appeal-headline .button-flex-item .appeal-main-text {
+    width: 90%;
+    margin: 40px auto;
+    font-size: 20px !important;
+  }
+
+  /* 4. button */
+  main #button {
+    width: 828px;
+    margin: 20px auto;
+    background: none;
+  }
+
+  main #button img {
+    width: 90%;
+  }
+
+  /* 5.pop */
+  .poparea {
+    top: 0;
+    position: fixed;
+  }
+
+  .poparea a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .poparea .pop-base {
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    padding: 24px 16px;
+    position: fixed;
+    color: #606072;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 4px 3px #e5e5e5;
+    z-index: 99999;
+    text-align: center;
+  }
+
+  .poparea .pop-base .batsu {
+    margin-left: 5%;
+    font-size: 50px;
+  }
+}
