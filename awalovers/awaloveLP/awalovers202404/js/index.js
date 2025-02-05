@@ -1,7 +1,7 @@
 /**
  * index.js
  *
- * function： LP画面用
+ * function： main js
  **/
 
 "use strict";
@@ -9,16 +9,16 @@
 (function ($) {
 
   $(function () {
-    // トグル用フラグ
+    // menu open flg
     let menuOpenFlg = false;
-    // トグル用フラグ
+    // toggle flg
     let menuFlg = false;
-    // 体験モニターボタン非表示
+    // hide line button
     $(".visual").hide();
-    // 透明体験モニターボタン表示
+    // show transparent line button
     $(".trans").show();
 
-    // モバイル
+    // when sp
     if (device() == 'mobile') {
       $(".fixed_btn").show();
 
@@ -26,74 +26,72 @@
       $(".fixed_btn").hide();
     }
 
-    // ハンバーガークリック時
+    // hamburger click
     $(".hamburger").on("click", function () {
-      // トグル
+      // toggle
       menuFlg = !menuFlg;
       menuOpenFlg = !menuOpenFlg;
 
-      // 画面最上部に位置をずらす
+      // scroll to top
       $(".menu-base").scrollTop($(window).scrollTop());
 
-      // フラグON
+      // toggle
       if (menuFlg) {
-        // メニューを非表示
+        // show menu
         $(".menuarea").removeClass("display-none");
       } else {
-        // メニューを表示
+        // hide menu
         $(".menuarea").addClass("display-none");
       }
     });
 
-    // メニュークリック時
+    // menu txt click
     $(".menu-text li a").on("click", function () {
-      // トグル
+      // toggle flg
       menuFlg = !menuFlg;
 
-      // フラグON
+      // menu open flg
       if (menuFlg) {
-        // メニューを表示
+        // show menu
         $(".menuarea").removeClass("display-none");
       } else {
-        // メニューを表示
+        // hide menu
         $(".menuarea").addClass("display-none");
       }
     });
 
-    // メニュー×ボタンクリック時
+    // menu × txt click
     $(".menuarea .batsu").on("click", function () {
-      // トグル
-      // menuFlg = true;
-      // メニューを非表示
+      // hide menu
       $(".menuarea").addClass("display-none");
     });
 
-    // ポップアップクリック時
+    // popup click
     $(".intro_button").on("click", function () {
-      // メニューを非表示
+      // show popup
       $(".poparea").removeClass("display-none");
-      // クリップボード貼り付け
+      // copy to clipboard
       copyTextToClipboard('https://ebisu.love/202404/');
     });
 
-    // ポップアップ×ボタンクリック時
+    // popup × txt click
     $(".poparea .batsu").on("click", function () {
-      // メニューを非表示
+      // hide popup
       $(".poparea").addClass("display-none");
     });
 
-    // 他の要素のクリックで閉じる
+    // click when on others
     $(document).click(function(event) {
       if (!$(event.target).closest('.menu-text li a').length && !$(event.target).closest('.hamburger').length && !$(event.target).closest('.check_lb').length && !$(event.target).closest('.header-logo').length && !$(event.target).closest('.button_area').length){
-         // トグル
+         // toggle
           menuFlg = !menuFlg;
 
-          // フラグON
+          // flg on
           if (menuFlg && menuOpenFlg) {
-              // メニューを表示
+              // show menu
               $(".menuarea").removeClass("display-none");
           } else {
-              // メニューを表示
+              // hide menu
               $(".menuarea").addClass("display-none");
           }
       }
@@ -102,6 +100,7 @@
 
 })(window.jQuery);
 
+// detect terminal
 function device() {
   const ua = navigator.userAgent;
   if (ua.indexOf('iPhone') > 0 || ua.indexOf('iPod') > 0 || ua.indexOf('Android') > 0 && ua.indexOf('Mobile') > 0) {
@@ -113,7 +112,7 @@ function device() {
   }
 }
 
-// クリップボードへコピー（コピーの処理）
+// copy to clipboard
 function copyTextToClipboard(textToCopy) {
   if (navigator?.clipboard?.writeText) {
     return navigator.clipboard.writeText(textToCopy);

@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&display=swap');
 
 /*------------------------------
- ▼共通デザイン（モバイル向け）
+ ▼sp css
  -------------------------------*/
 body {
     width: 100vw;
@@ -503,7 +503,7 @@ footer .footer-logo img {
 }
 
 /*-------------------------------
- ▼大型画面向けデザイン（PCなど）
+ ▼pc css
  --------------------------------*/
 @media screen and (min-width: 769px) {
     body {

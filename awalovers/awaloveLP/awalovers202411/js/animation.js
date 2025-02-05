@@ -1,7 +1,7 @@
 /**
  * animation.js
  *
- * function： アニメーション用
+ * function： button animation
  **/
 
 "use strict";

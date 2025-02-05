@@ -1,7 +1,7 @@
 /**
- * form.js
+ * animation.js
  *
- * function： LP画面用
+ * function： button animation
  **/
 
 "use strict";

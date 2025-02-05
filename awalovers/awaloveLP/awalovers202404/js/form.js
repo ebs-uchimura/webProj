@@ -1,93 +1,62 @@
 /**
  * form.js
  *
- * function： 注文フォーム用
+ * function： order form
  **/
 
 "use strict";
 
 $(function () {
-  // 高さ
+  // height
   const q02height = $("#q02").offset().top;
   const q03height = $("#q03").offset().top;
   const q04height = $("#q04").offset().top;
   const questionheight = $("#questionaire").offset().top - 50;
   const policyheight = $("#policy").offset().top;
 
-  // データレイヤー初期化
+  // initialize datalayer
   window.dataLayer = window.dataLayer || [];
 
-  // アンケートボタンクリック
+  // click questionnaire button
   $('.fiximg').click(function () {
-    // モバイル
+    // animation
     $('html, body').animate({
       scrollTop: questionheight
     }, 300);
   });
 
-  // アンケートボタンクリック
+  // click story button
   $('.hearing').click(function () {
-    // モバイル
+    // animation
     $('html, body').animate({
       scrollTop: questionheight
     }, 300);
   });
 
-  /*
-  // ラジオボタン変更
-  $('input[name="q01[]"]:radio').change(function () {
-    // モバイル
-    $('html, body').animate({
-      scrollTop: q02height
-    }, 300);
-  });
-
-  // ラジオボタン変更
-  $('input[name="q02[]"]:radio').change(function () {
-    // モバイル
-    $('html, body').animate({
-      scrollTop: q03height
-    }, 300);
-  });
-
-  // ラジオボタン変更
-  $('input[name="q03[]"]:radio').change(function () {
-    // モバイル
-    $('html, body').animate({
-      scrollTop: q04height
-    }, 300);
-  });
-
-  // ラジオボタン変更
-  $('input[name="q04[]"]:radio').change(function () {
-    $('html, body').animate({
-      scrollTop: policyheight
-    }, 300);
-  });
-  */
-
-  // チェック変更
+  // checkbox changed
   $('input[name="privacypolicy"], input[name="information"]').change(function () {
+    // privacypolicy button
     let $btn1 = $('.privacypolicy');
+    // information button
     let $btn2 = $('.information');
 
-    // チェック時
+    // checked
     if ($btn1.prop('checked') && $btn2.prop('checked')) {
-        // 体験モニターボタン表示
+        // show line button
         $(".visual").show();
-        // 透明体験モニターボタン非表示
+        // hide line transparent button
         $(".trans").hide();
 
     } else {
-        // 体験モニターボタン表示
+        // hide line button
         $(".visual").hide();
-        // 透明体験モニターボタン非表示
+        // show line transparent button
         $(".trans").show();
     }
 });
 });
 
-// スマホ判定
+// detect smartphone
 function isSmartPhone() {
   if (navigator.userAgent.match(/iPhone|Android.+Mobile/)) {
     return true;

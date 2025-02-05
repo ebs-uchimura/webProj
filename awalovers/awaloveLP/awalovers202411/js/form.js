@@ -1,71 +1,37 @@
 /**
  * form.js
  *
- * function： LP画面用
+ * function： LP form
  **/
 
 "use strict";
 
 $(function () {
-    // 高さ
+    // height
     const q02height = $("#q02").offset().top + 50;
     const q03height = $("#q03").offset().top + 70;
     const q04height = $("#q04").offset().top + 100;
     const policyheight = $("#policy").offset().top - 200;
-    // データレイヤー初期化
+    // initialize dataLayer
     window.dataLayer = window.dataLayer || [];
     $(".visual").hide();
-
-    /*
-    // ラジオボタン変更
-    $('input[name="q01[]"]:radio').change(function () {
-        // モバイル
-        $('html, body').animate({
-        scrollTop: q02height
-        }, 300);
-    });
-
-    // ラジオボタン変更
-    $('input[name="q02[]"]:radio').change(function () {
-        // モバイル
-        $('html, body').animate({
-        scrollTop: q03height
-        }, 300);
-    });
-
-    // ラジオボタン変更
-    $('input[name="q03[]"]:radio').change(function () {
-        // モバイル
-        $('html, body').animate({
-        scrollTop: q04height
-        }, 300);
-    });
-
-    // ラジオボタン変更
-    $('input[name="q04[]"]:radio').change(function () {
-        // モバイル
-        $('html, body').animate({
-        scrollTop: policyheight
-        }, 300);
-    });
-    */
     
-    // チェック変更
+    // change check
     $('input[name="privacypolicy"], input[name="information"]').change(function () {
         let $btn1 = $('.privacypolicy');
         let $btn2 = $('.information');
 
-        // チェック時
+        // button 1 checked
         if ($btn1.prop('checked') && $btn2.prop('checked')) {
-            // 体験モニターボタン表示
+            // show line button
             $(".visual").show();
-            // 透明体験モニターボタン非表示
+            // hide transparent line button
             $(".trans").hide();
 
         } else {
-            // 体験モニターボタン表示
+            // hide line button
             $(".visual").hide();
-            // 透明体験モニターボタン非表示
+            //  show transparent line button
             $(".trans").show();
         }
     });

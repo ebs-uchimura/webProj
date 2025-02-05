@@ -5,7 +5,7 @@
 @charset "utf-8";
 
 /*------------------------------
- ▼共通デザイン（モバイル向け）
+ ▼sp css
  -------------------------------*/
 li a {
   display: block;
@@ -309,7 +309,7 @@ main #policy .annotation p {
 }
 
 /*-------------------------------
- ▼大型画面向けデザイン（PCなど）
+ ▼pc css
  --------------------------------*/
 @media screen and (min-width: 768px) {
   input[type=checkbox] {
