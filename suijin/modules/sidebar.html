@@ -30,18 +30,23 @@
                         <{section name=i loop=$category_menu.list}>
                         <!-- VIPか業務会員 -->
                         <{if ($member.group_id == 1 || $member.group_id == 2)}>
-                            <{if ($category_menu.list[i].name == "焼酎[会員]" || $category_menu.list[i].name == "ワイン[会員]" || $category_menu.list[i].name == "ウイスキー[会員]" || $category_menu.list[i].name == "リキュール[会員]" || $category_menu.list[i].name == "日本酒[会員]" || $category_menu.list[i].name == "名入れ商品[会員]" || $category_menu.list[i].name == "食品・サプリメント[会員]" || $category_menu.list[i].name == "グラス[会員]" || $category_menu.list[i].name == "ゑびす工房[会員]" || $category_menu.list[i].name == "泡ラヴァーズ" || $category_menu.list[i].name == "ギフト")}>
-                                <li class="side-category-item">
-                                    <a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
-                                </li>
-                            <{/if}>
+                           <{if ($category_menu.list[i].code > 100 && $category_menu.list[i].code < 200)}>
+                              <li class="side-category-item">
+                                <a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
+                              </li>
+                           <{/if}>
                         <!-- ゲストか一般会員 -->
                         <{else}>
-                            <{if ($category_menu.list[i].name != "すべての商品" && $category_menu.list[i].name != "焼酎[会員]" && $category_menu.list[i].name != "ワイン[会員]" && $category_menu.list[i].name != "ウイスキー[会員]" && $category_menu.list[i].name != "リキュール[会員]" && $category_menu.list[i].name != "日本酒[会員]" && $category_menu.list[i].name != "名入れ商品[会員]" && $category_menu.list[i].name != "食品・サプリメント[会員]" && $category_menu.list[i].name != "グラス[会員]" && $category_menu.list[i].name != "ゑびす工房[会員]")}>
-                                <li class="side-category-item">
-                                    <a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
-                                </li>
+                           <{if ($category_menu.list[i].code < 100)}>
+                              <li class="side-category-item">
+                                <a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
+                              </li>
                             <{/if}>
+                        <{/if}>
+                        <{if ($category_menu.list[i].code > 200)}>
+                            <li class="side-category-item">
+                              <a href="<{$category_menu.list[i].url}>"><{$category_menu.list[i].name}></a>
+                            </li>
                         <{/if}>
                         <{/section}>
                         </ul>
