@@ -104,7 +104,6 @@
               <{rakuten_pay_banner type='logo3' size='small'}>
             </li>
           </ul>
-          
         </div>
       </div>
       <img src="https://img07.shop-pro.jp/PA01427/727/etc_base64/dG9wXzAwMQ.png?cmsp_timestamp=20241107161816">
@@ -113,7 +112,7 @@
           
           <div class="shopname__ad-wrap">
             <div class="shopname__ad shopname__ad-deli">
-              <p><i class="icon-lg-w icon-box"></i>全国一律送料550円（税込）</p>
+              <p><i class="icon-lg-w icon-box"></i>全国一律送料770円（税込）</p>
             </div>
             <div class="shopname__ad shopname__ad-tell">
               <p><i class="icon-lg-w icon-phone"></i>電話注文：099-259-5511</p>
@@ -229,6 +228,7 @@
         </div>
       </div>
     </div>
+
     <div id="contents" class="contents__section container">
       <{if $tpl_name == "top" && $free_space != ""}>
         <{$free_space}>
@@ -371,6 +371,7 @@
         <{if $history_num != 0}>
           <ul class="history-list product-list row">
             <{section name=num loop=$history max=6}>
+              <{ if $history[num].name|replace:"【社販】":"" == $history[num].name }>
               <li class="history-list__unit product-list__unit col col-lg-2 col-md-4 col-sm-6">
                 <a href="<{$history[num].link_url}>">
                   <{if $history[num].img_url != ""}>
@@ -408,6 +409,7 @@
                   <{/if}>
                 </p>
               </li>
+              <{/if}>
             <{/section}>
           </ul>
         <{else}>
@@ -439,6 +441,8 @@
             <h3 class="notice-heading">配送・送料について</h3>
             <dl class="notice-list">
               <{section name=num loop=$sk_delivery}>
+                <{if $sk_delivery[num].name != "拠点納品" }>
+                <{if $sk_delivery[num].name != "佐川急便（社販）" }>
                 <dt class="notice-list__name">
                   <{$sk_delivery[num].name}>
                 </dt>
@@ -448,6 +452,8 @@
                   <{/if}>
                   <{$sk_delivery[num].other}>
                 </dd>
+                <{/if}>
+                <{/if}>
               <{/section}>
             </dl>
           <{/if}>
@@ -476,9 +482,11 @@
               <dl class="notice-list">
                 <{section name=num loop=$sk_payment}>
                   <{if $sk_payment[num].name != "現金" }>
+                  <{if $sk_payment[num].name != "給与天引" }>
                   <dt class="notice-list__name">
                     <{$sk_payment[num].name}>
                   </dt>
+                  <{/if}>
                   <{/if}>
                   <dd class="notice-list__unit">
                     <{if $sk_payment[num].img_url != "" }>

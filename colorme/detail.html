@@ -113,18 +113,13 @@ $('img.thumb').click(function(){
         <div class="product-info-box">
           <!-- 価格・定価 -->
           <p class="product-price">
-            
-            <{if $sid_name != "社販サプリメント" && $sid_name != "社販芋焼酎" && $sid_name != "社販麦焼酎" && $sid_name != "社販ワイン" && $sid_name != "社販ウイスキー" && $sid_name != "社販日本酒" && $sid_name != "社販リキュール他" && $sid_name != "社販ゑびす堂マルシェ" && $sid_name != "社販オプション" && $sid_name != "社販グッズ" && $sid_name != "佐藤ミナコ"}>
+            <{if $sid_name != "社販サプリメント" && $sid_name != "社販芋焼酎" && $sid_name != "社販麦焼酎" && $sid_name != "社販ワイン" && $sid_name != "社販ウイスキー" && $sid_name != "社販日本酒" && $sid_name != "社販リキュール他" && $sid_name != "社販ゑびす堂マルシェ" && $sid_name != "社販オプション" && $sid_name != "社販ギフト商品" && $sid_name != "社販グッズ" && $sid_name != "佐藤ミナコ"}>
               <{if $members_login_flg == true && $product.discount_flg == true}>
-              
                 <span class="product-price-discount"><{$product.sales}></span>
                 <span class="product-price-discount-rate"><{$product.discount_rate}>OFF</span>
                 <span class="product-price-regular hidden-phone">←&nbsp;通常価格&nbsp;<{$product.regular_price}></span>
                 <span class="product-price-regular show visible-phone">↑&nbsp;通常価格&nbsp;<{$product.regular_price}></span>
               <{else}>
-              <{if $product.price_disp}>
-            <p class="product-price-establish">定価&nbsp;<{$product.price}></p>
-          <{/if}>
   						<span class="base-price">
   							<{$product.sales}>
   						</span>
@@ -134,7 +129,9 @@ $('img.thumb').click(function(){
               </span>
               <{/if}>
           </p>
-          
+          <{if $product.price_disp}>
+            <!--<p class="product-price-establish">定価&nbsp;<{$product.price}></p>-->
+          <{/if}>
           <!-- // 価格・定価 -->
         </div>
         <div class="product-info-box">
@@ -232,7 +229,7 @@ $('img.thumb').click(function(){
               <!-- 購入フォーム -->
                 <div class="product-order row">
                   <dl class="product-init-list col col-lg-4 col-sm-12">
-                    <{if $sid_name != "社販サプリメント" && $sid_name != "社販芋焼酎" && $sid_name != "社販麦焼酎" && $sid_name != "社販ワイン" && $sid_name != "社販ウイスキー" && $sid_name != "社販日本酒" && $sid_name != "社販リキュール他" && $sid_name != "社販ゑびす堂マルシェ" && $sid_name != "社販オプション" && $sid_name != "社販グッズ"}>
+                    <{if $sid_name != "社販サプリメント" && $sid_name != "社販芋焼酎" && $sid_name != "社販麦焼酎" && $sid_name != "社販ワイン" && $sid_name != "社販ウイスキー" && $sid_name != "社販日本酒" && $sid_name != "社販リキュール他" && $sid_name != "社販ゑびす堂マルシェ" && $sid_name != "社販オプション" && $sid_name != "社販ギフト商品" && $sid_name != "社販グッズ"}>
                     <dt class="product-init-list__name">
                       購入数
                     </dt>
@@ -261,7 +258,7 @@ $('img.thumb').click(function(){
 											<{if $product.password_field != "" }>
 												商品を購入するためのパスワードを入力してください。<{$product.password_field}>
 											<{/if}><br><br>
-                        <{if $sid_name != "社販サプリメント" && $sid_name != "社販芋焼酎" && $sid_name != "社販麦焼酎" && $sid_name != "社販ワイン" && $sid_name != "社販ウイスキー" && $sid_name != "社販日本酒" && $sid_name != "社販リキュール他" && $sid_name != "社販ゑびす堂マルシェ" && $sid_name != "社販オプション" && $sid_name != "社販グッズ"}>
+                        <{if $sid_name != "社販サプリメント" && $sid_name != "社販芋焼酎" && $sid_name != "社販麦焼酎" && $sid_name != "社販ワイン" && $sid_name != "社販ウイスキー" && $sid_name != "社販日本酒" && $sid_name != "社販リキュール他" && $sid_name != "社販ゑびす堂マルシェ" && $sid_name != "社販オプション" && $sid_name != "社販ギフト商品" && $sid_name != "社販グッズ"}>
                         <li class="product-order-btn-list__unit col <{$product_order_btn_col}>">
                           <button type="submit" class="btn--addcart btn btn-block cart_in_async">
                             <i class="icon-lg-w icon-cart"></i>カートに入れる
@@ -272,7 +269,7 @@ $('img.thumb').click(function(){
 											<{if $product.password_field != "" }>
 												商品を購入するためのパスワードを入力してください。<{$product.password_field}>
 											<{/if}><br><br>
-                        <{if $sid_name != "社販サプリメント" && $sid_name != "社販芋焼酎" && $sid_name != "社販麦焼酎" && $sid_name != "社販ワイン" && $sid_name != "社販ウイスキー" && $sid_name != "社販日本酒" && $sid_name != "社販リキュール他" && $sid_name != "社販ゑびす堂マルシェ" && $sid_name != "社販オプション" && $sid_name != "社販グッズ"}>
+                        <{if $sid_name != "社販サプリメント" && $sid_name != "社販芋焼酎" && $sid_name != "社販麦焼酎" && $sid_name != "社販ワイン" && $sid_name != "社販ウイスキー" && $sid_name != "社販日本酒" && $sid_name != "社販リキュール他" && $sid_name != "社販ゑびす堂マルシェ" && $sid_name != "社販オプション" && $sid_name != "社販ギフト商品" && $sid_name != "社販グッズ"}>
                         <li class="product-order-btn-list__unit col <{$product_order_btn_col}> disable_cartin">
                           <button type="submit" class="btn--addcart btn btn-block">
                             <i class="icon-lg-w icon-cart"></i>カートに入れる
