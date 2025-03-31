@@ -7,6 +7,12 @@ $(function () {
 
     $(window).on("load", function () {
         setGoodsImg();
+        $("#transfer-url").delay(1000).queue(function(){
+            const tmpUrl = $("#transfer-url").html();
+            if (tmpUrl != "") {
+                location.href = $("#transfer-url").html();
+            }
+        });
     });
 
     function setGoodsImg() {
@@ -122,3 +128,4 @@ function showOptionImage(url) {
 
     $('ul.goods-thumbnail img[src="' + url + '"]').trigger("click");
 }
+

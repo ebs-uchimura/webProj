@@ -33,6 +33,18 @@
                     <div class="cartin-msg-sp">ログインして下さい</div>
                 <{/if}>
             </div>
+            <div>
+                <{if ($member.group_id == 1 || $member.group_id == 2)}>
+                    <{if ($item.base_category.code < 100)}>
+                        <div id="transfer-url" style="display: none;">https://suijinclub.jp
+                        </div>
+                    <{else}>
+                        <div id="transfer-url"></div>
+                    <{/if}>
+                <{else}>
+                    <div id="transfer-url"></div>
+                <{/if}>
+            </div>
             <{if $item.breadcrumb_list_group.has_item}>
             <{section name=i loop=$item.breadcrumb_list_group.list}>
                 <{if $item.breadcrumb_list_group.list[i].has_item}>
@@ -48,7 +60,7 @@
             <section class="goods-wrapper">
                 <div class="goods-main-wrapper">
                     <div class="goods-main-img">
-                        <ul id="goods-img" class="goods-img<{if !$item.multi_image.has_item}> goods-img-single<{/if}>">
+                        <ul id="goods-img" value="hoge" class="goods-img<{if !$item.multi_image.has_item}> goods-img-single<{/if}>">
                             <{if $item.multi_image.has_item}>
                                 <{section name=i loop=$item.multi_image.list}>
                                     <li>
