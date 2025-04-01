@@ -29,6 +29,18 @@
         <div class="container">
             <{$module.side}>
             <main class="main">
+                <div>
+                    <{if ($member.group_id == 1 || $member.group_id == 2)}>
+                        <{if ($item.base_category.code < 100)}>
+                            <div id="transfer-url" style="display: none;">https://suijinclub.jp
+                            </div>
+                        <{else}>
+                            <div id="transfer-url"></div>
+                        <{/if}>
+                    <{else}>
+                        <div id="transfer-url"></div>
+                    <{/if}>
+                </div>
                 <section class="main-section">
                     <{if $category.recommend_item.has_item}>
                     <h2><{$category.name}>のおすすめ商品</h2>
