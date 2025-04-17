@@ -1,0 +1,301 @@
+/*
+/* index.css
+*/
+
+@charset "utf-8";
+
+/*------------------------------
+ ▼ forSP
+ -------------------------------*/
+/* main */
+main .img-txt {
+  margin: 10vw 0 0 0;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+/* main div */
+main div {
+  margin: 5vw 0;
+}
+
+/* main h3 */
+main div >h3 {
+  width: 90vw;
+  margin: 5vw auto;
+  padding: 3vw 0 3vw 2vw;
+  font-size: 6vw;
+  color: #373866;
+  text-align: left;
+  border-top: solid 1px #373866;
+  border-bottom: solid 1px #373866;
+}
+
+/* product main */
+main div .product-row-wrapper {
+  display: flex;
+  width: 100vw;
+  margin: 10vw 0;
+  padding: 0 0 1em;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  word-break: keep-all;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+.main div .product-row-wrapper::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none !important;
+}
+
+main div .product-row-wrapper .product-row-child {
+  width: 90%;
+  height: 100%;
+  flex: 0 0 78%;
+  margin: 0px 1vw;
+  scroll-snap-align: center;
+}
+
+main div .product-row-wrapper .product-row-child ul li.rank-image {
+  margin-bottom: 0;
+  vertical-align: bottom;
+}
+
+main div .product-row-wrapper .product-row-child ul li.rank-image>img {
+  margin-left: 60vw;
+  vertical-align: bottom;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-image {
+  height: 80vw;
+  margin-bottom: 2vw;
+  position: relative;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-image a i {
+  padding: 2% 0 0 88%;
+  color: #eee;
+  font-size: 2rem;
+  z-index: 9999;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-image a img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border: 1px solid #e4e4e4;
+  z-index: -9999;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-image .icon {
+  position: absolute;
+  width: 30vw;
+  top: 3vw;
+  left: 3vw;
+  z-index: 100;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0 7vw;
+  color: red;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-price .price {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-price .piece-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-price .piece-area .piece {
+  width: 15vw;
+  text-align: center;
+  color: #fff;
+  border-radius: 1vw;
+  font-size: 0.8rem;
+  margin-right: 10vw;
+  font-weight: 500;
+  line-height: 2em;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-price .piece-area .annotation {
+  font-size: 0.65rem;
+  text-align: left;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-text {
+  margin: 5vw 0;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-text p {
+  font-size: 3.6vw;
+  padding: 0 3vw;
+  word-break: break-all;
+  text-align: left;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-buttons div {
+  position: relative;
+  width: 80%;
+  height: 10vw;
+  margin: 1vw auto;
+}
+
+main div .product-row-wrapper .product-row-child ul li.list-buttons button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+
+main div ul.news-flex {
+  width: 95%;
+  margin: 10vw auto;
+}
+
+main div ul.news-flex li.list-image {
+  width: 100%;
+  text-align: center;
+}
+
+main div ul.news-flex li.list-image img {
+  width: 100%;
+}
+
+main div ul.news-flex li.list-title h4 {
+  width: 100%;
+  padding: 0 0 2vw 0;
+  text-align: left;
+  border-bottom: 1px solid #373866;
+}
+
+main div ul.news-flex li.list-content {
+  width: 100%;
+}
+
+main div ul.news-flex li.list-date {
+  padding: 1vw 0 0 0;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+main div ul li.list-seemore {
+  margin: 15vw 0 0 0;
+  text-align: center;
+}
+
+main div ul li.list-seemore .btn {
+  padding: 2vw 8vw;
+  color: #fff;
+  background-color: #373866;
+}
+
+main div ul li.list-seemore .btn:hover,
+a.btn:hover {
+  color: #fff;
+  background: #373866;
+}
+
+main .main-appeal-wrapper {
+  margin: 25vw 0 15vw;
+  text-align: center;
+}
+
+main .main-appeal-wrapper img {
+  width: 90%;
+  margin: 5vw 0;
+}
+
+main .main-category-wrapper {
+  width: 90%;
+  margin: 5vw auto;
+}
+
+main .main-category-wrapper ul {
+  width: 90%;
+  margin: 5vw 0;
+  text-align: center;
+}
+
+main .main-category-wrapper ul li  {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90vw;
+  height: 15vw;
+  margin: 5vw 0;
+  background-color: #373866;
+}
+
+main .main-category-wrapper ul li .btn {
+  color: #fff;
+  background-color: #373866;
+  font-size: 5vw;
+}
+
+main .main-category-wrapper ul li .btn:hover,
+a.btn:hover {
+  color: #fff;
+  background: #373866;
+}
+
+main .main-genre-wrapper  {
+  width: 90%;
+  margin: 15vw auto;
+  text-align: center;
+}
+
+main .main-genre-wrapper img {
+  width: 100%;
+}
+
+main .main-genre-wrapper h4 {
+  font-size: 5vw;
+}
+
+main .main-genre-wrapper p {
+  margin: 0 0 10vw 0;
+  font-size: 3vw;
+}
+
+main .main-genre-wrapper .btn {
+  font-size: 4vw;
+  padding: 2vw 8vw;
+  color: #fff;
+  background-color: #373866;
+}
+
+main .main-genre-wrapper .btn:hover,
+a.btn:hover {
+  color: #fff;
+  background: #373866;
+}
+
+/*-------------------------------
+ ▼forPC
+ --------------------------------*/
+@media screen and (min-width: 769px) {
+
+}

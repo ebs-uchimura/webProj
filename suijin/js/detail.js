@@ -5,6 +5,7 @@ $(function () {
         windowWidth = $(window).width(),
         windowBreakPoint = 1000;
 
+    /*
     $(window).on("load", function () {
         setGoodsImg();
         $("#transfer-url").delay(1000).queue(function(){
@@ -14,6 +15,7 @@ $(function () {
             }
         });
     });
+    */
 
     function setGoodsImg() {
         if ($goodsImg.find("li").length > 1) {
