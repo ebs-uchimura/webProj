@@ -1,0 +1,303 @@
+/*
+/* index.css
+*/
+
+@charset "utf-8";
+
+/*------------------------------
+ ▼ forSP
+ -------------------------------*/
+/* general */
+h1 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+ol {
+  padding: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+main div h3 {
+  text-align: center;
+  color: #373866;
+}
+
+main div.wrap {
+  margin: 0 0 5vw 0;
+}
+
+/* detail main */
+main .detail-main-wrapper {
+  width: 100vw;
+}
+
+/* main p */
+main .detail-main-wrapper>p {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 3.2vw;
+  color: #373866;
+  text-align: left;
+}
+
+/* category area */
+main .detail-main-wrapper {
+  margin: 5vw 0;
+}
+
+/* category product */
+main .detail-main-wrapper .detail-main-child {
+  width: 90%;
+  margin: 3vw auto;
+  text-align: center;
+}
+
+main .detail-main-wrapper .detail-main-child .detail-main-img {
+  padding: 2vw;
+  border: 1px solid #e4e4e4;
+}
+
+main .detail-main-wrapper .detail-main-child .detail-main-img .detailimg {
+  width: 100%;
+}
+
+/* category product title */
+main .detail-main-wrapper .detail-main-child .detail-flex {
+  margin: 5vw auto;
+}
+
+/* category product title */
+main .detail-main-wrapper .detail-main-child .detail-flex .list-title {
+  width: 85%;
+  margin: 1vw 0;
+  padding: 0 0 0 4vw;
+  font-size: 4vw;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* category product price */
+main .detail-main-wrapper .detail-main-child .detail-flex .list-review {
+  margin: 1vw 4vw;
+  text-align: left;
+}
+
+/* category product price */
+main .detail-main-wrapper .detail-main-child .detail-flex .list-price {
+  margin: 2vw 0;
+  padding: 0 0 0 5vw;
+  font-size: 4vw;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* category product order button */
+main .detail-main-wrapper .detail-main-child .detail-flex .list-content {
+  margin: 3vw auto;
+}
+
+/* category product order button */
+main .detail-main-wrapper .detail-main-child .detail-flex .list-content p {
+  margin: 2vw 0;
+  padding: 0 0 0 5vw;
+  text-align: left;
+  font-size: 3vw;
+}
+
+main .detail-main-wrapper .detail-main-child .detail-flex .number-area {
+  display: flex;
+  margin: 5vw 0 5vw 5vw;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+main .detail-main-wrapper .detail-main-child .detail-flex .number-area .numarea {
+  width: 12vw;
+  height: 10vw;
+  margin: 0 1vw;
+  text-align: center;
+}
+
+main .detail-main-wrapper .detail-main-child .detail-flex .number-area .plusbutton {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #373866;
+  color: #fff;
+}
+
+/* category product order button */
+main .detail-main-wrapper .detail-main-child .detail-flex .number-area .minusbutton {
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #696a7e;
+  color: #fff;
+}
+
+/* category product order button */
+main .detail-main-wrapper .detail-main-child .detail-flex .number-area .favbutton {
+  margin: 0 0 0 40%;
+  color: #eee;
+  font-size: 7vw;
+}
+
+main .detail-main-wrapper .detail-main-child .detail-flex .list-buttons .btn .order button {
+  width: 90%;
+  background-color: #e40014;
+  color: #fff;
+  padding: 3.5vw 0;
+  text-decoration: none;
+  font-size: 3.5vw;
+  border-radius: 2px;
+}
+
+/* information */
+main .detail-main-wrapper .information-main-wrapper {
+  margin: 5vw auto;
+}
+
+main .detail-main-wrapper .information-main-wrapper>hr {
+  width: 90%;
+  height: 1px;
+  margin: 15vw auto 5vw;
+  background-color: #373866;
+}
+
+main .detail-main-wrapper .information-main-wrapper .information-area {
+  width: 90%;
+  margin: 0 auto;
+  color: #000;
+  font-size: 3.2vw;
+}
+
+/* category product order button */
+main .detail-main-wrapper .information-main-wrapper .information-area .information-flex {
+  margin: 2vw auto;
+}
+
+/* category product order button */
+main .detail-main-wrapper .information-main-wrapper .information-area .information-flex li {
+  margin: 1vw auto;
+}
+
+main .detail-main-wrapper .information-main-wrapper .information-area .information-flex .info-details {
+  margin: 3vw 0 0 0;
+}
+
+/* review area */
+main .review-main-wrapper {
+  margin: 10vw auto;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex {
+  margin: 5vw auto;
+  text-align: center;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-head {
+  text-align: center;
+  font-size: 3vw;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-reviews ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-reviews ul li div {
+  padding: 0 2vw;
+  color: #e40014;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-reviews ul li .number {
+  font-size: 3vw;
+  color: #373866;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-title {
+  margin: 8vw auto;
+  color: #373866;
+  font-size: 5vw;
+  font-weight: 600;
+  text-align: center;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-reviews button {
+  width: 90%;
+  background-color: #e40014;
+  color: #fff;
+  padding: 3.5vw 0;
+  text-decoration: none;
+  font-size: 3.5vw;
+  border-radius: 2px;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-newest {
+  width: 90%;
+  display: block;
+  margin: 5vw auto;
+  text-align: left;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-newest .inner ul {
+  text-align: left;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-newest .inner ul li.list-review {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 2vw 0;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-newest .inner ul li.list-review .date {
+  color: #a9a9a9;
+  font-size: 3vw;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-newest .inner ul li.list-profile {
+  display: flex;
+  justify-content: flex-start;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-newest .inner ul li.list-profile .usericon {
+  color: #e40014;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-newest .inner ul li.list-profile .username {
+  color: #e40014;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-newest .inner ul li.list-title {
+  margin: 2vw 0;
+  color: #000;
+  font-size: 3vw;
+  text-align: left;
+}
+
+main .review-main-wrapper .review-main-child ul.review-flex li.list-newest .inner ul li.list-content {
+  color: #000;
+  font-size: 3vw;
+}
+
+main .review-main-wrapper hr {
+  width: 90%;
+  height: 1px;
+  margin: 5vw auto;
+  background-color: #373866;
+}
+
+/*-------------------------------
+ ▼forPC
+ --------------------------------*/
+@media screen and (min-width: 769px) {}

@@ -1,0 +1,47 @@
+/*
+/* index.css
+*/
+
+@charset "utf-8";
+
+/*------------------------------
+ ▼ forSP
+ -------------------------------*/
+/* general */
+body {
+  margin: 0;
+}
+
+h1 {
+  font-size: 10vw;
+}
+
+h2 {
+  font-size: 6.8vw;
+}
+
+h3 {
+  font-size: 6vw;
+}
+
+h4 {
+  font-size: 4.5vw;
+}
+
+/* 0. head */
+header {
+  width: 100vw;
+}
+
+header .header-img-wrapper {
+  width: 100%;
+}
+
+header .header-img-wrapper img {
+  width: 100%;
+}
+
+header .header-img-wrapper .header-headline-wrapper {
+  width: 100%;
+}
+

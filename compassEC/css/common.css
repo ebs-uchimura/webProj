@@ -18,6 +18,10 @@ body {
   font-family: sans-serif;
 }
 
+h1 {
+  padding: 0;
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -26,6 +30,66 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+details {
+  --arrow-size: 18px;
+  --anime-speed: 0.3s;
+}
+
+details summary {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  font-weight: 700;
+  padding: 1.5em calc(var(--arrow-size) + 3em) 1.5em 3.5em;
+  background: #fff;
+  border-top: solid 1px #fdeded;
+  border-bottom: solid 1px #fdeded;
+  cursor: pointer;
+}
+
+details summary::-webkit-details-marker {
+  /* iOSで表示されるデフォルトの三角形アイコンを消す */
+  display: none;
+}
+
+/* ※本来はafter要素の装飾で十分だが、iOSだと疑似要素に「transition」が効かないので、通常のタグを装飾 */
+details summary .ico {
+  position: absolute;
+  top: 0;
+  right: 1.5em;
+  bottom: 0;
+  display: block;
+  width: var(--arrow-size);
+  height: calc(var(--arrow-size) * 0.6);
+  /*aspect-ratio: 1/0.6;*/
+  /* ※追記 Windows版Chrome124にてaspect-ratioを指定した要素と、position: absoluteの位置調整の組み合わせに不具合が発生したため、height値をcalcの計算に切り替え */
+  margin: auto;
+  background: #e40014;
+  clip-path: polygon(100% 13%, 50% 100%, 0 13%, 8% 0, 50% 73%, 92% 0);
+  transition: transform var(--anime-speed);
+}
+
+details[open] summary .ico {
+  transform: rotate(180deg);
+}
+
+details .inner {
+  position: relative;
+  padding: 1.5em 1.5em 1.5em 3.5em;
+  background: #fff;
 }
 
 /* terminal */
@@ -38,7 +102,16 @@ a {
 }
 
 /* font */
-.small {
+.headline-big {
+  font-size: 7vw;
+}
+
+.headline-standard {
+  font-size: 5.6vw;
+}
+
+.headline-small {
+  padding: 0 0 0 1vw;
   font-size: 3vw;
 }
 
@@ -80,15 +153,14 @@ header .header-wrapper .header-logo a img {
 }
 
 header .header-wrapper .header-icon {
-  margin: 1vw 1vw 0 1vw;
+  margin: 0vw 1vw 0 1vw;
 }
 
 header .header-wrapper .header-icon i {
- color: #373866;
+  color: #373866;
 }
 
-header .header-wrapper .header-icon img
- {
+header .header-wrapper .header-icon img {
   width: 18px;
 }
 
@@ -122,6 +194,7 @@ header .search-box::before {
 header .search-box input {
   width: 100vw;
   height: 10vw;
+  border-style: solid;
   border-top-width: 1px;
   border-right-width: 0;
   border-bottom-width: 1px;
@@ -135,12 +208,172 @@ header .search-box input::placeholder {
 }
 
 header .search-box input:focus::placeholder {
-	color: transparent;
+  color: transparent;
+}
+
+/* breadcrumb */
+.main-breadcrumb-wrapper {
+  width: 100vw;
+}
+
+.main-breadcrumb-wrapper .breadcrumb {
+  padding: 0 0 0 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.main-breadcrumb-wrapper .breadcrumb li a {
+  font-size: 2.8vw;
+  font-weight: 500;
+  color: #373866;
+}
+
+.main-breadcrumb-wrapper .breadcrumb li:not(:last-of-type)::after {
+  content: "/";
+  margin: 0 .3em;
+  color: #777;
+}
+
+/* main slide show */
+div.wrap {
+  margin: 0 0 5vw 0;
+}
+
+/* product area */
+div.wrap .product-row-wrapper {
+  display: flex;
+  width: 100vw;
+  margin: 10vw 0;
+  padding: 0 0 1em;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  word-break: keep-all;
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+
+div.wrap .product-row-wrapper::-webkit-scrollbar {
+  /* Chrome, Safari 対応 */
+  display: none !important;
+}
+
+/* top product */
+div.wrap .product-row-wrapper .product-row-child {
+  width: 90%;
+  height: 100%;
+  flex: 0 0 78%;
+  margin: 0 auto;
+  scroll-snap-align: center;
+}
+
+div.wrap .product-row-wrapper .product-row-child ul {
+  margin: 0 auto;
+}
+
+/* top product image */
+div.wrap .product-row-wrapper .product-row-child ul li.list-image {
+  height: 70vw;
+  margin: 0 auto;
+  position: relative;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+div.wrap .product-row-wrapper .product-row-child ul li.list-image img {
+  position: absolute;
+  width: 80%;
+  top: 0;
+  left: 10%;
+  border: 1px solid #e4e4e4;
+  z-index: -9999;
+}
+
+/* top product ranking */
+div.wrap .product-row-wrapper .product-row-child ul li.list-image a .square-number {
+  position: absolute;
+  top: 0;
+  left: 10%;
+}
+
+/* top product favorite button */
+div.wrap .product-row-wrapper .product-row-child ul li.list-image i.fa-heart {
+  position: absolute;
+  top: 2vw;
+  left: 60vw;
+  color: #eee;
+  font-size: 2rem;
+  z-index: 9999;
+}
+
+/* top product category name */
+div.wrap .product-row-wrapper .product-row-child ul li.list-category {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 0 2% 5%;
+  text-align: left;
+  font-size: 3vw;
+  color: #373866;
+  border-bottom: solid 1px #e4e4e4;
+}
+
+/* top product title name */
+div.wrap .product-row-wrapper .product-row-child ul li.list-title {
+  padding: 2% 0 0 12%;
+  text-align: left;
+  font-size: 4vw;
+  font-weight: 800;
+}
+
+/* top product detail */
+div.wrap .product-row-wrapper .product-row-child ul li.list-content {
+  margin: 5vw 0;
+}
+
+div.wrap .product-row-wrapper .product-row-child ul li.list-content p {
+  font-size: 3vw;
+  padding: 0 10vw;
+  word-break: break-all;
+  text-align: left;
+}
+
+/* category product price */
+div.wrap .product-row-wrapper .product-row-child .product-flex .list-price {
+  padding: 2vw 0 2vw 10vw;
+  font-size: 4vw;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* category order button */
+div.wrap .product-row-wrapper .product-row-child .product-flex .list-buttons {
+  margin: 4vw 0;
+  text-align: center;
+}
+
+div.wrap .product-row-wrapper .product-row-child .product-flex .list-buttons .btn .order button {
+  width: 90%;
+  background-color: #fff;
+  border: solid 1px #ff0000;
+  color: #ff0000;
+  padding: 1.5vw 0;
+  text-decoration: none;
+  font-size: 3vw;
+  border-radius: 3px;
 }
 
 /* footer */
 footer {
   text-align: center;
+}
+
+footer hr {
+  width: 100%;
+  height: 1px;
+  margin: 15vw 0 5vw;
+  background-color: #373866;
 }
 
 footer .appeal {
@@ -150,7 +383,7 @@ footer .appeal {
 
 footer .category {
   width: 90%;
-  margin: 0 auto;
+  margin: 5vw auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -166,7 +399,7 @@ footer .category div {
 
 footer .content {
   width: 90%;
-  margin: 5vw auto;
+  margin: 5vw auto 10vw;
   font-size: 3vw;
   display: flex;
   flex-wrap: wrap;
@@ -199,9 +432,10 @@ footer .icon div img {
 }
 
 footer .copyright {
+  margin: 5vw 0 0 0;
   font-size: 3vw;
   color: #fff;
-  background-color:#373866;
+  background-color: #373866;
 }
 
 /*-------------------------------

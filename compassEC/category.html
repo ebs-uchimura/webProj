@@ -23,7 +23,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico">
   <link rel="icon" type="image/png" href="img/android-touch-icon.png" sizes="192x192">
-  <link rel="stylesheet" href="css/detail.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/category.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css">
   <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
 </head>
@@ -59,505 +60,110 @@
     <div class="search-box">
       <input type="text" name="search" placeholder="検索" class="textbox">
     </div>
-    <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-      <div class="gallery-cell">
-        <img class="header-image" src="img/topimage.jpg" srcset="
-            img/topimage.jpg 1x,
-            img/topimage@2x.jpg 2x,
-            img/topimage@3x.jpg 3x
-          " alt="">
-      </div>
-      <div class="gallery-cell">
-        <img class="header-image" src="img/topimage.jpg" srcset="
-          img/topimage.jpg 1x,
-          img/topimage@2x.jpg 2x,
-          img/topimage@3x.jpg 3x
-        " alt="">
-      </div>
-      <div class="gallery-cell">
-        <img class="header-image" src="img/topimage.jpg" srcset="
-          img/topimage.jpg 1x,
-          img/topimage@2x.jpg 2x,
-          img/topimage@3x.jpg 3x
-      " alt="">
-      </div>
-    </div>
-    <div class="img-txt">テキスト入ります。テキスト入ります。</div>
   </header>
   <main>
-    <div class="main-recommend-wrapper">
-      <h3 class="libre-baskerville">
-        RECOMMENDATION
-        <span class="noto-sans small">&emsp;おすすめ商品</span>
+    <div class="main-breadcrumb-wrapper">
+      <nav>
+        <ol class="breadcrumb">
+          <li><a href="/">TOP</a></li>
+          <li><a href="/category">カテゴリ</a></li>
+        </ol>
+      </nav>
+    </div>
+    <div class="wrap category-main-wrapper">
+      <h3 class="category-standard libre-baskerville">
+        RED WINE
+        <span class="noto-sans headline-small">&emsp;赤ワイン</span>
       </h3>
-      <div class="product-row-wrapper">
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000422">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recommend1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
-              </a>
-            </li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;
-              <br>
-              アモーレ
-            </li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000422,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
+      <p>ラズベリーのようなフルーティーで広がりのある香りで、豊かな果実味となめらかな渋み、心地よい酸味もあるバランスのとれた赤ワイン。</p>
+      <div class="category-head-wrapper">
+        <div class="category-head-items">000件</div>
+        <div class="category-head-dropdown">
+          <select name="order" id="order-select">
+            <option value="new">新規順</option>
+            <option value="pop">人気順</option>
+            <option value="name">名前順</option>
+          </select>
         </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000153">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recommend1" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
-              </a>
-            </li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;
-              <br>
-              ブラン
-            </li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000153,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000426">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recommend3" src="img/product/soleil.jpg" alt="ソレイユ">
-              </a>
-            </li>
-            <li class="list-title">ヴァン・ムスー・ブリュット ソレイユ</li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">2,200</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000426,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
+        <div class="category-head-title">在庫</div>
+        <div class="category-head-radio-item">
+          <input id="item-1" class="radio-inline__input" type="radio" name="accessible-radio" value="item-1"
+            checked="checked">
+          <label class="radio-inline__label" for="item-1">あり</label>
+          <input id="item-2" class="radio-inline__input" type="radio" name="accessible-radio" value="item-2">
+          <label class="radio-inline__label" for="item-2">なし</label>
         </div>
       </div>
     </div>
-    <div class="main-new-wrapper">
-      <h3 class="libre-baskerville">
-        NEW
-        <span class="noto-sans small">&emsp;新商品</span>
-      </h3>
-      <div class="product-row-wrapper">
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000422">
-                <i class="fa-regular fa-heart"></i>
-                <img class="news1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
-              </a>
-            </li>
-            <li class="list-title">SUIJIN&nbsp;WINE&nbsp;アモーレ</li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000422,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000153">
-                <i class="fa-regular fa-heart"></i>
-                <img class="news2" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
-              </a>
-            </li>
-            <li class="list-title">ソーヴィニョン ブラン</li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000153,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000426">
-                <i class="fa-regular fa-heart"></i>
-                <img class="news3" src="img/product/soleil.jpg" alt="ソレイユ">
-              </a>
-            </li>
-            <li class="list-title">ヴァン・ムスー・ブリュット ソレイユ</li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">2,200</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000426,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
+    <div class="category-row-wrapper">
+      <div class="category-row-child">
+        <ul class="category-flex">
+          <li class="list-image">
+            <i class="heartbutton fa-regular fa-heart"></i>
+            <img class="recommend1" src="img/product/cabernet.jpg" alt="アモーレ">
+          </li>
+          <li class="list-title">
+            カベルネ・ソーヴィニヨン<br>アモーレ
+          </li>
+          <li class="list-price">
+            <div class="price txt-purple noto-sans">1,980円(税込)</div>
+          </li>
+          <li class="list-buttons">
+            <div class="btn btn-purple">
+              <form class="order" action="https://suijinclub.jp/api/basket/add.html" method="post">
+                <input type="hidden" name="brand_info" value="1,000000000422,1">
+                <button>カートに入れる</button>
+              </form>
+            </div>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="main-ranking-wrapper">
-      <h3 class="libre-baskerville">
-        RANKING
-        <span class="noto-sans small">&emsp;ランキング</span>
-      </h3>
-      <div class="product-row-wrapper">
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000422">
-                <span class="square-number">1</span>
-                <img class="rank1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
-              </a>
-            </li>
-            <li class="list-title">SUIJIN&nbsp;WINE&nbsp;アモーレ</li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000422,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000153">
-                <span class="square-number">2</span>
-                <img class="rank2" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
-              </a>
-            </li>
-            <li class="list-title">ソーヴィニョン ブラン</li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000153,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000426">
-                <span class="square-number">3</span>
-                <img class="rank2" src="img/product/soleil.jpg" alt="ソレイユ">
-              </a>
-            </li>
-            <li class="list-title">ヴァン・ムスー・ブリュット ソレイユ</li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">2,200</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000426,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <div class="category-row-child">
+        <ul class="category-flex">
+          <li class="list-image">
+            <i class="heartbutton fa-regular fa-heart"></i>
+            <img class="recommend3" src="img/product/amelie.jpg" alt="アメリ">
+          </li>
+          <li class="list-title">アメリ 2018<br>&nbsp;</li>
+          <li class="list-price">
+            <div class="price txt-purple noto-sans">1,657円(税込)</div>
+          </li>
+          <li class="list-buttons">
+            <div class="btn btn-purple">
+              <form class="order" action="https://suijinclub.jp/api/basket/add.html" method="post">
+                <input type="hidden" name="brand_info" value="1,000000000457,1">
+                <button>カートに入れる</button>
+              </form>
+            </div>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="main-recent-wrapper">
-      <h3 class="libre-baskerville">
-        RECENT
-        <span class="noto-sans small">&emsp;最近チェックしたアイテム</span>
-      </h3>
-      <div class="product-row-wrapper">
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000422">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recent1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
-              </a>
-            </li>
-            <li class="list-title">SUIJIN&nbsp;WINE&nbsp;アモーレ</li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000422,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000153">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recent2" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
-              </a>
-            </li>
-            <li class="list-title">ソーヴィニョン ブラン</li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000153,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000426">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recent3" src="img/product/soleil.jpg" alt="ソレイユ">
-              </a>
-            </li>
-            <li class="list-title">ヴァン・ムスー・ブリュット ソレイユ</li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">2,200</div>
-              <div class="small txt-purple">円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000426,1">
-                  <button>ご注文はこちら</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
+      <div class="category-row-child">
+        <ul class="category-flex">
+          <li class="list-image">
+            <i class="heartbutton fa-regular fa-heart"></i>
+            <img class="recommend1" src="img/product/frontera.jpg" alt="フロンテラ">
+          </li>
+          <li class="list-title">
+            フロンテラ カベルネ・<br>ソーヴィニヨン（ハーフ）
+          </li>
+          <li class="list-price">
+            <div class="price txt-purple noto-sans">690円(税込)</div>
+          </li>
+          <li class="list-buttons">
+            <div class="btn btn-purple">
+              <form class="order" action="https://suijinclub.jp/api/basket/add.html" method="post">
+                <input type="hidden" name="brand_info" value="1,000000000553,1">
+                <button>カートに入れる</button>
+              </form>
+            </div>
+          </li>
+        </ul>
       </div>
-    </div>
-    <div class="main-news-wrapper">
-      <h3 class="libre-baskerville">
-        NEWS
-        <span class="noto-sans small">&emsp;新着記事</span>
-      </h3>
-      <ul class="news-flex">
-        <li class="list-image">
-          <img class="new1" src="img/news1.jpg" srcset="
-            img/news1.jpg 1x, 
-            img/news1@2x.jpg 2x, 
-            img/news1@3x.jpg 3x" alt="">
-        </li>
-        <li class="list-title">
-          <h4>記事カテゴリ</h4>
-        </li>
-        <li class="list-content">
-          テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
-        </li>
-        <li class="list-date">
-          2025.04.03
-        </li>
-      </ul>
-      <ul class="news-flex">
-        <li class="list-image">
-          <img class="new2" src="img/news2.jpg" srcset="
-            img/news2.jpg 1x, 
-            img/news2@2x.jpg 2x, 
-            img/news2@3x.jpg 3x" alt="">
-        </li>
-        <li class="list-title">
-          <h4>記事カテゴリ</h4>
-        </li>
-        <li class="list-content">
-          テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
-        </li>
-        <li class="list-date">
-          2025.04.03
-        </li>
-      </ul>
-      <ul class="news-flex">
-        <li class="list-image">
-          <img class="new3" src="img/news3.jpg" srcset="
-            img/news3.jpg 1x, 
-            img/news3@2x.jpg 2x, 
-            img/news3@3x.jpg 3x" alt="">
-        </li>
-        <li class="list-title">
-          <h4>記事カテゴリ</h4>
-        </li>
-        <li class="list-content">
-          テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
-        </li>
-        <li class="list-date">
-          2025.04.03
-        </li>
-      </ul>
-      <ul class="news-flex">
-        <li class="list-image">
-          <img class="new4" src="img/news4.jpg" srcset="
-            img/news4.jpg 1x, 
-            img/news4@2x.jpg 2x, 
-            img/news4@3x.jpg 3x" alt="">
-        </li>
-        <li class="list-title">
-          <h4>記事カテゴリ</h4>
-        </li>
-        <li class="list-content">
-          テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
-        </li>
-        <li class="list-date">
-          2025.04.03
-        </li>
-        <li class="list-seemore">
-          <a href="" class="btn">もっと見る</a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-appeal-wrapper">
-      <img class="new5" src="img/news5.jpg" srcset="
-        img/news5.jpg, 
-        img/news5@2x.jpg, 
-        img/news5@3x.jpg" alt="">
-      <img class="new6" src="img/news6.jpg" srcset="
-        img/news6.jpg, 
-        img/news6@2x.jpg, 
-        img/news6@3x.jpg" alt="">
-    </div>
-    <div class="main-category-wrapper">
-      <h3 class="libre-baskerville">
-        CATEGORY
-        <span class="noto-sans small">&emsp;カテゴリ</span>
-      </h3>
-      <ul>
-        <li>
-          <a href="" class="btn">赤ワイン</a>
-        </li>
-        <li>
-          <a href="" class="btn">白ワイン</a>
-        </li>
-        <li>
-          <a href="" class="btn">スパークリング</a>
-        </li>
-        <li>
-          <a href="" class="btn">ウイスキー</a>
-        </li>
-        <li>
-          <a href="" class="btn">オリシャン</a>
-        </li>
-        <li>
-          <a href="" class="btn">オリジナルグラス</a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-genre-wrapper">
-      <img class="appeal" src="img/appeal.jpg" srcset="
-        img/appeal.jpg 1x,
-        img/appeal@2x.jpg 2x,
-        img/appeal@3x.jpg 3x" alt="オリシャン">
-      <h4 class="">
-        テキスト
-        <br>
-        テキスト入ります
-        </span>
-      </h4>
-      <p>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
-      <a href="" class="btn">もっと見る</a>
-    </div>
-    <div class="main-genre-wrapper">
-      <img class="appeal" src="img/amelie_catch.jpg" srcset="
-        img/amelie_catch.jpg 1x,
-        img/amelie_catch@2x.jpg 2x,
-        img/amelie_catch@3x.jpg 3x" alt="オリシャン">
-      <h4 class="">
-        テキスト
-        <br>
-        テキスト入ります
-        </span>
-      </h4>
-      <p>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
-      <a href="" class="btn">もっと見る</a>
-    </div>
-    <div class="main-genre-wrapper">
-      <img class="appeal" src="img/emma_catch.jpg" srcset="
-        img/emma_catch.jpg 1x,
-        img/emma_catch@2x.jpg 2x,
-        img/emma_catch@3x.jpg 3x" alt="オリシャン">
-      <h4 class="">
-        テキスト
-        <br>
-        テキスト入ります
-        </span>
-      </h4>
-      <p>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
-      <a href="" class="btn">もっと見る</a>
     </div>
   </main>
   <footer>
+    <hr>
     <img class="appeal" src="img/logo/LOGO.png">
     <div class="category">
       <div>カテゴリ</div>
