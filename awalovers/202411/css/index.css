@@ -8,20 +8,19 @@
  ▼ forSP
  -------------------------------*/
 /* general */
-h1 {
-  font-size: 10vw;
-}
-
 h2 {
   font-size: 6.8vw;
+  font-weight: 800;
 }
 
 h3 {
   font-size: 6vw;
+  font-weight: 700;
 }
 
 h4 {
   font-size: 4.5vw;
+  font-weight: 600;
 }
 
 /* 1. entry */
@@ -38,8 +37,6 @@ main .entry-wrapper .entry-headline {
   width: 90vw;
   margin: 7vw auto;
 }
-
-
 
 main .entry-wrapper .entry-voice p {
   text-align: justify;
@@ -64,22 +61,20 @@ main .entry-wrapper .entry-headline .entry-text p {
   justify-content: space-around;
   text-align: justify;
   display: block;
-  font-weight: 400;
 }
 
 main .entry-wrapper .entry-headline .entry-text h2.entry-title {
   margin: 5vw auto;
   padding: 25vw 0 0 0;
   font-size: 6.7vw;
-  letter-spacing: -.15em;
-  font-weight: 800;
+  letter-spacing: -.05em;
 }
 
 main .entry-wrapper .entry-headline .entry-voice {
   width: 100%;
   height: 238vw;
   padding: 5vw 0 0 0;
-  background-image: url("../../img/background02.png");
+  background-image: url("../img/background02.png");
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: 95%;
@@ -90,7 +85,7 @@ main .entry-wrapper .entry-headline .entry-voice {
 
 main .entry-wrapper .entry-headline .entry-voice hr {
   width: 60%;
-  margin: 3vw auto;
+  margin: 3vw auto 5vw;
   height: 2px;
   background-color: #b9ce00;
 }
@@ -99,7 +94,6 @@ main .entry-wrapper .entry-headline .entry-voice h2 {
   padding: 8vw 0 2vw;
   font-size: 9.5vw;
   line-height: 1.3em;
-  font-weight: 700;
   letter-spacing: -.01em;
 }
 
@@ -114,9 +108,8 @@ main .entry-wrapper .entry-headline .entry-voice h4 {
 
 main .entry-wrapper .entry-headline .entry-voice p {
   margin: 0 0 1vw 0;
-  padding: 0 10vw 8vw;
+  padding: 5vw 12vw 8vw;
   font-size: 4vw;
-  font-weight: 400;
 }
 
 main .entry-wrapper .entry-headline .entry-voice img.voice-img {
@@ -131,7 +124,7 @@ main .entry-wrapper .entry-headline .entry-voice img.appeal-img {
 /* 2. questionnaire */
 main #lpContainer {
   margin: 20vw 0 0 0;
-  background-image: url("../../img/background03.jpg");
+  background-image: url("../img/background03.jpg");
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
@@ -162,10 +155,9 @@ main #lpContainer .question {
   margin: 20vw 0;
   font-family: "Zen Old Mincho", serif;
   text-align: center;
-  font-weight: 700;
 }
 
-main #lpContainer p.headTxt {
+main #lpContainer .headTxt {
   margin: 1vw auto;
   font-size: 2.1rem;
   letter-spacing: -.06em;
@@ -405,11 +397,10 @@ main #policy .annotation_area {
   padding: 0 0 0 12vw;
 }
 
-main #policy .annotation_area p {
+main #policy .annotation_area h4 {
   text-align: left;
   line-height: 1.4em;
   font-size: 4.2vw;
-  font-weight: 700;
   letter-spacing: -.1rem;
 }
 
@@ -453,7 +444,6 @@ main #policy .annotation_area p {
   main .entry-wrapper .entry-title {
     font-size: 3rem;
     letter-spacing: -.01em;
-    font-weight: 800;
   }
 
   main .entry-wrapper .entry-headline {
@@ -491,7 +481,7 @@ main #policy .annotation_area p {
     height: 1300px;
     margin: 50px auto 0;
     padding: 10px 0 0 0;
-    background-image: url("../../img/background02.png");
+    background-image: url("../img/background02.png");
     background-color: #fff;
     background-size: 90%;
     background-position: center top;
@@ -504,7 +494,6 @@ main #policy .annotation_area p {
     margin: 30px 0 10px;
     padding: 0;
     font-size: 3.3rem;
-    font-weight: 700;
     letter-spacing: -.1em;
     line-height: 1.3em;
     text-align: center;
@@ -533,11 +522,9 @@ main #policy .annotation_area p {
 
   main .entry-wrapper .entry-headline .entry-voice h3 {
     margin: 0;
-    font-weight: 600;
   }
 
   main .entry-wrapper .entry-headline .entry-voice h4 {
-    font-weight: 600;
     padding: 30px 0 0 0;
   }
 
@@ -570,7 +557,7 @@ main #policy .annotation_area p {
     background-color: #d80909;
   }
 
-  main #lpContainer p.headTxt {
+  main #lpContainer .headTxt {
     margin: 0;
     font-size: 2.3rem;
     letter-spacing: -.01em;
@@ -604,7 +591,6 @@ main #policy .annotation_area p {
     margin: 20px 0;
     font-size: 2rem;
     letter-spacing: -.1em;
-    font-weight: 700;
   }
 
   main #lpContainer .question img.appeal {
@@ -661,7 +647,6 @@ main #policy .annotation_area p {
   main #lpContainer .question ul li .inner label div {
     padding-left: 30px;
     font-size: 1.6rem;
-    font-weight: 700;
   }
 
   main #lpContainer .question ul li .inner input[type=radio] {
@@ -791,7 +776,6 @@ main #policy .annotation_area p {
     padding: 4% 0 0 2%;
     font-size: 1rem;
     letter-spacing: -.01em;
-    font-weight: 600;
   }
 
   main #policy .check_area ul li .check_lb .check-text a {
@@ -831,11 +815,10 @@ main #policy .annotation_area p {
     padding: 0 0 0 80px;
   }
 
-  main #policy .annotation_area p {
+  main #policy .annotation_area h4 {
     text-align: left;
     line-height: 1.1em;
     font-size: 1.1rem;
-    font-weight: 600;
     letter-spacing: .02em;
   }
 }

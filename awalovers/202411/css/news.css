@@ -12,6 +12,11 @@ p {
   font-size: 1.1rem;
 }
 
+h1 {
+  font-size: 10vw;
+  font-weight: 800;
+}
+
 h2 {
   font-size: 7.5vw;
 }
@@ -29,6 +34,14 @@ hr {
   margin: 5vw auto;
   height: 3px;
   background-color: #b9ce00;
+}
+
+.newsbold {
+  font-weight: 700;
+}
+
+.boldhead {
+  font-weight: 900;
 }
 
 .default_button {
@@ -58,8 +71,6 @@ main .news-main-wrapper .news-entry-headline .news-flex-item {
 
 main .news-main-wrapper .news-entry-headline .news-flex-item>h1 {
   margin: 5vw 0;
-  font-size: 10vw;
-  font-weight: 900;
   line-height: 1.3em;
   letter-spacing: -.2rem;
 }
@@ -172,7 +183,7 @@ main .news-main-wrapper .news-appeal-wrapper {
 }
 
 main .news-main-wrapper .news-appeal-wrapper .news-product-headline {
-  background-image: url("../../img/background03.jpg");
+  background-image: url("../img/background03.jpg");
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -183,7 +194,6 @@ main .news-main-wrapper .news-appeal-wrapper .news-product-headline {
 main .news-main-wrapper .news-appeal-wrapper .news-product-headline h2 {
   font-size: 9vw;
   letter-spacing: -.1em;
-  font-weight: 600;
 }
 
 main .news-main-wrapper .news-appeal-wrapper .news-product-headline article {
@@ -246,7 +256,6 @@ main .news-appeal-headline {
 main .news-appeal-headline h2 {
   font-size: 9vw;
   letter-spacing: -.1em;
-  font-weight: 600;
 }
 
 main .news-appeal-headline>img {
@@ -291,7 +300,6 @@ main .button_area .linemonitor {
 main .anothervoice_area {
   width: 100vw;
   text-align: center;
-  font-weight: 600;
 }
 
 main .anothervoice_area>img {
@@ -323,6 +331,7 @@ main .anothervoice_area ul li a .voiceflex .voiceimgflex img {
 main .anothervoice_area ul li a .voiceflex .voiceshopflex {
   width: 60%;
   padding: 0 0 5vw 0;
+  font-weight: 600;
 }
 
 main .anothervoice_area ul li a .voiceflex .voiceshopflex .big {
@@ -404,7 +413,6 @@ main .anothervoice_area ul li a .voiceflex .voiceshopflex .big {
   main .news-main-wrapper .news-entry-headline .news-flex-item>h1 {
     margin: 20px 0;
     font-size: 3.8rem;
-    font-weight: 600;
     line-height: 1.2em;
   }
 
@@ -500,7 +508,7 @@ main .anothervoice_area ul li a .voiceflex .voiceshopflex .big {
   }
 
   main .news-main-wrapper .news-appeal-wrapper .news-product-headline {
-    background-image: url("../../img/background03.jpg");
+    background-image: url("../img/background03.jpg");
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: 100%;

@@ -3,7 +3,7 @@
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
   <meta charset="UTF-8">
-  <title>WINE</title>
+  <title>Compassギフトサイト</title>
   <meta content="compass" name="description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="">
@@ -27,14 +27,16 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+  <script src="js/index.js"></script>
 </head>
 
 <body>
   <header>
     <div class="header-wrapper">
       <div class="header-flex">
-        <div class="header-icon hamburger">
+        <div class="forsp header-icon hamburger">
           <div></div>
           <div></div>
           <div></div>
@@ -42,502 +44,588 @@
       </div>
       <div class="header-logo">
         <a href="#headerarea">
-          <img src="img/logo/LOGO.png" alt="メインロゴ">
+          <div class="gallery-cell">
+            <img class="forpc header-image" src="img/logo/LOGO.png" alt="">
+            <img class="forsp header-image" src="img/logo/LOGO.png"
+              srcset="img/logo/LOGO.png 1x,img/logo/LOGO@2x.png 2x,img/logo/LOGO@3x.png 3x" alt="">
+          </div>
         </a>
       </div>
-      <div class="header-icon forpc">
-        <img src="img/icon/search.png">
-      </div>
-      <div class="header-icon">
-        <i class="fa-solid fa-heart"></i>
-      </div>
-      <div class="header-icon">
-        <i class="fa-solid fa-user"></i>
-      </div>
-      <div class="header-icon">
-        <i class="fa-solid fa-cart-shopping"></i>
+      <div class="header-iconarea">
+        <div class="header-icon forpc">
+          <img src="img/icon/search.png">
+        </div>
+        <div class="header-icon">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="header-icon">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="header-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
       </div>
     </div>
-    <div class="search-box">
+    <div class="search-box forsp">
       <input type="text" name="search" placeholder="検索" class="textbox">
     </div>
   </header>
 
   <main>
+    <nav class="navigation forpc">
+      <ul>
+        <li><a href="/">カテゴリ</a></li>
+        <li><a href="/">カテゴリ</a></li>
+        <li><a href="/">カテゴリ</a></li>
+        <li><a href="/">カテゴリ</a></li>
+        <li><a href="/">カテゴリ</a></li>
+        <li><a href="/">カテゴリ</a></li>
+      </ul>
+    </nav>
     <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
       <div class="gallery-cell">
-        <img class="header-image" src="img/topimage.jpg" srcset="
-            img/topimage.jpg 1x,
-            img/topimage@2x.jpg 2x,
-            img/topimage@3x.jpg 3x
-          " alt="">
+        <img class="forpc header-image" src="img/topimage.jpg" alt="">
+        <img class="forsp header-image" src="img/topimage_sp.jpg"
+          srcset="img/topimage_sp.jpg 1x,img/topimage_sp@2x.jpg 2x,img/topimage_sp@3x.jpg 3x" alt="">
       </div>
       <div class="gallery-cell">
-        <img class="header-image" src="img/topimage.jpg" srcset="
-          img/topimage.jpg 1x,
-          img/topimage@2x.jpg 2x,
-          img/topimage@3x.jpg 3x
-        " alt="">
+        <img class="forpc header-image" src="img/topimage.jpg" alt="">
+        <img class="forsp header-image" src="img/topimage_sp.jpg"
+          srcset="img/topimage_sp.jpg 1x,img/topimage_sp@2x.jpg 2x,img/topimage_sp@3x.jpg 3x" alt="">
       </div>
       <div class="gallery-cell">
-        <img class="header-image" src="img/topimage.jpg" srcset="
-          img/topimage.jpg 1x,
-          img/topimage@2x.jpg 2x,
-          img/topimage@3x.jpg 3x
-      " alt="">
+        <img class="forpc header-image" src="img/topimage.jpg" alt="">
+        <img class="forsp header-image" src="img/topimage_sp.jpg"
+          srcset="img/topimage_sp.jpg 1x, img/topimage_sp@2x.jpg 2x, img/topimage_sp@3x.jpg 3x" alt="">
       </div>
     </div>
     <div class="img-txt">テキスト入ります。テキスト入ります。</div>
-
     <div class="wrap main-recommend-wrapper">
       <h3 class="headline-standard libre-baskerville">
         RECOMMENDATION
         <span class="headline-small noto-sans">おすすめ商品</span>
       </h3>
       <div class="product-row-wrapper">
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <i class="heartbutton fa-regular fa-heart"></i>
-              <img class="recommend1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
-            </li>
-            <li class="list-category">赤ワイン</li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;
-              <br>
-              アモーレ
-            </li>
-            <li class="list-content">
-              <p>ラズベリーのようなフルーティーで広がりのある香りで、豊かな果実味となめらかな渋み、心地よい酸味もあるバランスのとれた赤ワイン。</p>
-            </li>
-          </ul>
+        <div id="recommendctrl" class="forsp product-controller">
+          <span class="leftarrow">
+            <i class="fa-solid fa-angles-left fa-2x"></i>
+          </span>
+          <span class="rightarrow">
+            <i class="fa-solid fa-angles-right fa-2x"></i>
+          </span>
         </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <i class="heartbutton fa-regular fa-heart"></i>
-              <img class="recommend1" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
-            </li>
-            <li class="list-category">白ワイン</li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;
-              <br>
-              ブラン
-            </li>
-            <li class="list-content">
-              <p>グレープフルーツやトロピカルフルーツのアロマ、すっきりとした酸味と適度なボディの調和のとれた味わいが楽しめ、心地よい爽やかな余韻が続きます。</p>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <i class="heartbutton fa-regular fa-heart"></i>
-              <img class="recommend3" src="img/product/soleil.jpg" alt="ソレイユ">
-            </li>
-            <li class="list-category">スパークリングワイン</li>
-            <li class="list-title">
-              ヴァン・ムスー・ブリュット
-              <br>
-              ソレイユ
-            </li>
-            <li class="list-content">
-              <p>洋梨やりんご等、柑橘系果実を思わせるアロマに、味わいはフレッシュな果実味にキリッとした酸が爽やか。すっきりとした味わいです。</p>
-            </li>
-          </ul>
+        <div id="recommendarea" class="product-row-parent">
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc recommend1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
+                <img class="forsp recommend1" src="img/product/cabernet.jpg"
+                  srcset="img/product/cabernet.jpg 1x,img/product/cabernet@2x.jpg 2x,img/product/cabernet@3x.jpg 3x"
+                  alt="SUIJINWINEアモーレ">
+              </li>
+              <li class="list-category">赤ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                アモーレ
+              </li>
+              <li class="list-content">
+                <p>ラズベリーのようなフルーティーで広がりのある香りで、豊かな果実味となめらかな渋み、心地よい酸味もあるバランスのとれた赤ワイン。</p>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc recommend2" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
+                <img class="forsp recommend2" src="img/product/blanc.jpg"
+                  srcset="img/product/blanc.jpg 1x,img/product/blanc@2x.jpg 2x,img/product/blanc@3x.jpg 3x"
+                  alt="SUIJINWINEブラン">
+              </li>
+              <li class="list-category">白ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                ブラン
+              </li>
+              <li class="list-content">
+                <p>グレープフルーツやトロピカルフルーツのアロマ、すっきりとした酸味と適度なボディの調和のとれた味わいが楽しめ、心地よい爽やかな余韻が続きます。</p>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc recommend3" src="img/product/soleil.jpg" alt="ソレイユ">
+                <img class="forsp recommend3" src="img/product/soleil.jpg"
+                  srcset="img/product/soleil.jpg 1x,img/product/soleil@2x.jpg 2x,img/product/soleil@3x.jpg 3x"
+                  alt="ソレイユ">
+              </li>
+              <li class="list-category">スパークリングワイン</li>
+              <li class="list-title">
+                ヴァン・ムスー・ブリュット
+                <br>
+                ソレイユ
+              </li>
+              <li class="list-content">
+                <p>洋梨やりんご等、柑橘系果実を思わせるアロマに、味わいはフレッシュな果実味にキリッとした酸が爽やか。すっきりとした味わいです。</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <div class="wrap main-new-wrapper">
-      <h3 class="headline-big libre-baskerville">NEW<span class="noto-sans headline-small">&emsp;新商品</span></h3>
+      <h3 class="headline-standard libre-baskerville">
+        NEW
+        <span class="noto-sans headline-small">&emsp;新商品</span>
+      </h3>
       <div class="product-row-wrapper">
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000422">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recommend1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
-              </a>
-            </li>
-            <li class="list-category">赤ワイン</li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;
-              <br>
-              アモーレ
-            </li>
-            <li class="list-content">
-              <p>ラズベリーのようなフルーティーで広がりのある香りで、豊かな果実味となめらかな渋み、心地よい酸味もあるバランスのとれた赤ワイン。</p>
-            </li>
-          </ul>
+        <div id="newctrl" class="forsp product-controller">
+          <span class="leftarrow">
+            <i class="fa-solid fa-angles-left fa-2x"></i>
+          </span>
+          <span class="rightarrow">
+            <i class="fa-solid fa-angles-right fa-2x"></i>
+          </span>
         </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000153">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recommend1" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
-              </a>
-            </li>
-            <li class="list-category">白ワイン</li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;
-              <br>
-              ブラン
-            </li>
-            <li class="list-content">
-              <p>グレープフルーツやトロピカルフルーツのアロマ、すっきりとした酸味と適度なボディの調和のとれた味わいが楽しめ、心地よい爽やかな余韻が続きます。</p>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000426">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recommend3" src="img/product/soleil.jpg" alt="ソレイユ">
-              </a>
-            </li>
-            <li class="list-category">スパークリングワイン</li>
-            <li class="list-title">
-              ヴァン・ムスー・ブリュット
-              <br>
-              ソレイユ
-            </li>
-            <li class="list-content">
-              <p>洋梨やりんご等、柑橘系果実を思わせるアロマに、味わいはフレッシュな果実味にキリッとした酸が爽やか。すっきりとした味わいです。</p>
-            </li>
-          </ul>
+        <div id="newarea" class="product-row-parent">
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc new1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
+                <img class="forsp new1" src="img/product/cabernet.jpg"
+                  srcset="img/product/cabernet.jpg 1x,img/product/cabernet@2x.jpg 2x, img/product/cabernet@3x.jpg 3x"
+                  alt="SUIJINWINEアモーレ">
+              </li>
+              <li class="list-category">赤ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                アモーレ
+              </li>
+              <li class="list-content">
+                <p>ラズベリーのようなフルーティーで広がりのある香りで、豊かな果実味となめらかな渋み、心地よい酸味もあるバランスのとれた赤ワイン。</p>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc new2" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
+                <img class="forsp new2" src="img/product/blanc.jpg"
+                  srcset="img/product/blanc.jpg 1x,img/product/blanc@2x.jpg 2x, img/product/blanc@3x.jpg 3x"
+                  alt="SUIJINWINEブラン">
+              </li>
+              <li class="list-category">白ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                ブラン
+              </li>
+              <li class="list-content">
+                <p>グレープフルーツやトロピカルフルーツのアロマ、すっきりとした酸味と適度なボディの調和のとれた味わいが楽しめ、心地よい爽やかな余韻が続きます。</p>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc new3" src="img/product/soleil.jpg" alt="ソレイユ">
+                <img class="forsp new3" src="img/product/soleil.jpg"
+                  srcset="img/product/soleil.jpg 1x,img/product/soleil@2x.jpg 2x, img/product/soleil@3x.jpg 3x"
+                  alt="ソレイユ">
+              </li>
+              <li class="list-category">スパークリングワイン</li>
+              <li class="list-title">
+                ヴァン・ムスー・ブリュット
+                <br>
+                ソレイユ
+              </li>
+              <li class="list-content">
+                <p>洋梨やりんご等、柑橘系果実を思わせるアロマに、味わいはフレッシュな果実味にキリッとした酸が爽やか。すっきりとした味わいです。</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <div class="wrap main-ranking-wrapper">
-      <h3 class="headline-big libre-baskerville">
+      <h3 class="headline-standard libre-baskerville">
         RANKING
         <span class="noto-sans headline-small">&emsp;ランキング</span>
       </h3>
       <div class="product-row-wrapper">
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000422">
-                <span class="square-number">1</span>
-                <img class="recommend1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
-              </a>
-            </li>
-            <li class="list-category">赤ワイン</li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;
-              <br>
-              アモーレ
-            </li>
-            <li class="list-content">
-              <p>ラズベリーのようなフルーティーで広がりのある香りで、豊かな果実味となめらかな渋み、心地よい酸味もあるバランスのとれた赤ワイン。</p>
-            </li>
-          </ul>
+        <div id="rankingctrl" class="forsp product-controller">
+          <span class="leftarrow">
+            <i class="fa-solid fa-angles-left fa-2x"></i>
+          </span>
+          <span class="rightarrow">
+            <i class="fa-solid fa-angles-right fa-2x"></i>
+          </span>
         </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000153">
-                <span class="square-number">2</span>
-                <img class="recommend1" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
-              </a>
-            </li>
-            <li class="list-category">白ワイン</li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;
-              <br>
-              ブラン
-            </li>
-            <li class="list-content">
-              <p>グレープフルーツやトロピカルフルーツのアロマ、すっきりとした酸味と適度なボディの調和のとれた味わいが楽しめ、心地よい爽やかな余韻が続きます。</p>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000426">
-                <span class="square-number">3</span>
-                <img class="recommend3" src="img/product/soleil.jpg" alt="ソレイユ">
-              </a>
-            </li>
-            <li class="list-category">スパークリングワイン</li>
-            <li class="list-title">
-              ヴァン・ムスー・ブリュット
-              <br>
-              ソレイユ
-            </li>
-            <li class="list-content">
-              <p>洋梨やりんご等、柑橘系果実を思わせるアロマに、味わいはフレッシュな果実味にキリッとした酸が爽やか。すっきりとした味わいです。</p>
-            </li>
-          </ul>
+        <div id="rankingarea" class="product-row-parent">
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc ranking1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
+                <img class="forsp ranking1" src="img/product/cabernet.jpg"
+                  srcset="img/product/cabernet.jpg 1x,img/product/cabernet@2x.jpg 2x,img/product/cabernet@3x.jpg 3x"
+                  alt="SUIJINWINEアモーレ">
+              </li>
+              <li class="list-category">赤ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                アモーレ
+              </li>
+              <li class="list-content">
+                <p>ラズベリーのようなフルーティーで広がりのある香りで、豊かな果実味となめらかな渋み、心地よい酸味もあるバランスのとれた赤ワイン。</p>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc ranking2" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
+                <img class="forsp ranking2" src="img/product/blanc.jpg"
+                  srcset="img/product/blanc.jpg 1x,img/product/blanc@2x.jpg 2x,img/product/blanc@3x.jpg 3x"
+                  alt="SUIJINWINEブラン">
+              </li>
+              <li class="list-category">白ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                ブラン
+              </li>
+              <li class="list-content">
+                <p>グレープフルーツやトロピカルフルーツのアロマ、すっきりとした酸味と適度なボディの調和のとれた味わいが楽しめ、心地よい爽やかな余韻が続きます。</p>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc ranking3" src="img/product/soleil.jpg" alt="ソレイユ">
+                <img class="forsp ranking3" src="img/product/soleil.jpg"
+                  srcset="img/product/soleil.jpg 1x,img/product/soleil@2x.jpg 2x, img/product/soleil@3x.jpg 3x"
+                  alt="ソレイユ">
+              </li>
+              <li class="list-category">スパークリングワイン</li>
+              <li class="list-title">
+                ヴァン・ムスー・ブリュット
+                <br>
+                ソレイユ
+              </li>
+              <li class="list-content">
+                <p>洋梨やりんご等、柑橘系果実を思わせるアロマに、味わいはフレッシュな果実味にキリッとした酸が爽やか。すっきりとした味わいです。</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <div class="wrap main-recent-wrapper">
-      <h3 class="headline-big libre-baskerville">
+      <h3 class="headline-standard libre-baskerville">
         RECENT
         <span class="noto-sans headline-small">&emsp;最近チェックしたアイテム</span>
       </h3>
       <div class="product-row-wrapper">
-        <div class="product-row-child">
-          <ul class="product-flex">
+        <div id="checkedctrl" class="forsp product-controller">
+          <span class="leftarrow">
+            <i class="fa-solid fa-angles-left fa-2x"></i>
+          </span>
+          <span class="rightarrow">
+            <i class="fa-solid fa-angles-right fa-2x"></i>
+          </span>
+        </div>
+        <div id="checkarea" class="product-row-parent">
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc check1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
+                <img class="forsp check1" src="img/product/cabernet.jpg"
+                  srcset="img/product/cabernet.jpg 1x, img/product/cabernet@2x.jpg 2x,img/product/cabernet@3x.jpg 3x"
+                  alt="SUIJINWINEアモーレ">
+              </li>
+              <li class="list-category">赤ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                アモーレ
+              </li>
+              <li class="list-content">
+                <p>ラズベリーのようなフルーティーで広がりのある香りで、豊かな果実味となめらかな渋み、心地よい酸味もあるバランスのとれた赤ワイン。</p>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc check2" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
+                <img class="forsp check2" src="img/product/blanc.jpg"
+                  srcset="img/product/blanc.jpg 1x,img/product/blanc@2x.jpg 2x, img/product/blanc@3x.jpg 3x"
+                  alt="SUIJINWINEブラン">
+              </li>
+              <li class="list-category">白ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                ブラン
+              </li>
+              <li class="list-content">
+                <p>グレープフルーツやトロピカルフルーツのアロマ、すっきりとした酸味と適度なボディの調和のとれた味わいが楽しめ、心地よい爽やかな余韻が続きます。</p>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc check3" src="img/product/soleil.jpg" alt="ソレイユ">
+                <img class="forsp check3" src="img/product/soleil.jpg"
+                  srcset="img/product/soleil.jpg 1x,img/product/soleil@2x.jpg 2x,img/product/soleil@3x.jpg 3x"
+                  alt="ソレイユ">
+              </li>
+              <li class="list-category">スパークリングワイン</li>
+              <li class="list-title">
+                ヴァン・ムスー・ブリュット
+                <br>
+                ソレイユ
+              </li>
+              <li class="list-content">
+                <p>洋梨やりんご等、柑橘系果実を思わせるアロマに、味わいはフレッシュな果実味にキリッとした酸が爽やか。すっきりとした味わいです。</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-news-wrapper">
+      <div class="main-article-wrapper">
+        <h3 class="headline-standard libre-baskerville">
+          NEWS
+          <span class="noto-sans headline-small">&emsp;新着記事</span>
+        </h3>
+        <div class="main-article-content">
+          <ul class="news-flex">
             <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000422">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recommend1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
-              </a>
+              <img class="new1" src="img/news1.jpg" srcset="img/news1.jpg 1x, img/news1@2x.jpg 2x, img/news1@3x.jpg 3x"
+                alt="">
             </li>
-            <li class="list-category">赤ワイン</li>
             <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;
-              <br>
-              アモーレ
+              <h4>記事カテゴリ</h4>
             </li>
             <li class="list-content">
-              <p>ラズベリーのようなフルーティーで広がりのある香りで、豊かな果実味となめらかな渋み、心地よい酸味もあるバランスのとれた赤ワイン。</p>
+              テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
+            </li>
+            <li class="list-date">
+              2025.04.03
             </li>
           </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
+          <ul class="news-flex">
             <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000153">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recommend1" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
-              </a>
+              <img class="new2" src="img/news2.jpg" srcset="img/news2.jpg 1x, img/news2@2x.jpg 2x, img/news2@3x.jpg 3x"
+                alt="">
             </li>
-            <li class="list-category">白ワイン</li>
             <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;
-              <br>
-              ブラン
+              <h4>記事カテゴリ</h4>
             </li>
             <li class="list-content">
-              <p>グレープフルーツやトロピカルフルーツのアロマ、すっきりとした酸味と適度なボディの調和のとれた味わいが楽しめ、心地よい爽やかな余韻が続きます。</p>
+              テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
+            </li>
+            <li class="list-date">
+              2025.04.03
             </li>
           </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
+          <ul class="news-flex">
             <li class="list-image">
-              <a href="https://suijinclub.jp/view/item/000000000426">
-                <i class="fa-regular fa-heart"></i>
-                <img class="recommend3" src="img/product/soleil.jpg" alt="ソレイユ">
-              </a>
+              <img class="new3" src="img/news3.jpg" srcset="img/news3.jpg 1x, img/news3@2x.jpg 2x, img/news3@3x.jpg 3x"
+                alt="">
             </li>
-            <li class="list-category">スパークリングワイン</li>
             <li class="list-title">
-              ヴァン・ムスー・ブリュット
-              <br>
-              ソレイユ
+              <h4>記事カテゴリ</h4>
             </li>
             <li class="list-content">
-              <p>洋梨やりんご等、柑橘系果実を思わせるアロマに、味わいはフレッシュな果実味にキリッとした酸が爽やか。すっきりとした味わいです。</p>
+              テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
+            </li>
+            <li class="list-date">
+              2025.04.03
+            </li>
+          </ul>
+          <ul class="news-flex">
+            <li class="list-image">
+              <img class="new4" src="img/news4.jpg" srcset="img/news4.jpg 1x, img/news4@2x.jpg 2x, img/news4@3x.jpg 3x"
+                alt="">
+            </li>
+            <li class="list-title">
+              <h4>記事カテゴリ</h4>
+            </li>
+            <li class="list-content">
+              テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
+            </li>
+            <li class="list-date">
+              2025.04.03
+            </li>
+          </ul>
+          <div class="list-seemore">
+            <a href="" class="btn">もっと見る</a>
+          </div>
+        </div>
+      </div>
+      <div class="main-sub-wrapper">
+        <div class="main-appeal-wrapper">
+          <img class="new5" src="img/news5.jpg" srcset="img/news5.jpg, img/news5@2x.jpg, img/news5@3x.jpg" alt="">
+          <img class="new6" src="img/news6.jpg" srcset="img/news6.jpg, img/news6@2x.jpg, img/news6@3x.jpg" alt="">
+        </div>
+        <div class="main-category-wrapper">
+          <h3 class="headline-side libre-baskerville">
+            CATEGORY<br class="forpc">
+            <span class="noto-sans headline-small">&emsp;カテゴリ</span>
+          </h3>
+          <ul>
+            <li>
+              <a href="" class="btn">赤ワイン</a>
+            </li>
+            <li>
+              <a href="" class="btn">白ワイン</a>
+            </li>
+            <li>
+              <a href="" class="btn">スパークリング</a>
+            </li>
+            <li>
+              <a href="" class="btn">ウイスキー</a>
+            </li>
+            <li>
+              <a href="" class="btn">オリシャン</a>
+            </li>
+            <li>
+              <a href="" class="btn">オリジナルグラス</a>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    <div class="main-news-wrapper">
-      <h3 class="headline-big libre-baskerville">
-        NEWS
-        <span class="noto-sans headline-small">&emsp;新着記事</span>
-      </h3>
-      <ul class="news-flex">
-        <li class="list-image">
-          <img class="new1" src="img/news1.jpg" srcset="
-            img/news1.jpg 1x, 
-            img/news1@2x.jpg 2x, 
-            img/news1@3x.jpg 3x" alt="">
-        </li>
-        <li class="list-title">
-          <h4>記事カテゴリ</h4>
-        </li>
-        <li class="list-content">
-          テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
-        </li>
-        <li class="list-date">
-          2025.04.03
-        </li>
-      </ul>
-      <ul class="news-flex">
-        <li class="list-image">
-          <img class="new2" src="img/news2.jpg" srcset="
-            img/news2.jpg 1x, 
-            img/news2@2x.jpg 2x, 
-            img/news2@3x.jpg 3x" alt="">
-        </li>
-        <li class="list-title">
-          <h4>記事カテゴリ</h4>
-        </li>
-        <li class="list-content">
-          テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
-        </li>
-        <li class="list-date">
-          2025.04.03
-        </li>
-      </ul>
-      <ul class="news-flex">
-        <li class="list-image">
-          <img class="new3" src="img/news3.jpg" srcset="
-            img/news3.jpg 1x, 
-            img/news3@2x.jpg 2x, 
-            img/news3@3x.jpg 3x" alt="">
-        </li>
-        <li class="list-title">
-          <h4>記事カテゴリ</h4>
-        </li>
-        <li class="list-content">
-          テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
-        </li>
-        <li class="list-date">
-          2025.04.03
-        </li>
-      </ul>
-      <ul class="news-flex">
-        <li class="list-image">
-          <img class="new4" src="img/news4.jpg" srcset="
-            img/news4.jpg 1x, 
-            img/news4@2x.jpg 2x, 
-            img/news4@3x.jpg 3x" alt="">
-        </li>
-        <li class="list-title">
-          <h4>記事カテゴリ</h4>
-        </li>
-        <li class="list-content">
-          テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。
-        </li>
-        <li class="list-date">
-          2025.04.03
-        </li>
-        <li class="list-seemore">
+    <div class="main-introduction-wrapper">
+      <div class="main-genre-wrapper right">
+        <div class="main-genre-img-wrapper">
+          <img class="appeal" src="img/appeal.jpg" srcset="img/appeal.jpg 1x,img/appeal@2x.jpg 2x,img/appeal@3x.jpg 3x"
+            alt="オリシャン">
+        </div>
+        <div class="main-genre-content-wrapper">
+          <h4 class="">
+            テキスト
+            <br>
+            テキスト入ります
+            </span>
+          </h4>
+          <p>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
           <a href="" class="btn">もっと見る</a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-appeal-wrapper">
-      <img class="new5" src="img/news5.jpg" srcset="
-        img/news5.jpg, 
-        img/news5@2x.jpg, 
-        img/news5@3x.jpg" alt="">
-      <img class="new6" src="img/news6.jpg" srcset="
-        img/news6.jpg, 
-        img/news6@2x.jpg, 
-        img/news6@3x.jpg" alt="">
-    </div>
-    <div class="main-category-wrapper">
-      <h3 class="headline-big libre-baskerville">
-        CATEGORY
-        <span class="noto-sans headline-small">&emsp;カテゴリ</span>
-      </h3>
-      <ul>
-        <li>
-          <a href="" class="btn">赤ワイン</a>
-        </li>
-        <li>
-          <a href="" class="btn">白ワイン</a>
-        </li>
-        <li>
-          <a href="" class="btn">スパークリング</a>
-        </li>
-        <li>
-          <a href="" class="btn">ウイスキー</a>
-        </li>
-        <li>
-          <a href="" class="btn">オリシャン</a>
-        </li>
-        <li>
-          <a href="" class="btn">オリジナルグラス</a>
-        </li>
-      </ul>
-    </div>
-    <div class="main-genre-wrapper">
-      <img class="appeal" src="img/appeal.jpg" srcset="
-        img/appeal.jpg 1x,
-        img/appeal@2x.jpg 2x,
-        img/appeal@3x.jpg 3x" alt="オリシャン">
-      <h4 class="">
-        テキスト
-        <br>
-        テキスト入ります
-        </span>
-      </h4>
-      <p>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
-      <a href="" class="btn">もっと見る</a>
-    </div>
-    <div class="main-genre-wrapper">
-      <img class="appeal" src="img/amelie_catch.jpg" srcset="
-        img/amelie_catch.jpg 1x,
-        img/amelie_catch@2x.jpg 2x,
-        img/amelie_catch@3x.jpg 3x" alt="オリシャン">
-      <h4 class="">
-        テキスト
-        <br>
-        テキスト入ります
-        </span>
-      </h4>
-      <p>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
-      <a href="" class="btn">もっと見る</a>
-    </div>
-    <div class="main-genre-wrapper">
-      <img class="appeal" src="img/emma_catch.jpg" srcset="
-        img/emma_catch.jpg 1x,
-        img/emma_catch@2x.jpg 2x,
-        img/emma_catch@3x.jpg 3x" alt="オリシャン">
-      <h4 class="">
-        テキスト
-        <br>
-        テキスト入ります
-        </span>
-      </h4>
-      <p>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
-      <a href="" class="btn">もっと見る</a>
+        </div>
+      </div>
+      <div class="main-genre-wrapper left">
+        <div class="main-genre-img-wrapper">
+          <img class="appeal" src="img/amelie_catch.jpg"
+            srcset="img/amelie_catch.jpg 1x,img/amelie_catch@2x.jpg 2x,img/amelie_catch@3x.jpg 3x" alt="オリシャン">
+        </div>
+        <div class="main-genre-content-wrapper">
+          <h4 class="">
+            テキスト
+            <br>
+            テキスト入ります
+            </span>
+          </h4>
+          <p>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
+          <a href="" class="btn">もっと見る</a>
+        </div>
+      </div>
+      <div class="main-genre-wrapper right">
+        <div class="main-genre-img-wrapper">
+          <img class="appeal" src="img/emma_catch.jpg"
+            srcset=" img/emma_catch.jpg 1x,img/emma_catch@2x.jpg 2x, img/emma_catch@3x.jpg 3x" alt="オリシャン">
+        </div>
+        <div class="main-genre-content-wrapper">
+          <h4 class="">
+            テキスト
+            <br>
+            テキスト入ります
+            </span>
+          </h4>
+          <p>テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。テキスト入ります。</p>
+          <a href="" class="btn">もっと見る</a>
+        </div>
+      </div>
     </div>
   </main>
 
   <footer>
     <hr>
-    <img class="appeal" src="img/logo/LOGO.png">
-    <div class="category">
-      <div>カテゴリ</div>
-      <div>カテゴリ</div>
-      <div>カテゴリ</div>
-      <div>カテゴリ</div>
-      <div>カテゴリ</div>
-      <div>カテゴリ</div>
-    </div>
-    <div class="content">
-      <div>テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-    </div>
-    <div class="icon">
-      <div>
-        <img src="img/logo/facebook.png" alt="facebookロゴ">
+    <div class="footer-area">
+      <div class="content-area">
+        <img class="appeal" src="img/logo/LOGO.png">
+        <div class="category">
+          <div>カテゴリ</div>
+          <div>カテゴリ</div>
+          <div>カテゴリ</div>
+          <div>カテゴリ</div>
+          <div>カテゴリ</div>
+          <div>カテゴリ</div>
+        </div>
+        <div class="content">
+          <div>テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+        </div>
       </div>
-      <div>
-        <img src="img/logo/instagram.png" alt="instagramロゴ">
-      </div>
-      <div>
-        <img src="img/logo/line.png" alt="lineロゴ">
-      </div>
-      <div>
-        <img src="img/logo/xcompany.png" alt="xcompanyロゴ">
+      <div class="icon-area">
+        <div>
+          <img src="img/logo/facebook.png" alt="facebookロゴ">
+        </div>
+        <div>
+          <img src="img/logo/instagram.png" alt="instagramロゴ">
+        </div>
+        <div>
+          <img src="img/logo/line.png" alt="lineロゴ">
+        </div>
+        <div>
+          <img src="img/logo/xcompany.png" alt="xcompanyロゴ">
+        </div>
       </div>
     </div>
     <p class="copyright">Copyright 2025 Compass, Inc.</p>

@@ -3,7 +3,7 @@
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
   <meta charset="UTF-8">
-  <title>WINE</title>
+  <title>Compassギフトサイト商品詳細</title>
   <meta content="compass" name="description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="">
@@ -27,14 +27,17 @@
   <link rel="stylesheet" href="css/custom.css">
   <link rel="stylesheet" href="css/detail.css">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/detail.js"></script>
 </head>
 
 <body>
   <header>
     <div class="header-wrapper">
       <div class="header-flex">
-        <div class="header-icon hamburger">
+        <div class="forsp header-icon hamburger">
           <div></div>
           <div></div>
           <div></div>
@@ -42,27 +45,44 @@
       </div>
       <div class="header-logo">
         <a href="#headerarea">
-          <img src="img/logo/LOGO.png" alt="メインロゴ">
+          <div class="gallery-cell">
+            <img class="forpc header-image" src="img/logo/LOGO.png" alt="">
+            <img class="forsp header-image" src="img/logo/LOGO.png"
+              srcset="img/logo/LOGO.png 1x,img/logo/LOGO@2x.png 2x,img/logo/LOGO@3x.png 3x" alt="">
+          </div>
         </a>
       </div>
-      <div class="header-icon forpc">
-        <img src="img/icon/search.png">
-      </div>
-      <div class="header-icon">
-        <i class="fa-solid fa-heart"></i>
-      </div>
-      <div class="header-icon">
-        <i class="fa-solid fa-user"></i>
-      </div>
-      <div class="header-icon">
-        <i class="fa-solid fa-cart-shopping"></i>
+      <div class="header-iconarea">
+        <div class="header-icon forpc">
+          <img src="img/icon/search.png">
+        </div>
+        <div class="header-icon">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="header-icon">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="header-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
       </div>
     </div>
-    <div class="search-box">
+    <div class="search-box forsp">
       <input type="text" name="search" placeholder="検索" class="textbox">
     </div>
   </header>
+
   <main>
+    <nav class="navigation forpc">
+      <ul>
+        <li><a href="/">カテゴリ</a></li>
+        <li><a href="/">カテゴリ</a></li>
+        <li><a href="/">カテゴリ</a></li>
+        <li><a href="/">カテゴリ</a></li>
+        <li><a href="/">カテゴリ</a></li>
+        <li><a href="/">カテゴリ</a></li>
+      </ul>
+    </nav>
     <div class="main-breadcrumb-wrapper">
       <nav>
         <ol class="breadcrumb">
@@ -72,43 +92,43 @@
       </nav>
     </div>
     <div class="wrap detail-main-wrapper">
-      <div class="detail-main-child">
-        <div class="detail-main-img">
-          <img class="detailimg" src="img/product/cabernet.jpg" alt="アモーレ">
-        </div>
+      <div class="detail-main-img">
+        <img class="detailimg" src="img/product/cabernet.jpg" alt="アモーレ">
+      </div>
+      <div class="wrap information-main-wrapper">
         <ul class="detail-flex">
-          <li class="list-title">
+          <li class="detail-list-title">
             カベルネ・ソーヴィニヨンアモーレ
           </li>
-          <li class="list-review">
+          <li class="detail-list-review">
             <div class="rate"><span class="rate4"></span>&emsp;1レビュー</div>
           </li>
-          <li class="list-price">
-            <div class="price txt-purple noto-sans">1,980円(税込)</div>
+          <li class="detail-list-price">
+            <div class="price txt-purple noto-sans">1,980円<span class="headline-small">&thinsp;(税込)</span></div>
           </li>
-          <li class="list-content">
+          <li class="detail-list-content">
             <p>※配送料は購入手続き時に計算されます。</p>
             <p>商品番号:&nbsp;0001</p>
           </li>
           <hr>
-          <div class="number-area">
+          <li class="detail-number-area">
             <div class="minusbutton"><i class="fa-solid fa-minus"></i></div>
-            <input class="numarea" type="number" value="0">
+            <input id="numarea" class="numarea" type="number" value="0">
             <div class="plusbutton"><i class="fa-solid fa-plus"></i></div>
-            <div class="favbutton"><i class="heartbutton fa-regular fa-heart"></i></div>
-          </div>
-          <li class="list-buttons">
-            <div class="btn btn-purple">
-              <form class="order" action="https://suijinclub.jp/api/basket/add.html" method="post">
-                <input type="hidden" name="brand_info" value="1,000000000422,1">
-                <button><i class="fa-solid fa-cart-shopping"></i>&emsp;カートに入れる</button>
-              </form>
+            <div class="favbutton">
+              <i class="heartsolid fa-solid fa-heart display-none"></i>
+              <i class="heartbutton fa-regular fa-heart"></i>
+            </div>
+          </li>
+          <li class="detail-list-buttons">
+            <div class="btn">
+              <button class="btn-cart">
+                <i class="fa-solid fa-cart-shopping"></i>&emsp;カートに入れる
+              </button>
             </div>
           </li>
         </ul>
         <hr>
-      </div>
-      <div class="wrap information-main-wrapper">
         <div class="information-area">
           <ul class="information-flex">
             <li class="info-title">
@@ -129,275 +149,459 @@
             </li>
           </ul>
         </div>
-        <hr>
       </div>
     </div>
     <div class="review-main-wrapper">
+      <hr>
+      <h2 class="review-list-title">カスタマーレビュー</h2>
       <div class="review-main-child">
-        <ul class="review-flex">
-          <li class="list-title">カスタマーレビュー</li>
-          <li class="list-head">
-            <div class="rate"><span class="rate4"></span>&emsp;5点満点中3.50</div>
-          </li>
-          <li class="list-head">
-            <div class="head">1のレビューに基づいています</div>
-          </li>
-          <li class="list-reviews">
-            <ul class="review-flex">
-              <li class="review-5">
-                <div class="star">★★★★★</div>
-                <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
-                  at 50/100
-                </meter>
-                <div class="number">1</div>
+        <div class="review-point">
+          <ul class="review-point-flex">
+            <li class="review-list-head">
+              <div class="rate"><span class="rate4"></span>&emsp;5点満点中3.50</div>
+            </li>
+            <li class="review-list-head">
+              <div class="head">1のレビューに基づいています</div>
+            </li>
+          </ul>
+        </div>
+        <div class="review-stars">
+          <ul class="review-stars-flex">
+            <li class="review-5">
+              <div class="star">★★★★★</div>
+              <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+                at 50/100
+              </meter>
+              <div class="number">1</div>
+            </li>
+            <li class="review-4">
+              <div class="star">★★★★☆</div>
+              <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+                at 50/100
+              </meter>
+              <div class="number">1</div>
+            </li>
+            <li class="review-3">
+              <div class="star">★★★☆☆</div>
+              <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+                at 50/100
+              </meter>
+              <div class="number">1</div>
+            </li>
+            <li class="review-2">
+              <div class="star">★★☆☆☆</div>
+              <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+                at 50/100
+              </meter>
+              <div class="number">1</div>
+            </li>
+            <li class="review-1">
+              <div class="star">★☆☆☆☆</div>
+              <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
+                at 50/100
+              </meter>
+              <div class="number">1</div>
+            </li>
+          </ul>
+        </div>
+        <div class="review-stars-button">
+          <button>
+            <i class="fa-solid fa-pencil"></i>&emsp;レビューを書く
+          </button>
+        </div>
+      </div>
+      <div class="review-list-newest">
+        <details>
+          <summary>
+            最新
+            <span class="ico"></span>
+          </summary>
+          <div class="inner">
+            <ul class="review-point-flex">
+              <li class="list-review">
+                <div class="rate"><span class="rate4"></span></div>
+                <div class="date">10/24/2024</div>
               </li>
-              <li class="review-4">
-                <div class="star">★★★★☆</div>
-                <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
-                  at 50/100
-                </meter>
-                <div class="number">1</div>
+              <li class="list-profile">
+                <div class="usericon"><i class="fa-solid fa-user"></i></div>
+                <div class="username">シャトープピーユ好きおじさん</div>
               </li>
-              <li class="review-3">
-                <div class="star">★★★☆☆</div>
-                <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
-                  at 50/100
-                </meter>
-                <div class="number">1</div>
-              </li>
-              <li class="review-2">
-                <div class="star">★★☆☆☆</div>
-                <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
-                  at 50/100
-                </meter>
-                <div class="number">1</div>
-              </li>
-              <li class="review-1">
-                <div class="star">★☆☆☆☆</div>
-                <meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="50">
-                  at 50/100
-                </meter>
-                <div class="number">1</div>
-              </li>
+              <li class="list-title">シャトープピーユ今年イチオシです</li>
+              <li class="list-content">シャトープピーユ最高です。コスパいいですし、味しっかりしてるし。リピ確定。</li>
             </ul>
-            <button><i class="fa-solid fa-pencil"></i>&emsp;レビューを書く</button>
-          </li>
-          <li class="list-newest">
-            <details>
-              <summary>
-                最新
-                <span class="ico"></span>
-              </summary>
-              <div class="inner">
-                <ul class="review-flex">
-                  <li class="list-review">
-                    <div class="rate"><span class="rate4"></span>&emsp;5点満点中3.50</div>
-                    <div class="date">10/24/2024</div>
-                  </li>
-                  <li class="list-profile">
-                    <div class="usericon"><i class="fa-solid fa-user"></i></div>
-                    <div class="username">シャトープピーユ好きおじさん</div>
-                  </li>
-                  <li class="list-title">シャトープピーユ今年イチオシです</li>
-                  <li class="list-content">シャトープピーユ最高です。コスパいいですし、味しっかりしてるし。リピ確定。</li>
-                </ul>
-              </div>
-            </details>
-          </li>
-        </ul>
+          </div>
+        </details>
       </div>
       <hr>
     </div>
-    <div class="wrap recommend-main-wrapper">
-      <h3 class="headline-standard noto-sans">
+    <div class="wrap detail-recommend-wrapper">
+      <h3 class="noto-sans">
         おすすめ
       </h3>
       <div class="product-row-wrapper">
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <i class="heartbutton fa-regular fa-heart"></i>
-              <img class="recommend1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
-            </li>
-            <li class="list-category">赤ワイン</li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;アモーレ
-            </li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form class="order" action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000422,1">
-                  <button>カートに入れる</button>
-                </form>
-              </div>
-            </li>
-          </ul>
+        <div id="recommendctrl" class="forsp product-controller">
+          <span class="leftarrow">
+            <i class="fa-solid fa-angles-left fa-2x"></i>
+          </span>
+          <span class="rightarrow">
+            <i class="fa-solid fa-angles-right fa-2x"></i>
+          </span>
         </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <i class="heartbutton fa-regular fa-heart"></i>
-              <img class="recommend1" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
-            </li>
-            <li class="list-category">白ワイン</li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;ブラン
-            </li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form class="order" action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000422,1">
-                  <button>カートに入れる</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <i class="heartbutton fa-regular fa-heart"></i>
-              <img class="recommend3" src="img/product/soleil.jpg" alt="ソレイユ">
-            </li>
-            <li class="list-category">スパークリングワイン</li>
-            <li class="list-title">
-              ヴァン・ムスー・ブリュット&nbsp;ソレイユ
-            </li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form class="order" action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000422,1">
-                  <button>カートに入れる</button>
-                </form>
-              </div>
-            </li>
-          </ul>
+        <div id="recommendarea" class="product-row-parent">
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc recommend1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
+                <img class="forsp recommend1" src="img/product/cabernet.jpg"
+                  srcset="img/product/cabernet.jpg 1x,img/product/cabernet@2x.jpg 2x,img/product/cabernet@3x.jpg 3x"
+                  alt="SUIJINWINEアモーレ">
+              </li>
+              <li class="list-category">赤ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                アモーレ
+              </li>
+              <li class="list-buttons">
+                <div class="btn">
+                  <button class="btn-red">カートに入れる</button>
+                </div>
+                <div class="btn forpc">
+                  <button class="quick1 btn-gray">クイックビュー</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc recommend2" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
+                <img class="forsp recommend2" src="img/product/blanc.jpg"
+                  srcset="img/product/blanc.jpg 1x,img/product/blanc@2x.jpg 2x,img/product/blanc@3x.jpg 3x"
+                  alt="SUIJINWINEブラン">
+              </li>
+              <li class="list-category">白ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                ブラン
+              </li>
+              <li class="list-buttons">
+                <div class="btn">
+                  <button class="btn-red">カートに入れる</button>
+                </div>
+                <div class="btn forpc">
+                  <button class="quick2 btn-gray">クイックビュー</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc recommend3" src="img/product/soleil.jpg" alt="ソレイユ">
+                <img class="forsp recommend3" src="img/product/soleil.jpg"
+                  srcset="img/product/soleil.jpg 1x,img/product/soleil@2x.jpg 2x,img/product/soleil@3x.jpg 3x"
+                  alt="ソレイユ">
+              </li>
+              <li class="list-category">スパークリングワイン</li>
+              <li class="list-title">
+                ヴァン・ムスー・ブリュット
+                <br>
+                ソレイユ
+              </li>
+              <li class="list-buttons">
+                <div class="btn">
+                  <button class="btn-red">カートに入れる</button>
+                </div>
+                <div class="btn forpc">
+                  <button class="quick3 btn-gray">クイックビュー</button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
+      <hr>
     </div>
-    <div class="wrap main-checked-wrapper">
-      <h3 class="headline-standard noto-sans">
+    <div class="wrap detail-recent-wrapper">
+      <h3 class="noto-sans">
         チェックした商品
       </h3>
       <div class="product-row-wrapper">
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <i class="heartbutton fa-regular fa-heart"></i>
-              <img class="recommend1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
-            </li>
-            <li class="list-category">赤ワイン</li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;アモーレ
-            </li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form class="order" action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000422,1">
-                  <button>カートに入れる</button>
-                </form>
-              </div>
-            </li>
-          </ul>
+        <div id="checkedctrl" class="forsp product-controller">
+          <span class="leftarrow">
+            <i class="fa-solid fa-angles-left fa-2x"></i>
+          </span>
+          <span class="rightarrow">
+            <i class="fa-solid fa-angles-right fa-2x"></i>
+          </span>
         </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <i class="heartbutton fa-regular fa-heart"></i>
-              <img class="recommend1" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
-            </li>
-            <li class="list-category">白ワイン</li>
-            <li class="list-title">
-              SUIJIN&nbsp;WINE&nbsp;ブラン
-            </li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form class="order" action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000422,1">
-                  <button>カートに入れる</button>
-                </form>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="product-row-child">
-          <ul class="product-flex">
-            <li class="list-image">
-              <i class="heartbutton fa-regular fa-heart"></i>
-              <img class="recommend3" src="img/product/soleil.jpg" alt="ソレイユ">
-            </li>
-            <li class="list-category">スパークリングワイン</li>
-            <li class="list-title">
-              ヴァン・ムスー・ブリュット&nbsp;ソレイユ
-            </li>
-            <li class="list-price">
-              <div class="price txt-purple noto-sans">1,980円(税込)</div>
-            </li>
-            <li class="list-buttons">
-              <div class="btn btn-purple">
-                <form class="order" action="https://suijinclub.jp/api/basket/add.html" method="post">
-                  <input type="hidden" name="brand_info" value="1,000000000422,1">
-                  <button>カートに入れる</button>
-                </form>
-              </div>
-            </li>
-          </ul>
+        <div id="checkarea" class="product-row-parent">
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc check1" src="img/product/cabernet.jpg" alt="SUIJINWINEアモーレ">
+                <img class="forsp check1" src="img/product/cabernet.jpg"
+                  srcset="img/product/cabernet.jpg 1x, img/product/cabernet@2x.jpg 2x,img/product/cabernet@3x.jpg 3x"
+                  alt="SUIJINWINEアモーレ">
+              </li>
+              <li class="list-category">赤ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                アモーレ
+              </li>
+              <li class="list-buttons">
+                <div class="btn">
+                  <button class="btn-red">カートに入れる</button>
+                </div>
+                <div class="btn forpc">
+                  <button class="quick1 btn-gray">クイックビュー</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc check2" src="img/product/blanc.jpg" alt="SUIJINWINEブラン">
+                <img class="forsp check2" src="img/product/blanc.jpg"
+                  srcset="img/product/blanc.jpg 1x,img/product/blanc@2x.jpg 2x, img/product/blanc@3x.jpg 3x"
+                  alt="SUIJINWINEブラン">
+              </li>
+              <li class="list-category">白ワイン</li>
+              <li class="list-title">
+                SUIJIN&nbsp;WINE&nbsp;
+                <br>
+                ブラン
+              </li>
+              <li class="list-buttons">
+                <div class="btn">
+                  <button class="btn-red">カートに入れる</button>
+                </div>
+                <div class="btn forpc">
+                  <button class="quick2 btn-gray">クイックビュー</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="product-row-child">
+            <ul class="product-flex">
+              <li class="list-image">
+                <i class="heartsolid fa-solid fa-heart display-none"></i>
+                <i class="heartbutton fa-regular fa-heart"></i>
+                <img class="forpc check3" src="img/product/soleil.jpg" alt="ソレイユ">
+                <img class="forsp check3" src="img/product/soleil.jpg"
+                  srcset="img/product/soleil.jpg 1x,img/product/soleil@2x.jpg 2x,img/product/soleil@3x.jpg 3x"
+                  alt="ソレイユ">
+              </li>
+              <li class="list-category">スパークリングワイン</li>
+              <li class="list-title">
+                ヴァン・ムスー・ブリュット
+                <br>
+                ソレイユ
+              </li>
+              <li class="list-buttons">
+                <div class="btn">
+                  <button class="btn-red">カートに入れる</button>
+                </div>
+                <div class="btn forpc">
+                  <button class="quick3 btn-gray">クイックビュー</button>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </main>
+
+  <section class="forpc poparea1 pop display-none">
+    <div class="pop-flex">
+      <div class="pop-main-img">
+        <img class="popimg" src="img/product/cabernet.jpg" alt="アモーレ">
+      </div>
+      <ul class="pop-detail-flex">
+        <div class="pop-head">
+          <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="batsu"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <li class="pop-detail-list-title">
+          カベルネ・ソーヴィニヨン<br>アモーレ
+        </li>
+        <li class="pop-detail-list-review">
+          <div class="rate"><span class="rate4"></span></div>
+        </li>
+        <li class="pop-detail-list-price">
+          <div class="price txt-purple noto-sans">1,980円<span class="price-small">&thinsp;(税込)</span></div>
+        </li>
+        <li class="pop-detail-list-content">
+          <p>※配送料は購入手続き時に計算されます。</p>
+          <p>商品番号:&nbsp;0001</p>
+        </li>
+        <hr>
+        <li class="pop-detail-number-area">
+          <div class="minusbutton"><i class="fa-solid fa-minus"></i></div>
+          <input class="numarea" type="number" value="0">
+          <div class="plusbutton"><i class="fa-solid fa-plus"></i></div>
+        </li>
+        <li class="pop-detail-list-buttons">
+          <div class="btn">
+            <button class="btn-cart">
+              <i class="fa-solid fa-cart-shopping"></i>&emsp;カートに入れる
+            </button>
+          </div>
+        </li>
+        <li class="pop-detail-list-detail">
+          詳細を見る
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="forpc poparea2 pop display-none">
+    <div class="pop-flex">
+      <div class="pop-main-img">
+        <img class="popimg" src="img/product/blanc.jpg" alt="ブラン">
+      </div>
+      <ul class="pop-detail-flex">
+        <div class="pop-head">
+          <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="batsu"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <li class="pop-detail-list-title">
+          SUIJIN&nbsp;WINE&nbsp;ブラン
+        </li>
+        <li class="pop-detail-list-review">
+          <div class="rate"><span class="rate4"></span></div>
+        </li>
+        <li class="pop-detail-list-price">
+          <div class="price txt-purple noto-sans">1,657円<span class="price-small">&thinsp;(税込)</span></div>
+        </li>
+        <li class="pop-detail-list-content">
+          <p>※配送料は購入手続き時に計算されます。</p>
+          <p>商品番号:&nbsp;0002</p>
+        </li>
+        <hr>
+        <li class="pop-detail-number-area">
+          <div class="minusbutton"><i class="fa-solid fa-minus"></i></div>
+          <input class="numarea" type="number" value="0">
+          <div class="plusbutton"><i class="fa-solid fa-plus"></i></div>
+        </li>
+        <li class="pop-detail-list-buttons">
+          <div class="btn">
+            <button class="btn-cart">
+              <i class="fa-solid fa-cart-shopping"></i>&emsp;カートに入れる
+            </button>
+          </div>
+        </li>
+        <li class="pop-detail-list-detail">
+          詳細を見る
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="forpc poparea3 pop display-none">
+    <div class="pop-flex">
+      <div class="pop-main-img">
+        <img class="popimg" src="img/product/soleil.jpg" alt="ヴァン・ムスー・ブリュット
+        ソレイユ">
+      </div>
+      <ul class="pop-detail-flex">
+        <div class="pop-head">
+          <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+          <div class="batsu"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+        <li class="pop-detail-list-title">
+          ヴァン・ムスー・ブリュット<br>ソレイユ
+        </li>
+        <li class="pop-detail-list-review">
+          <div class="rate"><span class="rate4"></span></div>
+        </li>
+        <li class="pop-detail-list-price">
+          <div class="price txt-purple noto-sans">690円<span class="price-small">&thinsp;(税込)</span></div>
+        </li>
+        <li class="pop-detail-list-content">
+          <p>※配送料は購入手続き時に計算されます。</p>
+          <p>商品番号:&nbsp;0003</p>
+        </li>
+        <hr>
+        <li class="pop-detail-number-area">
+          <div class="minusbutton"><i class="fa-solid fa-minus"></i></div>
+          <input class="numarea" type="number" value="0">
+          <div class="plusbutton"><i class="fa-solid fa-plus"></i></div>
+        </li>
+        <li class="pop-detail-list-buttons">
+          <div class="btn">
+            <button class="btn-cart">
+              <i class="fa-solid fa-cart-shopping"></i>&emsp;カートに入れる
+            </button>
+          </div>
+        </li>
+        <li class="pop-detail-list-detail">
+          詳細を見る
+        </li>
+      </ul>
+    </div>
+  </section>
+
   <footer>
     <hr>
-    <img class="appeal" src="img/logo/LOGO.png">
-    <div class="category">
-      <div>カテゴリ</div>
-      <div>カテゴリ</div>
-      <div>カテゴリ</div>
-      <div>カテゴリ</div>
-      <div>カテゴリ</div>
-      <div>カテゴリ</div>
-    </div>
-    <div class="content">
-      <div>テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-      <div>／テキスト</div>
-    </div>
-    <div class="icon">
-      <div>
-        <img src="img/logo/facebook.png" alt="facebookロゴ">
+    <div class="footer-area">
+      <div class="content-area">
+        <img class="appeal" src="img/logo/LOGO.png">
+        <div class="category">
+          <div>カテゴリ</div>
+          <div>カテゴリ</div>
+          <div>カテゴリ</div>
+          <div>カテゴリ</div>
+          <div>カテゴリ</div>
+          <div>カテゴリ</div>
+        </div>
+        <div class="content">
+          <div>テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+        </div>
       </div>
-      <div>
-        <img src="img/logo/instagram.png" alt="instagramロゴ">
-      </div>
-      <div>
-        <img src="img/logo/line.png" alt="lineロゴ">
-      </div>
-      <div>
-        <img src="img/logo/xcompany.png" alt="xcompanyロゴ">
+      <div class="icon-area">
+        <div>
+          <img src="img/logo/facebook.png" alt="facebookロゴ">
+        </div>
+        <div>
+          <img src="img/logo/instagram.png" alt="instagramロゴ">
+        </div>
+        <div>
+          <img src="img/logo/line.png" alt="lineロゴ">
+        </div>
+        <div>
+          <img src="img/logo/xcompany.png" alt="xcompanyロゴ">
+        </div>
       </div>
     </div>
     <p class="copyright">Copyright 2025 Compass, Inc.</p>

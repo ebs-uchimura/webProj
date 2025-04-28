@@ -39,7 +39,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  color: #FFA500;
+  color: #e21a19;
   overflow: hidden;
 }
 
@@ -90,4 +90,98 @@
 
 .rate .rate5:after {
   content: "★★★★★";
+}
+
+/*-------------------------------
+ ▼forPC
+ --------------------------------*/
+@media screen and (min-width: 769px) {
+
+  /*------------------------------
+ ▼ review
+ -------------------------------*/
+  .rate {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+  }
+
+  .rate:before {
+    content: "★★★★★";
+    color: #ccc;
+  }
+
+  .rate0-5:after,
+  .rate1:before,
+  .rate1:after,
+  .rate1-5:before,
+  .rate1-5:after,
+  .rate2:before,
+  .rate2:after,
+  .rate2-5:before,
+  .rate2-5:after,
+  .rate3:before,
+  .rate3:after,
+  .rate3-5:before,
+  .rate3-5:after,
+  .rate4:before,
+  .rate4:after,
+  .rate4-5:before,
+  .rate4-5:after,
+  .rate5:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #e21a19;
+    overflow: hidden;
+  }
+
+  .rate .rate0-5:after,
+  .rate .rate1-5:after,
+  .rate .rate2-5:after,
+  .rate .rate3-5:after,
+  .rate .rate4-5:after {
+    width: 8px;
+    content: "★";
+  }
+
+  .rate .rate1:after,
+  .rate .rate1-5:before {
+    content: "★";
+  }
+
+  .rate .rate1-5:after {
+    left: 1em;
+  }
+
+  .rate .rate2:after,
+  .rate .rate2-5:before {
+    content: "★★";
+  }
+
+  .rate .rate2-5:after {
+    left: 2em;
+  }
+
+  .rate .rate3:after,
+  .rate .rate3-5:before {
+    content: "★★★";
+  }
+
+  .rate .rate3-5:after {
+    left: 3em;
+  }
+
+  .rate .rate4:after,
+  .rate .rate4-5:before {
+    content: "★★★★";
+  }
+
+  .rate .rate4-5:after {
+    left: 4em;
+  }
+
+  .rate .rate5:after {
+    content: "★★★★★";
+  }
 }
