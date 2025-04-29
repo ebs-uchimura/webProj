@@ -9,11 +9,9 @@
 $(function() {
   // detect mobile
   const isMobile = /iPhone|Android/i.test(navigator.userAgent);
-  console.log(isMobile);
 
   // poparea
   $('.heartsolid').on('click', function() {
-    console.log('fav');
     // display-none
     $(this).next().removeClass('display-none');
     $(this).addClass('display-none');
@@ -21,7 +19,6 @@ $(function() {
 
   // poparea
   $('.heartbutton').on('click', function() {
-    console.log('nonfav');
     // display-none
     $(this).prev().removeClass('display-none');
     $(this).addClass('display-none');
