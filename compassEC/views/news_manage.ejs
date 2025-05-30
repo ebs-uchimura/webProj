@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta charset="UTF-8">
+  <title>
+    <%= title %>管理画面
+  </title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta content="compass" name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="/css/newsmanage.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+  <script src="/js/index.js"></script>
+</head>
+
+<body>
+  <header>
+    <h2>
+      <%= title %>管理画面
+    </h2>
+    <a href="<%= root %>/manage/">前の画面へ戻る</a>
+  </header>
+  <table class="btntbl">
+    <tr>
+      <th>ID</th>
+      <th>日付</th>
+      <th>記事タイトル</th>
+      <th>記事内容</th>
+      <th>掲載</th>
+    </tr>
+    <form action="/manage/news" id="regform" method="post">
+    <% if (data.length > 0) { %>
+    <% for ( let i=0; i < data.length; i++ ) { %>
+    <tr>
+      <td>
+        <%= data[i].id %>
+      </td>
+      <td>
+        <input type="text" name="datepicker" id="js-datepicker">
+      </td>
+      <td>
+        <input type="text" class="standard" name="title" value="<%= data[i].title %>">
+      </td>
+      <td>
+        <textarea class="textarea" rows="5" cols="50" name="context" value=""><%= data[i].context %></textarea>
+      </td>
+      <td>
+         <input type="checkbox" id="checkbox" class="checkbox" name="check[]" value="<%= i %>" <%= data[i].display == 1 ? 'checked' : '' %> >
+      </td>
+      <input type="hidden" id="id" name="id" value="<%= data[i].id %>" />
+    </tr>
+    <% } %>
+    <% } %>
+    <tr>
+      <td colspan="5">
+        <button class="subbutton button-g button-6 button-wide" type="submit">登録</button>
+      </td>
+    </tr>
+    </form>
+    <tr>
+      <td colspan="5">
+        <a href="<%= root %>/manage/">前の画面へ戻る</a>
+      </td>
+    </tr>
+  </table>
+  
+  <script>
+    // init calender
+    flatpickr("#js-datepicker", {
+      locale: "ja"
+    });
+  </script>
+  <p class="copyright">Copyright 2025 Compass, Inc.</p>
+</body>
+
+</html>

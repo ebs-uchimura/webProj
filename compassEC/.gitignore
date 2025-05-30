@@ -1,2 +1,15 @@
-img/
-source/
+# Dependency directories
+.git/
+node_modules/
+logs/
+
+.gitignore
+
+# dotenv environment variables file
+.env
+.devenv
+.localenv
+test.env
+
+# package file
+package-lock.json

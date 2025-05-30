@@ -1,0 +1,255 @@
+/*
+/* manage.css
+*/
+
+@charset "utf-8";
+
+/* general */
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 1250px;
+  table-layout: fixed;
+}
+
+table tr {
+  background-color: #fff;
+  padding: .35em;
+  border: 2px solid #eee;
+}
+
+table tr:last-child {
+  border: none;
+}
+
+table th {
+  padding: 0;
+  font-size: .85em;
+  border-right: 2px solid #fff;
+}
+
+table td {
+  padding: 20px 0 5px;
+  border-right: 2px solid #eee;
+  font-size: .85em;
+  text-align: center;
+}
+
+table thead tr {
+  background-color: #50535d;
+  color: #fff;
+}
+
+table tbody th {
+  border-right: 2px solid #eee;
+}
+
+table tbody th:first-child {
+  width: 20px;
+}
+
+table tbody th:nth-child(2) {
+  width: 30px;
+}
+
+table tbody th:nth-child(3) {
+  width: 80px;
+}
+
+table tbody th:nth-child(4) {
+  width: 80px;
+}
+
+table tbody th:nth-child(5) {
+  width: 100px;
+}
+
+table tbody th:nth-child(6) {
+  width: 160px;
+}
+
+th.non {
+  border-right: none;
+}
+
+.txt {
+  text-align: left;
+  font-size: .85em;
+}
+
+.standard {
+  height: 40px;
+}
+
+.textarea {
+  height: 50px;
+}
+
+.price {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.3em
+}
+
+.price span {
+  font-size: .6em;
+}
+
+.red_bk {
+  background: #e81010
+}
+
+.red-txt {
+  color: #e81010
+}
+
+.btn {
+  background: #e81010;
+  border: 2px solid #e81010;
+  color: #fff;
+  padding: 1em;
+  border-radius: 20px;
+  display: block;
+  text-decoration: none;
+  font-size: .8em
+}
+
+.btn:hover {
+  background: #fff;
+  border: 2px solid #e81010;
+  color: #e81010;
+  transition: .2s;
+}
+
+table .btnarea td {
+  padding: .2em .5em;
+  border-right: none
+}
+
+.subbutton {
+  margin: 0 0 20px 0;
+}
+
+/* blue buttons */
+.button-g {
+  width: auto;
+  margin-left: 10px;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica,
+    Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  min-height: 3rem;
+  padding: calc(.875rem-1px) calc(1.5rem-1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+}
+
+.button-g:hover,
+.button-g:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.button-g:hover {
+  transform: translateY(-1px);
+}
+
+.button-g:active {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+
+.button-wide {
+  width: 250px;
+}
+
+.button-standard {
+  width: 120px;
+}
+
+.button-narrow {
+  width: 80px;
+}
+
+/* red buttons */
+.button-8 {
+  background-color: #ffb2b2;
+}
+
+.button-8:active {
+  background-color: #ffa5a5;
+}
+
+/* general buttons */
+.button-6 {
+  background-color: #ffffff;
+}
+
+.button-6:active {
+  background-color: #f0f0f1;
+}
+
+/* general buttons */
+.button-5 {
+  background-color: #ffcc99;
+}
+
+.button-5:active {
+  background-color: #ffb770;
+}
+
+/* general buttons */
+.button-4 {
+  background-color: #cce6ff;
+}
+
+.button-4:active {
+  background-color: #b3d9ff;
+}
+
+/* general buttons */
+.button-3 {
+  background-color: #898985;
+  /*background-color: #ffffb3;*/
+}
+
+.button-3:active {
+  background-color: #898985;
+  /*background-color: #ffff99;*/
+}
+
+/* general buttons */
+.button-2 {
+  background-color: #afe1af;
+}
+
+.button-2:active {
+  background-color: #9fe2bf;
+}
+
+/* gray buttons */
+.button-1 {
+  background-color: #898985;
+}
+
+.button-1:active {
+  background-color: #afafaa;
+}

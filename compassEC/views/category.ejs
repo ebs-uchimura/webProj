@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta charset="UTF-8">
+  <title>Compassギフトサイトカテゴリ</title>
+  <meta content="compass" name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="">
+  <meta name="keywords" content="ギフト,酒,タンブラー,ワイン,グラス">
+  <meta property="og:url" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:image" content="/images/apple-touch-icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="format-detection" content="telephone=no">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="canonical" href="">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" href="/images/android-touch-icon.png" sizes="192x192">
+  <link rel="stylesheet" href="/css/common.css">
+  <link rel="stylesheet" href="/css/category.css">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2.3.0/dist/flickity.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/flickity@2.3.0/dist/flickity.pkgd.min.js"></script>
+  <script src="/js/index.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-wrapper">
+      <div class="header-flex">
+        <div class="forsp header-icon hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="header-logo">
+        <a href="/">
+          <div class="gallery-cell">
+            <img class="forpc header-image" src="/images/logo/LOGO.png" alt="">
+            <img class="forsp header-image" src="/images/logo/LOGO.png"
+              srcset="/images/logo/LOGO.png 1x,/images/logo/LOGO@2x.png 2x,/images/logo/LOGO@3x.png 3x" alt="">
+          </div>
+        </a>
+      </div>
+      <div class="header-iconarea">
+        <div class="header-icon forpc">
+          <img src="/images/icon/search.png">
+        </div>
+        <div class="header-icon">
+          <i class="fa-solid fa-heart"></i>
+        </div>
+        <div class="header-icon">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="header-icon">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div>
+    </div>
+    <div class="search-box forsp">
+      <input type="text" name="search" placeholder="検索" class="textbox">
+    </div>
+  </header>
+
+  <main>
+    <nav class="navigation forpc">
+      <ul>
+        <% if (typeof category !='string' ) { %>
+          <% categories.forEach(function(val) { %>
+            <li>
+              <a href="/category/<%= val.id %>">
+                <%= val.categoryname %>
+              </a>
+            </li>
+            <% }) %>
+              <% } %>
+      </ul>
+    </nav>
+    <div class="main-breadcrumb-wrapper">
+      <nav>
+        <ol class="breadcrumb">
+          <li><a href="/">TOP</a></li>
+          <li>
+            <a href="/category/<%= selectedCategory.id %>">
+              <%= selectedCategory.categoryname %>
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="wrap category-main-wrapper">
+      <h3 id="categoryname-en" class="category-standard libre-baskerville">
+        <%= selectedCategory.englishname %>&nbsp;
+          <span class="headline-small">
+            <%= selectedCategory.categoryname %>
+          </span>
+      </h3>
+      <p>
+        <%= selectedCategory.context %>
+      </p>
+      <div class="category-head-wrapper">
+        <div class="category-head-items">
+          <%= product.length %>件
+        </div>
+      </div>
+    </div>
+    <div class="category-row-wrapper">
+      <% if (typeof product !='string' ) { %>
+        <% product.forEach(function(val, i) { %>
+          <div class="category-row-child">
+            <ul class="category-flex">
+              <li class="list-image">
+                <div class="favbutton">
+                  <i class="hearton heartbutton fa-solid fa-heart display-none" value="">
+                    <span>
+                      <%= val.id %>
+                    </span>
+                  </i>
+                  <i class="heartoff heartbutton fa-regular fa-heart" value="">
+                    <span>
+                      <%= val.id %>
+                    </span>
+                  </i>
+                </div>
+                <a href="/product/<%= val.id %>">
+                  <img class="recommend1" src="<%= val.imagepath %>" alt="<%= val.productname %>">
+                </a>
+              </li>
+              <li class="list-title">
+                <%= val.productname %>
+              </li>
+              <li class="list-price">
+                <div class="price txt-purple noto-sans">
+                  <%= val.priceRange %>
+                    <span class="price-small ">(税込)</span>
+                </div>
+              </li>
+              <li class="list-buttons">
+                <form name="cartForm2" action="/update/cart" method="post">
+                  <input class="productid" type="hidden" name="pid" value="<%= val.id %>">
+                  <input id="numarea" class="numarea" name="num" type="hidden" value="1">
+                  <div class="btn">
+                    <input class="btn-red" type="submit" value="カートに入れる">
+                  </div>
+                </form>
+                <div class="btn forpc">
+                  <button class="view-btn quick<%= i+1 %> btn-gray">クイックビュー</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <% }) %>
+            <% } %>
+    </div>
+
+    <% if (typeof product !='string' ) { %>
+      <% product.forEach(function(val,i) { %>
+        <section class="forpc poparea<%= i+1 %> pop display-none">
+          <div class="pop-flex">
+            <div class="pop-main-img">
+              <a href="/product/<%= val.id %>">
+                <img class="popimg" src="<%= val.imagepath %>" alt="<%= val.categoryname %>"">
+          </a>
+        </div>
+        <div class=" pop-head">
+                <div class="batsu">
+                  <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+            <ul class=" pop-detail-flex">
+              <li class="pop-detail-list-title">
+                <%= val.productname %>
+              </li>
+              <li class="pop-detail-list-review">
+                <div class="rate">
+                  <div class="star">★★★★★</div>
+                </div>
+              </li>
+              <li class="pop-detail-list-price">
+                <div class="price txt-purple noto-sans">
+                  <%= val.priceRange %>円<span class="price-small">&thinsp;(税込)</span>
+                </div>
+              </li>
+              <li class="pop-detail-list-content">
+                <p>※配送料は購入手続き時に計算されます。</p>
+                <p>商品番号:&nbsp;0001</p>
+              </li>
+              <hr>
+              <form name="cartForm" action="/update/cart" method="post">
+                <li class="pop-detail-number-area">
+                  <div class="minusbutton"><i class="fa-solid fa-minus"></i></div>
+                  <input class="productid" type="hidden" name="pid" value="<%= val.id %>">
+                  <input class="numarea" type="number" name="num" value="1" min="1">
+                  <div class="plusbutton"><i class="fa-solid fa-plus"></i></div>
+                </li>
+                <li class="pop-detail-list-buttons">
+                  <div class="btn">
+                    <button class="btn-cart">
+                      <i class="fa-solid fa-cart-shopping"></i>
+                      <input type="submit" value="カートに入れる" />
+                    </button>
+                  </div>
+                </li>
+              </form>
+              <li class="pop-detail-list-detail">
+                <a href="/product/<%= val.id %>">詳細を見る</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <% }) %>
+          <% } %>
+  </main>
+
+  <footer>
+    <hr>
+    <div class="footer-area">
+      <div class="content-area">
+        <img class="appeal" src="/images/logo/LOGO.png">
+        <div class="category">
+          <% if (typeof categories !='string' ) { %>
+            <% categories.forEach(function(val) { %>
+              <div>
+                <a href="/category/<%= val.id %>">
+                  <%= val.categoryname %>
+                </a>
+              </div>
+              <% }) %>
+                <% } %>
+        </div>
+        <div class="content">
+          <div>テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+          <div>／テキスト</div>
+        </div>
+      </div>
+      <div class="icon-area">
+        <div>
+          <img src="/images/logo/facebook.png" alt="facebookロゴ">
+        </div>
+        <div>
+          <img src="/images/logo/instagram.png" alt="instagramロゴ">
+        </div>
+        <div>
+          <img src="/images/logo/line.png" alt="lineロゴ">
+        </div>
+        <div>
+          <img src="/images/logo/xcompany.png" alt="xcompanyロゴ">
+        </div>
+      </div>
+    </div>
+    <p class="copyright">Copyright 2025 Compass, Inc.</p>
+  </footer>
+</body>
+
+</html>
