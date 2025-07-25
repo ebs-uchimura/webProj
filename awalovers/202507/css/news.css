@@ -64,9 +64,11 @@ hr.black {
 .head-button {
   width: 100%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .head-button a img {
+  width: 80vw;
   margin: 0 auto;
 }
 
@@ -158,7 +160,6 @@ main .news-caption-wrapper .news-caption-headline .news-caption-item .news-capti
 
 main .news-article-wrapper .news-article-headline {
   font-size: 7.4vw;
-  letter-spacing: -.2rem;
 }
 
 main .news-article-wrapper .news-article-headline:nth-child(even) {

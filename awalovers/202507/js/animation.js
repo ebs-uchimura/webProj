@@ -5,10 +5,11 @@
  **/
 
 "use strict";
-
+$(function(){
 jQuery('a[href^="#"]').click(function (e) {
   var speed = 400,
-    href = $(this).attr("href"),
+    href = $(this).attr("href");
+    console.log(href);
     target = $(href == "#" || href == "" ? 'html' : href),
     position = target.offset().top;
   $.when(
@@ -25,4 +26,5 @@ jQuery('a[href^="#"]').click(function (e) {
       }, 10, 'swing');
     }
   });
+});
 });

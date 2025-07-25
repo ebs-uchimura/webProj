@@ -10,6 +10,8 @@ $(function() {
   console.log('is loaded');
   // 端末判定
   const isMobile = /iPhone|Android/i.test(navigator.userAgent);
+  // ジャンプオフセット
+  const offset = $(window).width() * 0.15;
   // ページ上部からの距離を取得
   let distance = 0;
 
@@ -25,7 +27,7 @@ $(function() {
     $('input[name="q01[]"]:radio').change(function() {
       console.log('radio1 changed');
       // ラジオボタン変更
-      const q2yPos = $('#q02').offset().top - 100;
+      const q2yPos = $('#q02').offset().top - offset;
       // アニメーション移動
       $('html, body').animate(
         {
@@ -39,7 +41,7 @@ $(function() {
     $('input[name="q02[]"]:radio').change(function() {
       console.log('radio2 changed');
       // ラジオボタン変更
-      const q3yPos = $('#q03').offset().top - 100;
+      const q3yPos = $('#q03').offset().top - offset;
       // アニメーション移動
       $('html, body').animate(
         {
@@ -53,7 +55,7 @@ $(function() {
     $('input[name="q03[]"]:radio').change(function() {
       console.log('radio3 changed');
       // ラジオボタン変更
-      const q4yPos = $('#q04').offset().top - 100;
+      const q4yPos = $('#q04').offset().top - offset;
       // アニメーション移動
       $('html, body').animate(
         {
