@@ -1,0 +1,36 @@
+a.btn-default {
+  display: inline-block !important;
+  background: #ec4d5f !important;
+  color: #ffffff !important;
+  border: 4px solid #ec4d5f !important;
+  border-radius: 4em !important;
+  min-width: 4.1em !important;
+  max-width: 100% !important;
+  font-size: 100% !important;
+  line-height: 1.8 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  padding: 1em 3em !important;
+  transition: all 0.2s !important;
+}
+a.btn-default:visited {
+  background: #ec4d5f !important;
+  color: #ffffff !important;
+  border: 2px solid #ec4d5f !important;
+  text-decoration: none !important;
+}
+a.btn-default:active {
+  background: #ffffff !important;
+  color: #ec4d5f !important;
+  border: 2px solid #ec4d5f !important;
+  text-decoration: none !important;
+}
+a.btn-default:hover {
+  background: #ffffff !important;
+  border-color: #ec4d5f !important;
+  color: #ec4d5f !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+

@@ -1,0 +1,37 @@
+a.banner {
+  display: inline-block !important;
+  background: #faaf2f !important;
+  color: #ffffff !important;
+  border: 0px solid #83cfcf !important;
+  border-radius: 30px !important;
+  min-width: 4em !important;
+  max-width: 100% !important;
+  font-size: 100% !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  padding: 0.5em 3em !important;
+  transition: all 0.2s !important;
+}
+a.banner:visited {
+  background: #faaf2f !important;
+  color: #ffffff !important;
+  border: 2px solid #83cfcf !important;
+  text-decoration: none !important;
+}
+a.banner:active {
+  background: #ec4d5f !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  text-decoration: none !important;
+}
+a.banner:hover {
+  background: #ec4d5f !important;
+  color: #ffffff !important;
+  border: 0px solid #ffffff !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+}
+
+

@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{ENV:HTTPS} !on
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+</IfModule>
+Redirect permanent /item/satsumakurosumaru/ https://cart.550373.com/?mode=grp&gid=957520
+Redirect permanent /item/kurosubijinmaru/ https://cart.550373.com/?mode=grp&gid=957521
+Redirect permanent /item/katuoichibansenji/ https://cart.550373.com/?mode=grp&gid=957522
+Redirect permanent /item/blueberrykurosu-premium/ https://cart.550373.com/?mode=grp&gid=957524
+Redirect permanent /item/rakurakuwalk/ https://cart.550373.com/?mode=grp&gid=1058871
+Redirect permanent /item/gobocha/ https://cart.550373.com/?mode=grp&gid=1079943
+Redirect permanent /item/kametsubokurosu-2/ https://cart.550373.com/?mode=grp&gid=2102174
+Redirect permanent /about_us/ /index.html
+Redirect permanent /guide/kurosu/ https://cart.550373.com/?mode=f2
+RedirectMatch 301 /lp/(.*) https://www.550373.com/
+
+order deny,allow
+
+
+

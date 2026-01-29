@@ -1,0 +1,30 @@
+suPHP_ConfigPath /home/kiku44/550373.com/xserver_php/
+AddHandler x-httpd-php5.3 .php .phps
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^(550373Å_.com)(:80)? [NC]
+RewriteRule ^(.*) http://www.550373.com/$1 [R=301,L]
+Redirect permanent /company.html http://www.550373.com/about_us/
+Redirect permanent /pr.html http://www.550373.com/privacy/
+Redirect permanent /tr.html http://www.550373.com/conventions/
+Redirect permanent /item/kurosu.html http://www.550373.com/item/satsumakurosumaru/
+Redirect permanent /item/bijin.html http://www.550373.com/item/kurosubijinmaru/
+Redirect permanent /item/manten.html http://www.550373.com/item/kurosumantenmaru/
+Redirect permanent /tvcm.html http://www.550373.com/guide/tvcm/
+Redirect permanent /aman/ http://www.550373.com/category/news/aman/
+Redirect permanent /item/su.html http://www.550373.com/item/kametsubokurosu-2/
+Redirect permanent /m/ http://www.550373.com/
+
+order deny,allow
+

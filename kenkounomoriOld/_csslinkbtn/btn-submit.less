@@ -1,0 +1,25 @@
+// Declaring variables
+@background-color: #4AC789;
+@border: #369d68;
+@color:#FFFFFF;
+@background-color-hover: #369d68;
+@border-hover: #369d68;
+@color-hover:#FFFFFF;
+// Using variables
+
+.btn-submit{
+	display: inline-block;
+	background-color: @background-color;
+	color: @color;
+	border: 2px solid @border;
+	min-width: 100px;
+	line-height: 1.9;
+	text-align:center;
+	cursor:pointer;
+	padding: 0.5em;
+}
+.btn-submit:hover{
+	background-color: @background-color-hover;
+	border: 2px solid @border-hover;
+	color: @color-hover;
+}

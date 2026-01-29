@@ -1,0 +1,17 @@
+.btn-submit {
+  display: inline-block;
+  background-color: #4ac789;
+  color: #ffffff;
+  border: 2px solid #369d68;
+  min-width: 100px;
+  line-height: 1.9;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.5em;
+}
+.btn-submit:hover {
+  background-color: #369d68;
+  border: 2px solid #369d68;
+  color: #ffffff;
+}
+

@@ -1,0 +1,6 @@
+@charset "utf-8";
+.c-body,li,dt,dd,th,td { font-family: 'SourceHanSans-Light'; }
+.c-title { font-family: 'SourceHanSerif-Light'; }
+.c-large_headline { font-family: 'SourceHanSerif-SemiBold'; }
+.c-small_headline { font-family: 'SourceHanSansHW-Regular'; }
+.c-lead { font-family: 'SourceHanSerif-Light'; }

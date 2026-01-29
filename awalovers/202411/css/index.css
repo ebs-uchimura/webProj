@@ -1,0 +1,824 @@
+/*
+/* index.css
+*/
+
+@charset "utf-8";
+
+/*------------------------------
+ ▼ forSP
+ -------------------------------*/
+/* general */
+h2 {
+  font-size: 6.8vw;
+  font-weight: 800;
+}
+
+h3 {
+  font-size: 6vw;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 4.5vw;
+  font-weight: 600;
+}
+
+/* 1. entry */
+main {
+  margin: 10vw 0 0 0;
+}
+
+main .entry-wrapper {
+  margin: 5vw auto;
+  padding: 5vw 0 0 0;
+}
+
+main .entry-wrapper .entry-headline {
+  width: 90vw;
+  margin: 7vw auto;
+}
+
+main .entry-wrapper .entry-voice p {
+  text-align: justify;
+  padding-bottom: 2vw;
+}
+
+main .entry-wrapper .entry-headline img {
+  width: 70%;
+  padding: 1vw 0 0 0;
+  text-align: center;
+}
+
+main .entry-wrapper .entry-headline .entry-text {
+  width: 100%;
+  margin: 0 auto 10vw auto;
+  font-size: 1.2rem;
+}
+
+main .entry-wrapper .entry-headline .entry-text p {
+  width: 80%;
+  padding: 0;
+  justify-content: space-around;
+  text-align: justify;
+  display: block;
+}
+
+main .entry-wrapper .entry-headline .entry-text h2.entry-title {
+  margin: 5vw auto;
+  padding: 25vw 0 0 0;
+  font-size: 6.7vw;
+  letter-spacing: -.05em;
+}
+
+main .entry-wrapper .entry-headline .entry-voice {
+  width: 100%;
+  height: 238vw;
+  padding: 5vw 0 0 0;
+  background-image: url("../img/background02.png");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: bottom center;
+  z-index: 99999;
+  text-align: center;
+}
+
+main .entry-wrapper .entry-headline .entry-voice hr {
+  width: 60%;
+  margin: 3vw auto 5vw;
+  height: 2px;
+  background-color: #b9ce00;
+}
+
+main .entry-wrapper .entry-headline .entry-voice h2 {
+  padding: 8vw 0 2vw;
+  font-size: 9.5vw;
+  line-height: 1.3em;
+  letter-spacing: -.01em;
+}
+
+main .entry-wrapper .entry-headline .entry-voice h3 {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+main .entry-wrapper .entry-headline .entry-voice h4 {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+main .entry-wrapper .entry-headline .entry-voice p {
+  margin: 0 0 1vw 0;
+  padding: 5vw 12vw 8vw;
+  font-size: 4vw;
+}
+
+main .entry-wrapper .entry-headline .entry-voice img.voice-img {
+  width: 45%;
+  text-align: center;
+}
+
+main .entry-wrapper .entry-headline .entry-voice img.appeal-img {
+  width: 100vw;
+}
+
+/* 2. questionnaire */
+main #lpContainer {
+  margin: 20vw 0 0 0;
+  background-image: url("../img/background03.jpg");
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 99999;
+  text-align: center;
+}
+
+main #lpContainer img.arrow2 {
+  width: 25%;
+}
+
+main #lpContainer hr {
+  width: 23%;
+  margin: 3vw auto;
+  background-color: #d80909;
+}
+
+main #lpContainer .Qhead {
+  text-align: center;
+}
+
+main #lpContainer .Qhead img {
+  width: 35%;
+  margin: auto;
+}
+
+main #lpContainer .question {
+  margin: 20vw 0;
+  font-family: "Zen Old Mincho", serif;
+  text-align: center;
+}
+
+main #lpContainer .headTxt {
+  margin: 1vw auto;
+  font-size: 2.1rem;
+  letter-spacing: -.06em;
+  text-align: center;
+}
+
+main #lpContainer #q01 {
+  margin: 10vw 0;
+}
+
+main #lpContainer #q04 {
+  margin: 20vw 0 5vw;
+}
+
+main #lpContainer .question .questiontxt {
+  font-size: 7vw;
+  letter-spacing: -.14em;
+  font-weight: 700;
+}
+
+main #lpContainer .question .q {
+  width: 15%;
+  margin: auto;
+}
+
+main #lpContainer .question .appeal {
+  width: 100%;
+  margin: 5vw 0;
+}
+
+main #lpContainer .question ul {
+  padding: 0 12vw;
+  margin: 1% 0 0 0;
+  text-align: center;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+main #lpContainer .question ul li {
+  line-height: 1;
+  margin: .4em 0 -.6em 0;
+  padding: 0.1em 0;
+  position: relative;
+  list-style: none;
+  letter-spacing: .1rem;
+  color: #000;
+}
+
+main #lpContainer .question ul li .inner {
+  margin: 1vw 0;
+}
+
+main #lpContainer .question ul li .inner label {
+  display: block;
+  padding-left: 8vw;
+  position: relative;
+  text-align: left;
+}
+
+main #lpContainer .question ul li .inner label div {
+  font-size: 6vw;
+  font-weight: 600;
+  line-height: 1.3em;
+  letter-spacing: -.1rem;
+}
+
+main #lpContainer .question ul.short {
+  padding: 0 18vw;
+}
+
+main #lpContainer .question ul.short li {
+  line-height: 1;
+  margin: .4em 0 -.6em 0;
+  padding: 0.1em 0.5em;
+  min-height: 0vw;
+  position: relative;
+  list-style: none;
+  letter-spacing: .1rem;
+  color: #000;
+}
+
+main #lpContainer input[type=radio] {
+  display: none;
+}
+
+main #lpContainer .check::before {
+  content: "";
+  display: inline-block;
+  vertical-align: text-top;
+  margin-right: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  border: 1px solid #d80909;
+  position: absolute;
+  left: 0%;
+  top: 18%;
+  cursor: pointer;
+}
+
+main #lpContainer .check::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 18px;
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+  border-bottom: 3px solid #f0481b;
+  border-right: 3px solid #f0481b;
+  position: absolute;
+  left: 1%;
+  top: 15%;
+  margin: auto;
+  opacity: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+main #lpContainer input[type=radio]:checked+.check::after {
+  opacity: 1;
+}
+
+main #lpContainer ul li span {
+  font-size: 1.2rem;
+  text-align: left;
+  display: block;
+  padding-left: 16vw;
+  position: relative;
+}
+
+main #lpContainer ul li span div {
+  line-height: 1.4;
+}
+
+/* 3. campaign */
+main #campaign {
+  padding-top: 5vw;
+  text-align: center;
+}
+
+main #campaign>img {
+  width: 80vw;
+}
+
+main #campaign .thankstxt {
+  margin: 2vw 0;
+  padding: 2vw 0;
+}
+
+main #campaign .thankstxt h2 {
+  letter-spacing: -.1rem;
+}
+
+main #campaign .codetxt {
+  margin: auto;
+}
+
+main #campaign .codetxt div {
+  font-size: 1.2rem;
+}
+
+main #campaign .arrow2 {
+  width: 23%;
+}
+
+main #campaign .annotation p {
+  text-align: center;
+}
+
+main #campaign .annotation p {
+  text-align: center;
+}
+
+/* 4. policy */
+main #policy {
+  margin-top: 7vw;
+  text-align: center;
+}
+
+main #policy>img {
+  width: 25vw;
+}
+
+main #policy .announcetxt {
+  margin: 3vw 10vw 5vw 10vw;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+main #policy .check_area {
+  position: relative;
+}
+
+main #policy .check_area input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+main #policy .check_area ul {
+  padding: 3vw 0 8vw;
+  background-color: #e2e2e4;
+}
+
+main #policy .check_area ul li {
+  padding: 1vw 0;
+}
+
+main #policy .check_area ul li .check_lb .check-text {
+  padding-left: 2vw;
+  font-size: 3.7vw;
+  font-weight: 500;
+}
+
+main #policy .check_area ul li .check_lb .check-text a {
+  display: inherit;
+  height: inherit;
+  width: inherit;
+}
+
+main #policy .check_area .button_area {
+  position: absolute;
+  width: 90vw;
+  top: 19vw;
+  left: 5vw;
+  text-align: center;
+}
+
+main #policy .check_area .button_area .linemonitor {
+  margin: -8vw 0 0 0;
+  padding: 0 0 0 4vw;
+  text-align: left;
+  font-size: 3.4vw;
+}
+
+main #policy .annotation_area {
+  width: 80vw;
+  margin: 39vw 0 0 0;
+  padding: 0 0 0 12vw;
+}
+
+main #policy .annotation_area h4 {
+  text-align: left;
+  line-height: 1.4em;
+  font-size: 4.2vw;
+  letter-spacing: -.1rem;
+}
+
+/*-------------------------------
+ ▼forPC
+ --------------------------------*/
+@media screen and (min-width: 769px) {
+
+  /* general */
+  h2 {
+    padding: 0;
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  h3 {
+    padding: 0;
+    letter-spacing: -.01em;
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    padding: 0;
+    letter-spacing: -.01em;
+    font-size: 1.6rem;
+  }
+
+  /* 1. entry */
+  main {
+    margin: 20px 0 0 0;
+    text-align: center;
+  }
+
+  main .entry-wrapper {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  main .entry-wrapper .entry-title {
+    font-size: 3rem;
+    letter-spacing: -.01em;
+  }
+
+  main .entry-wrapper .entry-headline {
+    width: 588px;
+    margin: 10px auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  main .entry-wrapper .entry-headline img {
+    width: 70%;
+    margin: 0;
+    padding: 0;
+  }
+
+  main .entry-wrapper .entry-headline .entry-text {
+    width: 100%;
+    margin: 20px auto 30px auto;
+  }
+
+  main .entry-wrapper .entry-headline .entry-text h2.entry-title {
+    margin: 30px auto;
+    padding: 0;
+    font-size: 2.5rem;
+  }
+
+  main .entry-wrapper .entry-headline .entry-text p {
+    width: 60%;
+    font-size: 1.25rem;
+    line-height: 1.7em;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice {
+    width: 488px;
+    height: 1300px;
+    margin: 50px auto 0;
+    padding: 10px 0 0 0;
+    background-image: url("../img/background02.png");
+    background-color: #fff;
+    background-size: 90%;
+    background-position: center top;
+    background-repeat: no-repeat;
+    z-index: 99999;
+    text-align: center;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice h2 {
+    margin: 30px 0 10px;
+    padding: 0;
+    font-size: 3.3rem;
+    letter-spacing: -.1em;
+    line-height: 1.3em;
+    text-align: center;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice p {
+    margin: 0 0 40px 0;
+    padding: 0 75px;
+    line-height: 1.9em;
+    font-size: 1.3rem;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice img.appeal-img {
+    margin: 0;
+    padding: 0;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice img.appeal-img {
+    width: 100%;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice img.experience {
+    margin: 40px 0 0 0;
+    padding: 0;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice h3 {
+    margin: 0;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice h4 {
+    padding: 30px 0 0 0;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice hr {
+    width: 60%;
+    margin: 15px auto;
+    height: 2px;
+    background-color: #b9ce00;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice img.voice-img {
+    width: 35%;
+    text-align: center;
+  }
+
+  main .entry-wrapper .entry-headline .entry-voice img.appeal-img {
+    width: 98%;
+  }
+
+  /* 2. questionnaire */
+  main #lpContainer {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+
+  main #lpContainer hr {
+    width: 25%;
+    margin: 0 auto;
+    background-color: #d80909;
+  }
+
+  main #lpContainer .headTxt {
+    margin: 0;
+    font-size: 2.3rem;
+    letter-spacing: -.01em;
+    margin-bottom: 10px;
+  }
+
+  main #lpContainer #q01 {
+    margin: 30px 0 50px;
+  }
+
+  main #lpContainer #q04 {
+    margin: 50px 0 10px;
+  }
+
+  main #lpContainer .Qhead img {
+    width: 40%;
+  }
+
+  main #lpContainer .question {
+    text-align: center;
+    margin: 70px 0;
+  }
+
+  main #lpContainer .question img.q {
+    width: 13%;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  main #lpContainer .question .questiontxt {
+    margin: 20px 0;
+    font-size: 2rem;
+    letter-spacing: -.1em;
+  }
+
+  main #lpContainer .question img.appeal {
+    width: 80%;
+    margin: 0;
+  }
+
+  main #lpContainer .question ul {
+    margin: 0 0 8%;
+    text-align: center;
+    vertical-align: baseline;
+    list-style: none;
+    background: none;
+  }
+
+  main #lpContainer .question ul li {
+    line-height: 1;
+    padding: 0.4em 0.5em;
+    min-height: 0;
+    position: relative;
+    list-style: none;
+    letter-spacing: .1rem;
+    color: #000;
+  }
+
+  main #lpContainer .question ul.short {
+    padding: 0 120px;
+  }
+
+  main #lpContainer .question ul.short li {
+    margin: .4em 0 -.6em 0;
+  }
+
+  main #lpContainer .question ul.long {
+    padding: 0 70px;
+  }
+
+  main #lpContainer .question ul.long li {
+    margin: 0 0 -.6em 0;
+  }
+
+  main #lpContainer .question ul li .inner {
+    margin: 5px 0;
+  }
+
+  main #lpContainer .question ul li .inner label {
+    font-size: 2rem;
+    padding: 0.2em 0 0.2em 0;
+    cursor: pointer;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  main #lpContainer .question ul li .inner label div {
+    padding-left: 30px;
+    font-size: 1.6rem;
+  }
+
+  main #lpContainer .question ul li .inner input[type=radio] {
+    display: none;
+  }
+
+  main #lpContainer .question ul li .inner .check::before {
+    content: "";
+    display: inline-block;
+    vertical-align: text-top;
+    margin: 0 5px 0 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    border: 1px solid #d80909;
+    left: 0%;
+    top: 32%;
+    position: absolute;
+    cursor: pointer;
+  }
+
+  main #lpContainer .question ul li .inner .check::after {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 18px;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    border-bottom: 3px solid #f0481b;
+    border-right: 3px solid #f0481b;
+    position: absolute;
+    margin: auto;
+    opacity: 0;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+
+  main #lpContainer .question ul li .inner input[type=radio]:checked+.check::after {
+    opacity: 1;
+  }
+
+  /* 3. campaign */
+  main #campaign {
+    width: 75%;
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+  }
+
+  main #campaign>img {
+    width: 40%;
+  }
+
+  main #campaign .arrow2 {
+    width: 130px;
+    margin: 20px 0;
+  }
+
+  main #campaign .thankstxt {
+    margin: 0;
+    padding: 15px 20px;
+    font-size: 1rem;
+  }
+
+  main #campaign .thankstxt h2 {
+    margin: 10px 0;
+    padding: 0;
+    font-size: 2.3rem;
+    letter-spacing: -.15em;
+    text-align: center;
+  }
+
+  main #campaign .codetxt {
+    margin: auto;
+  }
+
+  main #campaign .codetxt .code {
+    width: 50%;
+    margin: 1% auto;
+    padding: 2% 1%;
+    border: solid 1px #180117;
+    font-size: 1.7rem;
+  }
+
+  main #campaign .annotation p {
+    text-align: center;
+  }
+
+  /* 4. policy */
+  main #policy {
+    width: 528px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  main #policy>img {
+    width: 25%;
+  }
+
+  main #policy .announcetxt {
+    margin: 10px 10%;
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  main #policy .check_area {
+    position: relative;
+    margin: 20px 0;
+    padding: 15px 20px;
+    font-size: 1.5rem;
+  }
+
+  main #policy .check_area input[type=checkbox] {
+    transform: scale(1.8);
+  }
+
+  main #policy .check_area ul {
+    padding: 10px 0 50px;
+    background-color: #e2e2e4;
+  }
+
+  main #policy .check_area ul li {
+    padding: 3px 0;
+  }
+
+  main #policy .check_area ul li .check_lb .check-text {
+    padding: 4% 0 0 2%;
+    font-size: 1rem;
+    letter-spacing: -.01em;
+  }
+
+  main #policy .check_area ul li .check_lb .check-text a {
+    display: inherit;
+    height: inherit;
+    width: inherit;
+  }
+
+  main #policy .check_area .button_area {
+    position: absolute;
+    width: 100%;
+    top: 120px;
+    left: 0;
+    margin: 0 0 500px 0;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  main #policy .check_area .button_area .linemonitor {
+    margin: -40px 0 0 0;
+    padding: 0 0 0 80px;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  main #policy>div.check_area.noto-sans>div>img {
+    width: 80%;
+  }
+
+  main #linebutton>img {
+    width: 80%;
+  }
+
+  main #policy .annotation_area {
+    width: 80%;
+    margin: 170px 0 0 0;
+    padding: 0 0 0 80px;
+  }
+
+  main #policy .annotation_area h4 {
+    text-align: left;
+    line-height: 1.1em;
+    font-size: 1.1rem;
+    letter-spacing: .02em;
+  }
+}
